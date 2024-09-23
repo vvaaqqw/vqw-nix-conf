@@ -42,6 +42,5 @@
     ++ [(import ./mime.nix)]
     ++ [(import ./fcitx5)] # fcitx5
     ++ [(import ./vscode)] # vscode
-    ++ [(import ./xdg-mimes.nix)] # xdg config
     ++ [(import ./zsh.nix)]; # shell
 }

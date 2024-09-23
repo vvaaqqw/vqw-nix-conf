@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }: let
   addDesktop = x: "${x}.desktop";
@@ -376,7 +377,7 @@
       (_: ["pistol"])
     )
     (lib.genAttrs code (_: editors))
-    (lib.genAttrs images (_: ["imv"]))
+    (lib.genAttrs images (_: ["qview"]))
     (lib.genAttrs urls (_: browsers))
     (lib.genAttrs readable (_: ["org.gnome.Evince"]))
     (lib.genAttrs audio (_: ["vlc" "mpv"]))
@@ -385,7 +386,7 @@
       (_: ["unar" "org.gnome.FileRoller" "thunar"]))
     (lib.genAttrs documents (_: ["writer" "less"]))
     (lib.genAttrs spreadsheets (_: ["calc" "visidata" "less"]))
-    (lib.genAttrs slides (_: ["impress" "less"]))
+    (lib.genAttrs slides (_: ["impress" "et"]))
     (lib.genAttrs models (_: ["PrusaSlicer"]))
     (lib.genAttrs ["text/x-gcode"] (_: ["PrusaGcodeviewer"]))
     (lib.genAttrs cad (_: ["org.freecadweb.FreeCAD"]))
@@ -402,7 +403,7 @@
     {
       "x-scheme-handler/mailto" = ["thunderbird"];
       "text/calendar" = ["org.gnome.Calendar"];
-      "application/pdf" = ["org.pwmt.zathura" "less"];
+      "application/pdf" = ["org.pwmt.zathura" "okular"];
       "text/plain" = ["codium" "org.gnome.TextEditor" "lapce" "less"];
       "text/markdown" = ["codium" "glow" "less"];
       "text/org" = ["codium" "less"];
@@ -411,7 +412,7 @@
       "application/json" = browsers;
       "text/csv" = ["calc" "visidata" "less" "org.gnome.TextEditor"];
       "application/vnd.smart.notebook" = ["less"];
-      "x-scheme-handler/irc" = ["halloy"];
+      "x-scheme-handler/irc" = ["weechat"];
       "application/x-desktop" = ["exo-open"];
       "application/vnd.microsoft.portable-executable" = ["wine"];
     }
@@ -422,4 +423,11 @@ in {
     defaultApplications = associations;
     associations.added = associations;
   };
+  home.packages = with pkgs; [junction];
+
+  home.sessionVariables = {
+    # prevent wine from creating file associations
+    WINEDLLOVERRIDES = "winemenubuilder.exe=d";
+  };
+
 }

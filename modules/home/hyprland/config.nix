@@ -202,6 +202,20 @@
         "$mainMod SHIFT, K, movewindoworgroup, u" # move window above
         "$mainMod SHIFT, J, movewindoworgroup, d" # move window below
 
+        "$mainMod ALT, H, changegroupactive, b" # focus with group 
+        "$mainMod ALT, L, changegroupactive, f" #  focus with group 
+
+        "$mainMod ALT, 1, changegroupactive, 1" #
+        "$mainMod ALT, 2, changegroupactive, 2" #
+        "$mainMod ALT, 3, changegroupactive, 3" #
+        "$mainMod ALT, 4, changegroupactive, 4" #
+        "$mainMod ALT, 5, changegroupactive, 5" #
+        "$mainMod ALT, 6, changegroupactive, 6" #
+        "$mainMod ALT, 7, changegroupactive, 7" #
+        "$mainMod ALT, 8, changegroupactive, 8" #
+        "$mainMod ALT, 9, changegroupactive, 9" #
+        "$mainMod ALT, 0, changegroupactive, 0" #
+
         "$mainMod, E, exec, kitty -e yazi"
         "$mainMod SHIFT, E, exec, dolphin"
         #dropdown term

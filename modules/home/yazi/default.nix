@@ -5,6 +5,9 @@
   ...
 }: {
   home.file.".config/yazi/plugins/smart-enter.yazi/init.lua".source = ./plugins/smart-enter-init.lua;
+  home.file.".config/yazi/plugins/smart-paste.yazi/init.lua".source = ./plugins/smart-paste-init.lua;
+  home.file.".config/yazi/plugins/arrow.yazi/init.lua".source = ./plugins/arrow-init.lua;
+ 
 
   home.packages = lib.attrValues {
     inherit
@@ -261,27 +264,8 @@
           }
           {
             on = ["g" "m"];
-            run = "shell cd /run/media/spectre";
+            run = "shell cd /run/media/$USER";
             desc = "to usb";
-          }
-          # https://yazi-rs.github.io/docs/tips/#dropping-to-shell
-          {
-            on = ["g" "s"];
-            run = ''shell "$SHELL" --block --confirm'';
-            desc = "Open shell here";
-          }
-          # https://yazi-rs.github.io/docs/tips/#drag-and-drop
-          {
-            on = ["g" "n"];
-            run = ''
-              shell ripdrag "$@" -x 2>/dev/null &
-            '';
-          }
-          # https://yazi-rs.github.io/docs/tips/#smart-enter
-          {
-            on = ["l"];
-            run = "plugin --sync smart-enter";
-            desc = "Enter the child directory, or open the file";
           }
         ];
 
@@ -291,10 +275,34 @@
             run = "close";
             desc = "Exit the process";
           }
+          # https://yazi-rs.github.io/docs/tips/#dropping-to-shell
+          {
+            on = ["<C-s>"];
+            run = ''shell "$SHELL" --block --confirm'';
+            desc = "Open shell here";
+          }
+          # https://yazi-rs.github.io/docs/tips/#drag-and-drop
+          {
+            on = ["<C-n>"];
+            run = ''
+              shell 'ripdrag "$@" -x 2>/dev/null &' --confirm
+            '';
+          }
+          # https://yazi-rs.github.io/docs/tips/#smart-enter
+          {
+            on = ["l"];
+            run = "plugin --sync smart-enter";
+            desc = "Enter the child directory, or open the file";
+          }
           {
             on = ["<Right>"];
             run = "plugin --sync smart-enter";
             desc = "Enter the child directory, or open the file";
+          }
+          {
+            on = ["p"];
+            run = "plugin --sync smart-paste";
+            desc = "Paste into the hovered directory or CWD";
           }
           # https://yazi-rs.github.io/docs/tips/#selected-files-to-clipboard
           {
@@ -518,46 +526,90 @@
         ];
       };
       opener = {
-        edit = [
+        code = [
           {
             run = "hx \"$@\"";
             desc = "helix";
             block = true;
             # for = "unix";
           }
-        ];
-        open = [
           {
-            run = "xdg-open \"$1\"";
-            desc = "Open";
+            run = "kitty --detach hx \"$@\"";
+            desc = "hx(detach)";
+            orphan = true;
           }
           {
-            run = "open-with \"$1\"";
-            desc = "Open With";
-          }
-        ];
-        reveal = [
-          {
-            run = ''
-              xdg-open "$(dirname \"$1\")"
-            '';
-            desc = "Reveal";
+            run = "codium \"$@\"";
+            desc = "vsc";
+            orphan = true;
           }
           {
-            run = ''
-              exiftool "$1"; echo "Press enter to exit"; read _
-            '';
-            block = true;
-            desc = "Show EXIF";
+            run = "xdg-open \"$@\"";
+            desc = "xdg-open";
+            orphan = true;
           }
         ];
-        extract = [
+        directories = [
           {
-            run = "ya pub extract --list \"$@\"";
-            desc = "Extract here";
+            run = "kitty --detach hx \"$@\"";
+            desc = "hx(detach)";
+            orphan = true;
+          }
+          {
+            run = "codium \"$@\"";
+            desc = "vsc";
+            orphan = true;
+          }
+          {
+            run = "kitty \"$@\"";
+            desc = "kitty";
+            orphan = true;
+          }
+          {
+            run = "xdg-open \"$@\"";
+            desc = "xdg-open";
+            orphan = true;
           }
         ];
-        play = [
+
+        documents = [
+          {
+            run = "wps \"$@\"";
+            desc = "wps";
+            orphan = true;
+          }         
+          {
+            run = "xdg-open \"$@\"";
+            desc = "xdg-open";
+            orphan = true;
+          }         
+        ];
+        spreadsheets = [
+          {
+            run = "et \"$@\"";
+            desc = "et";
+            orphan = true;
+          }         
+          {
+            run = "xdg-open \"$@\"";
+            desc = "xdg-open";
+            orphan = true;
+          }         
+        ];
+        images = [
+          {
+            run = "qview \"$@\"";
+            desc = "qview";
+            orphan = true;
+          }
+          {
+            run = "xdg-open \"$@\"";
+            desc = "xdg-open";
+            orphan = true;
+          }
+        ];
+
+        video = [
           {
             run = "vlc --fullscreen \"$@\"";
             # run = "mpv --force-window \"$@\"";
@@ -573,6 +625,54 @@
             '';
             block = true;
             desc = "Show media info";
+          }
+          {
+            run = "xdg-open \"$@\"";
+            desc = "xdg-open";
+            orphan = true;
+          }
+        ];
+        audio = [
+          {
+            run = "mpv \"$@\"";
+            desc = "mpv";
+            orphan = true;
+          }
+          {
+            run = "xdg-open \"$@\"";
+            desc = "xdg-open";
+            orphan = true;
+          }
+        ];
+        open = [
+          {
+            run = "xdg-open \"$@\"";
+            desc = "xdg-open";
+          }
+          {
+            run = "open-with \"$@\"";
+            desc = "Open With";
+          }
+        ];
+        reveal = [
+          {
+            run = ''
+              xdg-open "$(dirname \"$@\")"
+            '';
+            desc = "Reveal";
+          }
+          {
+            run = ''
+              exiftool "$@"; echo "Press enter to exit"; read _
+            '';
+            block = true;
+            desc = "Show EXIF";
+          }
+        ];
+        archives = [
+          {
+            run = "ya pub extract --list \"$@\"";
+            desc = "Extract here";
           }
         ];
       };

@@ -5,8 +5,8 @@
 }:
 with lib; let
   defaultApps = {
-    browser = ["floorp.desktop"];
-    text = ["org.gnome.TextEditor.desktop"];
+    browser = ["firefox.desktop"];
+    text = ["kate.desktop"];
     image = ["com.interversehq.qView.desktop"];
     audio = ["mpv.desktop"];
     video = ["mpv.desktop"];
@@ -15,7 +15,7 @@ with lib; let
       "org.gnome.Nautilus.desktop"
     ];
     office = ["libreoffice.desktop"];
-    pdf = ["org.gnome.Evince.desktop"];
+    pdf = ["okular.desktop"];
     terminal = ["kitty.desktop"];
     archive = ["org.gnome.FileRoller.desktop"];
   };
