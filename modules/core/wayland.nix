@@ -10,7 +10,9 @@
     wlr.enable = true;
     xdgOpenUsePortal = true;
     extraPortals = [
-      # pkgs.xdg-desktop-portal-gtk #waybar failed to start when using this
+    # flatpak needs it
+    # yazi needs it
+      pkgs.xdg-desktop-portal-gtk #waybar failed to start when using this
     ];
   };
 

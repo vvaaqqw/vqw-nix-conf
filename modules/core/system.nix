@@ -12,8 +12,14 @@
       experimental-features = ["nix-command" "flakes"];
       substituters = ["https://nix-gaming.cachix.org"];
       trusted-public-keys = ["nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="];
-      extra-substituters = [ "https://yazi.cachix.org" ];
-      extra-trusted-public-keys = [ "yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k=" ];
+      extra-substituters = [
+         "https://yazi.cachix.org" 
+         "https://nix-community.cachix.org"
+          ];
+      extra-trusted-public-keys = [ 
+        "yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k=" 
+        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+        ];
     };
   };
   nixpkgs = {

@@ -3,11 +3,24 @@
   pkgs,
   config,
   ...
-}: {
+}:let
+	yazi-plugins = pkgs.fetchFromGitHub {
+		owner = "yazi-rs";
+		repo = "plugins";
+		rev = "c5785059611624e20a37ba573620f30acc28a26a";
+		hash = "sha256-wlSBtabIsEUJhuHmXwgpSnwZp9WaVQFBg6s1XXjubrE=";
+	};
+in
+ {
   home.file.".config/yazi/plugins/smart-enter.yazi/init.lua".source = ./plugins/smart-enter-init.lua;
   home.file.".config/yazi/plugins/smart-paste.yazi/init.lua".source = ./plugins/smart-paste-init.lua;
   home.file.".config/yazi/plugins/arrow.yazi/init.lua".source = ./plugins/arrow-init.lua;
- 
+  # config
+  home.file = {
+    ".config/yazi/yazi.toml".source = ./yazi.toml;
+    ".config/yazi/keymap.toml".source = ./keymap.toml;
+    ".config/yazi/theme.toml".source = ./theme.toml;
+  }; 
 
   home.packages = lib.attrValues {
     inherit
@@ -24,672 +37,195 @@
     # https://yazi-rs.github.io/docs/configuration/keymap
     # https://yazi-rs.github.io/docs/quick-start/#keybindings
     # https://github.com/sxyazi/yazi/blob/latest/yazi-config/preset/keymap.toml
-    settings = {
-      log = {
-        enabled = false;
-      };
-      input = {
-        prepend_keymap = [
-          # https://yazi-rs.github.io/docs/tips/#close-input-by-esc
-          {
-            on = ["<Esc>"];
-            run = "close";
-            desc = "Cancel input";
-          }
-          {
-            on = ["i"];
-            run = "insert";
-            desc = "Enter insert mode";
-          }
-          {
-            on = ["a"];
-            run = "insert --prepend";
-            desc = "Enter prepend mode";
-          }
-          {
-            on = ["I"];
-            run = ["move -999" "insert"];
-            desc = "Move to the BOL; and enter insert mode";
-          }
-          {
-            on = ["A"];
-            run = ["move 999" "insert --prepend"];
-            desc = "Move to the EOL; and enter prepend mode";
-          }
-          {
-            on = ["v"];
-            run = "visual";
-            desc = "Enter visual mode";
-          }
-          {
-            on = ["V"];
-            run = ["move -999" "visual" "move 999"];
-            desc = "Enter visual mode and select all";
-          }
+    plugins = {
+			# chmod = "${yazi-plugins}/chmod.yazi";
+			full-border = "${yazi-plugins}/full-border.yazi";
+			max-preview = "${yazi-plugins}/max-preview.yazi";
+      smart-filter =  "${yazi-plugins}/smart-filter.yazi";
+      hide-preview =  "${yazi-plugins}/hide-preview.yazi";
+			compress = pkgs.fetchFromGitHub {
+				owner = "KKV9";
+				repo = "compress.yazi";
+				rev = "60b24af23d1050f1700953a367dd4a2990ee51aa";
+				sha256 = "sha256-Yf5R3H8t6cJBMan8FSpK3BDSG5UnGlypKSMOi0ZFqzE=";
+			};
+			 yatline= pkgs.fetchFromGitHub {
+				owner = "imsi32";
+				repo = "yatline.yazi";
+				rev = "7b56434864d6a0b5d547fed2339b99346a018522";
+				sha256 = "sha256-4qxBAXFyPBQhSU24xL7fzhgM5e8Cq7BigEp4GPxSjD4=";
+			};
+			 yatline-githead= pkgs.fetchFromGitHub {
+				owner = "imsi32";
+				repo = "yatline-githead.yazi";
+				rev = "a6377a8b190a8563645e79c6d71e7f398e516c52";
+				sha256 = "sha256-SH2BDk8sHZT1L12gJjVbVBipiTwF/KARkuaJfNGdGXg=";
+			};
+		};
 
-          # Character-wise movement
-          {
-            on = ["j"];
-            run = "move -1";
-            desc = "Move back a character";
-          }
-          {
-            on = ["l"];
-            run = "move 1";
-            desc = "Move forward a character";
-          }
-          {
-            on = ["<Left>"];
-            run = "move -1";
-            desc = "Move back a character";
-          }
-          {
-            on = ["<Right>"];
-            run = "move 1";
-            desc = "Move forward a character";
-          }
-          {
-            on = ["<C-b>"];
-            run = "move -1";
-            desc = "Move back a character";
-          }
-          {
-            on = ["<C-f>"];
-            run = "move 1";
-            desc = "Move forward a character";
-          }
+		initLua = ''
+    local catppuccin_palette = {
+  	rosewater = "#f4dbd6",
+  	flamingo = "#f0c6c6",
+  	pink = "#f5bde6",
+  	mauve = "#c6a0f6",
+  	red = "#ed8796",
+  	maroon = "#ee99a0",
+  	peach = "#f5a97f",
+  	yellow = "#eed49f",
+  	green = "#a6da95",
+  	teal = "#8bd5ca",
+  	sky = "#91d7e3",
+  	sapphire = "#7dc4e4",
+  	blue = "#8aadf4",
+  	lavender = "#b7bdf8",
+  	text = "#cad3f5",
+  	subtext1 = "#b8c0e0",
+  	subtext0 = "#a5adcb",
+  	overlay2 = "#939ab7",
+  	overlay1 = "#8087a2",
+  	overlay0 = "#6e738d",
+  	surface2 = "#5b6078",
+  	surface1 = "#494d64",
+  	surface0 = "#363a4f",
+  	base = "#24273a",
+  	mantle = "#1e2030",
+  	crust = "#181926",
+  }
 
-          # Word-wise movement
-          {
-            on = ["b"];
-            run = "backward";
-            desc = "Move back to the start of the current or previous word";
-          }
-          {
-            on = ["w"];
-            run = "forward";
-            desc = "Move forward to the start of the next word";
-          }
-          {
-            on = ["e"];
-            run = "forward --end-of-word";
-            desc = "Move forward to the end of the current or next word";
-          }
-          {
-            on = ["<A-b>"];
-            run = "backward";
-            desc = "Move back to the start of the current or previous word";
-          }
-          {
-            on = ["<A-f>"];
-            run = "forward --end-of-word";
-            desc = "Move forward to the end of the current or next word";
-          }
+  -- Plugins
+  require("full-border"):setup({
+  	type = ui.Border.ROUNDED,
+  })
 
-          # Line-wise movement
-          {
-            on = ["<C-a>"];
-            run = "move -999";
-            desc = "Move to the BOL";
-          }
-          {
-            on = ["<C-e>"];
-            run = "move 999";
-            desc = "Move to the EOL";
-          }
+  require("yatline"):setup({
+  	section_separator = { open = "", close = "" },
+  	inverse_separator = { open = "", close = "" },
+  	part_separator = { open = "", close = "" },
 
-          # Delete
-          {
-            on = ["<Backspace>"];
-            run = "backspace";
-            desc = "Delete the character before the cursor";
-          }
-          {
-            on = ["<Delete>"];
-            run = "backspace --under";
-            desc = "Delete the character under the cursor";
-          }
-          {
-            on = ["<C-h>"];
-            run = "backspace";
-            desc = "Delete the character before the cursor";
-          }
-          {
-            on = ["<C-d>"];
-            run = "backspace --under";
-            desc = "Delete the character under the cursor";
-          }
+  	style_a = {
+  		fg = catppuccin_palette.mantle,
+  		bg_mode = {
+  			normal = catppuccin_palette.blue,
+  			select = catppuccin_palette.mauve,
+  			un_set = catppuccin_palette.red,
+  		},
+  	},
+  	style_b = { bg = catppuccin_palette.surface0, fg = catppuccin_palette.text },
+  	style_c = { bg = catppuccin_palette.base, fg = catppuccin_palette.text },
 
-          # Kill
-          {
-            on = ["<C-u>"];
-            run = "kill bol";
-            desc = "Kill backwards to the BOL";
-          }
-          {
-            on = ["<C-k>"];
-            run = "kill eol";
-            desc = "Kill forwards to the EOL";
-          }
-          {
-            on = ["<C-w>"];
-            run = "kill backward";
-            desc = "Kill backwards to the start of the current word";
-          }
-          {
-            on = ["<A-d>"];
-            run = "kill forward";
-            desc = "Kill forwards to the end of the current word";
-          }
+  	permissions_t_fg = catppuccin_palette.green,
+  	permissions_r_fg = catppuccin_palette.yellow,
+  	permissions_w_fg = catppuccin_palette.red,
+  	permissions_x_fg = catppuccin_palette.sky,
+  	permissions_s_fg = catppuccin_palette.lavender,
 
-          # Cut/Yank/Paste
-          {
-            on = ["d"];
-            run = "delete --cut";
-            desc = "Cut the selected characters";
-          }
-          {
-            on = ["D"];
-            run = ["delete --cut" "move 999"];
-            desc = "Cut until the EOL";
-          }
-          {
-            on = ["c"];
-            run = "delete --cut --insert";
-            desc = "Cut the selected characters; and enter insert mode";
-          }
-          {
-            on = ["C"];
-            run = ["delete --cut --insert" "move 999"];
-            desc = "Cut until the EOL; and enter insert mode";
-          }
-          {
-            on = ["x"];
-            run = ["delete --cut" "move 1 --in-operating"];
-            desc = "Cut the current character";
-          }
-          {
-            on = ["y"];
-            run = "yank";
-            desc = "Copy the selected characters";
-          }
-          {
-            on = ["p"];
-            run = "paste";
-            desc = "Paste the copied characters after the cursor";
-          }
-          {
-            on = ["P"];
-            run = "paste --before";
-            desc = "Paste the copied characters before the cursor";
-          }
+  	selected = { icon = "󰻭", fg = catppuccin_palette.yellow },
+  	copied = { icon = "", fg = catppuccin_palette.green },
+  	cut = { icon = "", fg = catppuccin_palette.red },
 
-          # Undo/Redo
-          {
-            on = ["u"];
-            run = "undo";
-            desc = "Undo the last operation";
-          }
-          {
-            on = ["<C-r>"];
-            run = "redo";
-            desc = "Redo the last operation";
-          }
-        ];
-      };
-      manager = {
-        show_hidden = true;
-        sort_dir_first = true;
-        ratio = [
-          1 # parent
-          2 # current
-          5 # preview
-        ];
-        mouse_events = ["click" "scroll" "touch" "move" "drag"];
-        keymap = [
-          {
-            on = ["g" "t"];
-            run = "shell cd ~/.local/share/Trash/files";
-            desc = "to trash";
-          }
-          {
-            on = ["g" "d"];
-            run = "shell cd ~/Downloads";
-            desc = "to downloads";
-          }
-          {
-            on = ["g" "D"];
-            run = "shell cd ~/Desktop";
-            desc = "to desktop";
-          }
-          {
-            on = ["g" "m"];
-            run = "shell cd /run/media/$USER";
-            desc = "to usb";
-          }
-        ];
+  	total = { icon = "", fg = catppuccin_palette.yellow },
+  	succ = { icon = "", fg = catppuccin_palette.green },
+  	fail = { icon = "", fg = catppuccin_palette.red },
+  	found = { icon = "", fg = catppuccin_palette.blue },
+  	processed = { icon = "", fg = catppuccin_palette.green },
 
-        prepend_keymap = [
-          {
-            on = ["q"];
-            run = "close";
-            desc = "Exit the process";
-          }
-          # https://yazi-rs.github.io/docs/tips/#dropping-to-shell
-          {
-            on = ["<C-s>"];
-            run = ''shell "$SHELL" --block --confirm'';
-            desc = "Open shell here";
-          }
-          # https://yazi-rs.github.io/docs/tips/#drag-and-drop
-          {
-            on = ["<C-n>"];
-            run = ''
-              shell 'ripdrag "$@" -x 2>/dev/null &' --confirm
-            '';
-          }
-          # https://yazi-rs.github.io/docs/tips/#smart-enter
-          {
-            on = ["l"];
-            run = "plugin --sync smart-enter";
-            desc = "Enter the child directory, or open the file";
-          }
-          {
-            on = ["<Right>"];
-            run = "plugin --sync smart-enter";
-            desc = "Enter the child directory, or open the file";
-          }
-          {
-            on = ["p"];
-            run = "plugin --sync smart-paste";
-            desc = "Paste into the hovered directory or CWD";
-          }
-          # https://yazi-rs.github.io/docs/tips/#selected-files-to-clipboard
-          {
-            on = ["y"];
-            run = [
-              "yank"
-              ''
-                shell --confirm 'for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list'
-              ''
-            ];
-          }
-          # https://yazi-rs.github.io/docs/tips/#navigation-wraparound
-          {
-            on = ["k"];
-            run = "plugin --sync arrow --args=-1";
-          }
-          {
-            on = ["<Up>"];
-            run = "plugin --sync arrow --args=-1";
-          }
-          {
-            on = ["j"];
-            run = "plugin --sync arrow --args=1";
-          }
-          {
-            on = ["<Down>"];
-            run = "plugin --sync arrow --args=1";
-          }
-          {
-            on = ["K"];
-            run = "plugin --sync arrow --args=-5";
-          }
-          {
-            on = ["J"];
-            run = "plugin --sync arrow --args=5";
-          }
-          # skip confirm on delete
-          #{
-          #  on = ["d"];
-          #  run = "remove --force";
-          #  desc = "Move the files to the trash";
-          #}
-          {
-            on = ["h"];
-            run = "leave";
-            desc = "Go back to the parent directory";
-          }
-          {
-            on = ["<Left>"];
-            run = "leave";
-            desc = "Go back to the parent directory";
-          }
-          # { on = [ l ]; run = "enter"; desc = "Enter the child directory"; }
-          {
-            on = ["H"];
-            run = "back";
-            desc = "Go back to the previous directory";
-          }
-          {
-            on = ["L"];
-            run = "forward";
-            desc = "Go forward to the next directory";
-          }
-          {
-            on = ["<A-k>"];
-            run = "seek -5";
-            desc = "Seek up 5 units in the preview";
-          }
-          {
-            on = ["<A-j>"];
-            run = "seek 5";
-            desc = "Seek down 5 units in the preview";
-          }
+  	tab_width = 20,
+  	tab_use_inverse = true,
 
-          {
-            on = ["o"];
-            run = "open";
-            desc = "Open the selected files";
-          }
-          {
-            on = ["O"];
-            run = "open --interactive";
-            desc = "Open the selected files interactively";
-          }
-          {
-            on = ["y"];
-            run = "yank";
-            desc = "Copy the selected files";
-          }
-          {
-            on = ["Y"];
-            run = "unyank";
-            desc = "Cancel the yank status of files";
-          }
-          {
-            on = ["<C-s>"];
-            run = "search none";
-            desc = "Cancel the ongoing search";
-          }
-          {
-            on = ["<PageUp>"];
-            run = "arrow -100%";
-            desc = "Move cursor up one page";
-          }
-          {
-            on = ["<PageDown>"];
-            run = "arrow 100%";
-            desc = "Move cursor down one page";
-          }
-          # Linemode
-          {
-            on = ["m" "n"];
-            run = "linemode none";
-            desc = "Set linemode to none";
-          }
+  	show_background = false,
 
-          # Copy
-          {
-            on = ["c" "n"];
-            run = "copy name_without_ext";
-            desc = "Copy the name of the file without the extension";
-          }
+  	display_header_line = true,
+  	display_status_line = true,
 
-          # Find
-          {
-            on = ["n"];
-            run = "find_arrow";
-            desc = "Go to next found file";
-          }
-          {
-            on = ["N"];
-            run = "find_arrow --previous";
-            desc = "Go to previous found file";
-          }
-        ];
-      };
-      tasks = {
-        prepend_keymap = [
-          {
-            on = ["k"];
-            run = "arrow -1";
-            desc = "Move cursor up";
-          }
-          {
-            on = ["j"];
-            run = "arrow 1";
-            desc = "Move cursor down";
-          }
-        ];
-      };
-      select = {
-        prepend_keymap = [
-          {
-            on = ["k"];
-            run = "arrow -1";
-            desc = "Move cursor up";
-          }
-          {
-            on = ["j"];
-            run = "arrow 1";
-            desc = "Move cursor down";
-          }
-          {
-            on = ["K"];
-            run = "arrow -5";
-            desc = "Move cursor up 5 lines";
-          }
-          {
-            on = ["J"];
-            run = "arrow 5";
-            desc = "Move cursor down 5 lines";
-          }
-        ];
-      };
-      completion = {
-        prepend_keymap = [
-          {
-            on = ["<A-k>"];
-            run = "arrow -1";
-            desc = "Move cursor up";
-          }
-          {
-            on = ["<A-j>"];
-            run = "arrow 1";
-            desc = "Move cursor down";
-          }
-          {
-            on = ["<C-p>"];
-            run = "arrow -1";
-            desc = "Move cursor up";
-          }
-          {
-            on = ["<C-k>"];
-            run = "arrow 1";
-            desc = "Move cursor down";
-          }
-        ];
-      };
-      help = {
-        prepend_keymap = [
-          {
-            on = ["k"];
-            run = "arrow -1";
-            desc = "Move cursor up";
-          }
-          {
-            on = ["j"];
-            run = "arrow 1";
-            desc = "Move cursor down";
-          }
-          {
-            on = ["K"];
-            run = "arrow -5";
-            desc = "Move cursor up 5 lines";
-          }
-          {
-            on = ["J"];
-            run = "arrow 5";
-            desc = "Move cursor down 5 lines";
-          }
-        ];
-      };
-      opener = {
-        code = [
-          {
-            run = "hx \"$@\"";
-            desc = "helix";
-            block = true;
-            # for = "unix";
-          }
-          {
-            run = "kitty --detach hx \"$@\"";
-            desc = "hx(detach)";
-            orphan = true;
-          }
-          {
-            run = "codium \"$@\"";
-            desc = "vsc";
-            orphan = true;
-          }
-          {
-            run = "xdg-open \"$@\"";
-            desc = "xdg-open";
-            orphan = true;
-          }
-        ];
-        directories = [
-          {
-            run = "kitty --detach hx \"$@\"";
-            desc = "hx(detach)";
-            orphan = true;
-          }
-          {
-            run = "codium \"$@\"";
-            desc = "vsc";
-            orphan = true;
-          }
-          {
-            run = "kitty \"$@\"";
-            desc = "kitty";
-            orphan = true;
-          }
-          {
-            run = "xdg-open \"$@\"";
-            desc = "xdg-open";
-            orphan = true;
-          }
-        ];
+  	header_line = {
+  		left = {
+  			section_a = {
+  				{ type = "line", custom = false, name = "tabs", params = { "left" } },
+  			},
+  			section_b = {
+  				{ type = "coloreds", custom = false, name = "githead" },
+  			},
+  			section_c = {},
+  		},
+  		right = {
+  			section_a = {
+  				{ type = "string", custom = false, name = "tab_path" },
+  			},
+  			section_b = {
+  				{ type = "coloreds", custom = false, name = "task_workload" },
+  			},
+  			section_c = {
+  				{ type = "coloreds", custom = false, name = "task_states" },
+  			},
+  		},
+  	},
 
-        documents = [
-          {
-            run = "wps \"$@\"";
-            desc = "wps";
-            orphan = true;
-          }         
-          {
-            run = "xdg-open \"$@\"";
-            desc = "xdg-open";
-            orphan = true;
-          }         
-        ];
-        spreadsheets = [
-          {
-            run = "et \"$@\"";
-            desc = "et";
-            orphan = true;
-          }         
-          {
-            run = "xdg-open \"$@\"";
-            desc = "xdg-open";
-            orphan = true;
-          }         
-        ];
-        images = [
-          {
-            run = "qview \"$@\"";
-            desc = "qview";
-            orphan = true;
-          }
-          {
-            run = "xdg-open \"$@\"";
-            desc = "xdg-open";
-            orphan = true;
-          }
-        ];
+  	status_line = {
+  		left = {
+  			section_a = {
+  				{ type = "string", custom = false, name = "tab_mode" },
+  			},
+  			section_b = {
+  				{ type = "string", custom = false, name = "hovered_size" },
+  			},
+  			section_c = {
+  				{ type = "string", custom = false, name = "hovered_name" },
+  				{ type = "coloreds", custom = false, name = "count" },
+  			},
+  		},
+  		right = {
+  			section_a = {
+  				{ type = "string", custom = false, name = "cursor_position" },
+  			},
+  			section_b = {
+  				{ type = "string", custom = false, name = "cursor_percentage" },
+  			},
+  			section_c = {
+  				{ type = "string", custom = false, name = "hovered_file_extension", params = { true } },
+  				{ type = "coloreds", custom = false, name = "permissions" },
+  			},
+  		},
+  	},
+  })
 
-        video = [
-          {
-            run = "vlc --fullscreen \"$@\"";
-            # run = "mpv --force-window \"$@\"";
-            orphan = true;
-          }
-          {
-            run = "mpv --force-window \"$@\"";
-            orphan = true;
-          }
-          {
-            run = ''
-              mediainfo "$1"; echo "Press enter to exit"; read _
-            '';
-            block = true;
-            desc = "Show media info";
-          }
-          {
-            run = "xdg-open \"$@\"";
-            desc = "xdg-open";
-            orphan = true;
-          }
-        ];
-        audio = [
-          {
-            run = "mpv \"$@\"";
-            desc = "mpv";
-            orphan = true;
-          }
-          {
-            run = "xdg-open \"$@\"";
-            desc = "xdg-open";
-            orphan = true;
-          }
-        ];
-        open = [
-          {
-            run = "xdg-open \"$@\"";
-            desc = "xdg-open";
-          }
-          {
-            run = "open-with \"$@\"";
-            desc = "Open With";
-          }
-        ];
-        reveal = [
-          {
-            run = ''
-              xdg-open "$(dirname \"$@\")"
-            '';
-            desc = "Reveal";
-          }
-          {
-            run = ''
-              exiftool "$@"; echo "Press enter to exit"; read _
-            '';
-            block = true;
-            desc = "Show EXIF";
-          }
-        ];
-        archives = [
-          {
-            run = "ya pub extract --list \"$@\"";
-            desc = "Extract here";
-          }
-        ];
-      };
-    };
-    # https://yazi-rs.github.io/docs/configuration/theme
-    # https://github.com/sxyazi/yazi/blob/latest/yazi-config/preset/yazi.toml
-    # theme = {
-    #   filetype = {
-    #     rules = [
-    #       { fg = "#7AD9E5"; mime = "image/*"; }
-    #       { fg = "#F3D398"; mime = "video/*"; }
-    #       { fg = "#F3D398"; mime = "audio/*"; }
-    #       { fg = "#CD9EFC"; mime = "application/x-bzip"; }
-    #     ];
-    #   };
-    # };
-    # https://yazi-rs.github.io/docs/configuration/yazi
-    # https://github.com/sxyazi/yazi/blob/latest/yazi-config/preset/yazi.toml
+  require("yatline-githead"):setup({
+  	show_branch = true,
+  	branch_prefix = "",
+  	branch_symbol = "",
+  	branch_borders = "",
+
+  	commit_symbol = " ",
+
+  	show_stashes = true,
+  	stashes_symbol = " ",
+
+  	show_state = true,
+  	show_state_prefix = true,
+  	state_symbol = "󱅉",
+
+  	show_staged = true,
+  	staged_symbol = " ",
+
+  	show_unstaged = true,
+  	unstaged_symbol = " ",
+
+  	show_untracked = true,
+  	untracked_symbol = " ",
+
+  	prefix_color = catppuccin_palette.pink,
+  	branch_color = catppuccin_palette.pink,
+  	commit_color = catppuccin_palette.mauve,
+  	stashes_color = catppuccin_palette.teal,
+  	state_color = catppuccin_palette.lavender,
+  	staged_color = catppuccin_palette.green,
+  	unstaged_color = catppuccin_palette.yellow,
+  	untracked_color = catppuccin_palette.pink,
+  })
+      '';
+        # https://yazi-rs.github.io/docs/configuration/theme
+        # https://github.com/sxyazi/yazi/blob/latest/yazi-config/preset/yazi.toml
+        # https://yazi-rs.github.io/docs/configuration/yazi
+        # https://github.com/sxyazi/yazi/blob/latest/yazi-config/preset/yazi.toml
   };
 }

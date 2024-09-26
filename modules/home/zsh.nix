@@ -142,8 +142,8 @@
       lockprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nix flake update";
 
       cdnix = "cd /etc/nixos";
-      nixnlockprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild switch --flake .#ghostrace --option eval-cache false --recreate-lock-file";
-      nixprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild switch --flake .#ghostrace --option eval-cache false";
+      nixnlockprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild switch --flake .#ghostrace --option eval-cache false --recreate-lock-file --show-trace";
+      nixprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild switch --flake .#ghostrace --option eval-cache false --show-trace";
       nix-clean = "nh clean all --keep 5";
       deadnix = "sudo nix run github:astro/deadnix /etc/nixos";
       deadfix = "sudo nix run github:astro/deadnix -- -e /etc/nixos";

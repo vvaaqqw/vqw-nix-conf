@@ -1,4 +1,5 @@
-{...}: {
+{pkgs, ...}:
+{
   wayland.windowManager.hyprland = {
     settings = {
       # TODO: easyfocus
@@ -17,10 +18,10 @@
         "swaybg -m fill -i $(find ~/Pictures/wallpapers/ -maxdepth 1 -type f) &"
         "hyprctl setcursor Bibata-Original-Classic 19 &"
         "poweralertd &"
-        "waybar"
-        "swaync &"
-        #"ags"
-        #"ydotoold" #ags use
+        # "waybar &"
+        # "swaync &"
+        # "ags"
+        "${pkgs.hyprpanel}/bin/hyprpanel"
         "wl-paste --watch cliphist store &"
         "hyprlock"
         # workaround for brightness being reset on root rollback (impermanence)
@@ -219,13 +220,16 @@
         "$mainMod, E, exec, kitty -e yazi"
         "$mainMod SHIFT, E, exec, dolphin"
         #dropdown term
-        "$mainMod, T, exec, hdrop --floating kitty --class dropdkitty"
+        "$mainMod, T, exec, hdrop -f --focus --insensitive -p r -h 60 -w 49 kitty"
         #dropdown yazi
-        "$mainMod, R, exec, hdrop --floating kitty --class dropdyz -e yazi "
+        "$mainMod, R, exec, hdrop -f --focus --insensitive -p r -h 60 -w 49 kitty -e yazi "
         #dropdown music
-        "$mainMod, M, exec, hdrop -f yesplaymusic"
+        "$mainMod, M, exec, hdrop -f --focus --insensitive -p r -h 60 -w 49 kitty -e musicfox"
         #dropdown pass
-        "$mainMod, P, exec, hdrop --class KeePassXC --floating keepassxc"
+        "$mainMod, P, exec, hdrop -f -i -p r -h 70 -w 50 keepassxc"
+        # "$mainMod, P, exec, keepassxc"
+        #dropdown zen-browser
+        "$mainMod, N, exec, hdrop -f -i -p l -h 70 -w 50 zen"
 
         "$mainMod,G,exec,firefox" # browser
 
@@ -238,18 +242,18 @@
 
         #"$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 4 silent] discord --enable-features=UseOzonePlatform --ozone-platform=wayland'"
         "$mainMod SHIFT, S, exec, hyprctl dispatch exec '[workspace 5 silent] SoundWireServer'"
-        "$mainMod, Escape, exec, swaylock"
-        "ALT, Escape, exec, hyprlock"
+        # "$mainMod ALT, Escape, exec, hyprlock"
+        "$mainMod ALT, Escape, exec, swaylock"
         "$mainMod SHIFT, Escape, exec, power-menu"
         "$mainMod, U, togglesplit,"
         "$mainMod,I,togglegroup," # group focused window
         "$mainMod,O,changegroupactive," # switch within the active group
         "$mainMod SHIFT, O, exec, toggle_oppacity"
         "$mainMod SHIFT, P ,exec, hyprpicker -a"
-        # "$mainMod SHIFT, P, pseudo,"
+        "$mainMod , V, pseudo," # 切换伪 tiling 模式，伪 tiling 模式的窗口保持它们浮动时的大小
         "$mainMod SHIFT, W,exec, wallpaper-picker"
         #"$mainMod ALT, W, exec, vm-start"
-        "$mainMod, N, exec, swaync-client -t -sw"
+        # "$mainMod, N, exec, swaync-client -t -sw"
 
         # screenshot
         "$mainMod, Print, exec, grimblast --notify --cursor --freeze save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
@@ -294,7 +298,7 @@
         "$mainMod CTRL, 8, movetoworkspacesilent, 8"
         "$mainMod CTRL, 9, movetoworkspacesilent, 9"
         "$mainMod CTRL, 0, movetoworkspacesilent, 10"
-        "$mainMod CTRL, c, movetoworkspace, empty"
+        # "$mainMod CTRL, c, movetoworkspace, empty"
 
         # window control
         "$mainMod SHIFT, left, movewindow, h"
@@ -363,14 +367,14 @@
       windowrule = [
         "float,qView"
         "center,qView"
-        "size 1200 725,qView"
+        # "size 1200 725,qView"
         "float,imv"
         "center,imv"
-        "size 1200 725,imv"
+        # "size 1200 725,imv"
         "float,mpv"
         "center,mpv"
         "tile,Aseprite"
-        "size 1200 725,mpv"
+        # "size 1200 725,mpv"
         "float,title:^(float_kitty)$"
         "center,title:^(float_kitty)$"
         "size 950 600,title:^(float_kitty)$"
@@ -413,22 +417,21 @@
         "float, title:^(Open Folder)(.*)"
         "float, title:^(Save As)(.*)$"
 
-        "float,class:Keepassxc"
-        "size 800 600,class:Keepassxc"
         "idleinhibit focus, class:^(mpv)$"
+        "idleinhibit focus, class:^(kitty)$"
         "idleinhibit focus,class:foot"
 
         "idleinhibit fullscreen, class:^(firefox)$"
+        "idleinhibit fullscreen, class:^(zen)$"
         "float,title:^(Firefox — Sharing Indicator)$"
         "move 0 0,title:^(Firefox — Sharing Indicator)$"
         # pavucontrol
         "float,class:pavucontrol"
         "float,title:^(Volume Control)$"
         "size 800 600,title:^(Volume Control)$"
-        "move 75 44%,title:^(Volume Control)$"
+        # "move 75 44%,title:^(Volume Control)$"
         "float, class:^(imv)$"
 
-        "workspace 5, class:^(floorp)$"
         "workspace 4, class:^(Aseprite)$"
         "workspace 4, class:^(Gimp-2.10)$"
         "workspace 5, class:^(Audacious)$"

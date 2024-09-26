@@ -8,7 +8,7 @@
     yesplaymusic
     easyeffects
     firefox
-    librewolf
+    # librewolf # opens firefox somehow
     # cinnamon.nemo
     qbittorrent
     # hexchat
@@ -33,6 +33,6 @@
     # gnome packages
     pkgs.gnome-tweaks
     pkgs.gnome-calendar
-    komikku
+    # komikku #comics
   ];
 }

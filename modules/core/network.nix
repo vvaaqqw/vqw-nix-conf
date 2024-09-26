@@ -21,7 +21,8 @@
 
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
-    clash-verge
+    clash-nyanpasu # clash tauri gui
     clash-meta
+    clash-geoip
   ];
 }

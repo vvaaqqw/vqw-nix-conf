@@ -23,7 +23,6 @@
     ++ [(import ./gtk.nix)] # gtk theme
     ++ [(import ./hyprland)] # window manager
     ++ [(import ./kitty.nix)] # terminal
-    ++ [(import ./swaync/swaync.nix)] # notification deamon
     ++ [(import ./micro.nix)] # nano replacement
     ++ [(import ./nvim.nix)] # neovim editor
     ++ [(import ./helix.nix)] # helix editor
@@ -36,8 +35,10 @@
     ++ [(import ./swaylock.nix)] # lock screen
     #++ [(import ./vscodium.nix)]                  # vscode forck
     ++ [(import ./commonapps.nix)] # vscode forck
-    ++ [(import ./waybar)] # status bar
-    #++[(import ./ags)]
+    # ++ [(import ./waybar)] # status bar
+    # ++ [(import ./swaync/swaync.nix)] # notification deamon
+    # ++[(import ./ags)]
+    ++[(import ./hyprpanel.nix)] # all-in-one
     ++ [(import ./yazi)]
     ++ [(import ./mime.nix)]
     ++ [(import ./fcitx5)] # fcitx5

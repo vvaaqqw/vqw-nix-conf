@@ -12,7 +12,7 @@
     xremap-flake.url = "github:xremap/nix-flake";
     #ags.url = "github:Aylur/ags";
     nix-gaming.url = "github:fufexan/nix-gaming";
-
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
     # nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
     # nix-software-center.url = "github:snowfallorg/nix-software-center";
 
@@ -24,6 +24,7 @@
     };
     #   spicetify-nix.url = "github:gerg-l/spicetify-nix";
     #   spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
 
     hyprland = {
       type = "git";
@@ -61,7 +62,10 @@
       inherit system;
       config.allowUnfree = true;
       #overlays = [unstsmallOverlay];
-      overlays = [fenix.overlays.default];
+      overlays = [
+        fenix.overlays.default
+        inputs.hyprpanel.overlay
+        ];
     };
 
     # lib = nixpkgs.lib;

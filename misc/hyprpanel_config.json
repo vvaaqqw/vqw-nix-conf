@@ -1,0 +1,125 @@
+{
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "theme.font.weight": 500,
+  "theme.bar.outer_spacing": "0.4em",
+  "theme.font.size": "0.7rem",
+  "tear": false,
+  "theme.bar.buttons.y_margins": "0.1em",
+  "theme.bar.buttons.spacing": "0.1em",
+  "theme.bar.buttons.padding_x": "0.3rem",
+  "theme.bar.buttons.padding_y": "0.1rem",
+  "theme.bar.buttons.radius": "0.3em",
+  "menus.power.showLabel": true,
+  "menus.power.shutdown": "poweroff",
+  "menus.clock.time.military": false,
+  "menus.clock.weather.location": "Los Angeles",
+  "menus.clock.weather.unit": "imperial",
+  "menus.dashboard.powermenu.shutdown": "poweroff",
+  "theme.bar.menus.monochrome": false,
+  "wallpaper.pywal": false,
+  "wallpaper.enable": false,
+  "theme.bar.menus.opacity": 90,
+  "theme.matugen": true,
+  "wallpaper.image": "/home/spectre/Pictures/wallpapers/futuristic-dark-1920x1080-12564.jpg",
+  "menus.dashboard.powermenu.avatar.image": "/home/spectre/Downloads/xihe.jpg",
+  "scalingPriority": "hyprland",
+  "bar.launcher.icon": "",
+  "bar.workspaces.show_icons": false,
+  "theme.bar.buttons.workspaces.enableBorder": false,
+  "bar.workspaces.show_numbered": false,
+  "theme.bar.buttons.workspaces.numbered_active_highlight_padding": "0.35em",
+  "theme.bar.buttons.workspaces.numbered_active_highlight_border": "0.0em",
+  "bar.workspaces.showWsIcons": true,
+  "bar.workspaces.spacing": 0,
+  "bar.workspaces.workspaces": 10,
+  "bar.workspaces.hideUnoccupied": false,
+  "bar.workspaces.numbered_active_indicator": "highlight",
+  "bar.workspaces.workspaceMask": false,
+  "bar.workspaces.reverse_scroll": true,
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media",
+        "battery"
+      ],
+      "right": [
+        "systray",
+        "volume",
+        "bluetooth",
+        "ram",
+        "cpu",
+        "storage",
+        "netstat",
+        "clock",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "theme.bar.buttons.modules.ram.spacing": "0.1em",
+  "bar.customModules.ram.labelType": "percentage",
+  "bar.customModules.ram.round": true,
+  "theme.bar.buttons.modules.cpu.spacing": "0.1em",
+  "bar.customModules.cpu.leftClick": "kitty -e htop",
+  "bar.customModules.ram.leftClick": "kitty -e htop",
+  "bar.customModules.netstat.icon": "󰣺",
+  "bar.customModules.netstat.label": true,
+  "theme.bar.buttons.modules.netstat.spacing": "0.1em",
+  "bar.customModules.netstat.labelType": "full",
+  "bar.customModules.netstat.rateUnit": "GiB",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "zen",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "zen",
+  "menus.dashboard.shortcuts.left.shortcut2.tooltip": "yesplaymusic",
+  "menus.dashboard.shortcuts.left.shortcut2.command": "yesplaymusic",
+  "bar.workspaces.workspaceIconMap": {
+    "1": "一",
+    "2": "貳",
+    "3": "參",
+    "4": "肆",
+    "5": "武",
+    "6": "鎏",
+    "7": "柒",
+    "8": "魃",
+    "9": "玖",
+    "10": "∅"
+  },
+  "theme.bar.buttons.workspaces.fontSize": "1.2em",
+  "theme.matugen_settings.mode": "dark",
+  "theme.matugen_settings.scheme_type": "fruit-salad",
+  "theme.matugen_settings.variation": "monochrome_1",
+  "theme.matugen_settings.contrast": 0.1
+}

@@ -11,5 +11,6 @@ I would like to thank the following projects for providing essential foundations
 - [KiaraGrouwstra/nix-config](https://github.com/KiaraGrouwstra/nix-config)
 - [0thElement/nixconf](https://github.com/0thElement/nixconf)
 - [end-4/dots-hyprland](https://github.com/end-4/dots-hyprland)
+- [Zakar98k/hyprland-dots](https://github.com/Zakar98k/hyprland-dots)
 
 Thanks for making it way too easy to look like I know what I'm doing
