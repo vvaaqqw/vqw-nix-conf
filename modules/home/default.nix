@@ -13,6 +13,7 @@
     ++ [(import ./btop.nix)] # resouces monitor
     ++ [(import ./gammastep.nix)] # resouces monitor
     ++ [(import ./cava.nix)] # audio visualizer
+    ++ [(import ./zathura.nix)] # pdf viewer
     #++ [(import ./discord/discord.nix)]                   # discord with catppuccin theme
     ++ [(import ./fastfetch.nix)] # fetch tool
     #    ++ [(import ./floorp/floorp.nix)]             # firefox based browser
@@ -27,7 +28,7 @@
     ++ [(import ./nvim.nix)] # neovim editor
     ++ [(import ./helix.nix)] # helix editor
     ++ [(import ./packages.nix)] # other packages
-    ++ [(import ./retroarch.nix)]
+    # ++ [(import ./retroarch.nix)]
     ++ [(import ./rofi.nix)] # launcher
     ++ [(import ./scripts/scripts.nix)] # personal scripts
     #++ [(import ./spicetify.nix)]                 # spotify client

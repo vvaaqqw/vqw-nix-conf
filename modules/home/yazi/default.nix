@@ -43,7 +43,9 @@ in
 			max-preview = "${yazi-plugins}/max-preview.yazi";
       smart-filter =  "${yazi-plugins}/smart-filter.yazi";
       hide-preview =  "${yazi-plugins}/hide-preview.yazi";
-			compress = pkgs.fetchFromGitHub {
+      jump-to-char =  "${yazi-plugins}/jump-to-char.yazi";
+      git = "${yazi-plugins}/git.yazi";
+ 			compress = pkgs.fetchFromGitHub {
 				owner = "KKV9";
 				repo = "compress.yazi";
 				rev = "60b24af23d1050f1700953a367dd4a2990ee51aa";
@@ -60,6 +62,12 @@ in
 				repo = "yatline-githead.yazi";
 				rev = "a6377a8b190a8563645e79c6d71e7f398e516c52";
 				sha256 = "sha256-SH2BDk8sHZT1L12gJjVbVBipiTwF/KARkuaJfNGdGXg=";
+			};
+			 bookmarks = pkgs.fetchFromGitHub {
+				owner = "dedukun";
+				repo = "bookmarks.yazi";
+				rev = "600f87c02176175f55b0571f79c5ff0b1606362f";
+				sha256 = "sha256-pNRRxS4IQO8y8/WSK9s8mNZHEdl1u1cuPfdULxikl7k=";
 			};
 		};
 
@@ -95,7 +103,7 @@ in
 
   -- Plugins
   require("full-border"):setup({
-  	type = ui.Border.ROUNDED,
+  	type = ui.Border.PLAIN,
   })
 
   require("yatline"):setup({
@@ -222,6 +230,8 @@ in
   	unstaged_color = catppuccin_palette.yellow,
   	untracked_color = catppuccin_palette.pink,
   })
+
+  require("git"):setup()
       '';
         # https://yazi-rs.github.io/docs/configuration/theme
         # https://github.com/sxyazi/yazi/blob/latest/yazi-config/preset/yazi.toml

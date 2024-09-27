@@ -170,8 +170,8 @@
         "$mainMod, Return, exec, kitty"
         "$mainMod ALT, Return, exec, kitty --title float_kitty"
         "$mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'"
-        #"$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] floorp'"
-        "$mainMod SHIFT, B, exec, toggle_waybar"
+        # "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] floorp'"
+        #"$mainMod SHIFT, B, exec, toggle_waybar"
         "$mainMod, Z, movetoworkspacesilent,10" # move to 10 as a way to minimize
         "$mainMod, X, killactive,"
         "$mainMod, C, fullscreen, 1"
@@ -220,16 +220,16 @@
         "$mainMod, E, exec, kitty -e yazi"
         "$mainMod SHIFT, E, exec, dolphin"
         #dropdown term
-        "$mainMod, T, exec, hdrop -f --focus --insensitive -p r -h 60 -w 49 kitty"
+        "$mainMod, T, exec, hdrop -c kitty_kt -f -p r -h 60 -w 49 'kitty --class kitty_kt'"
         #dropdown yazi
-        "$mainMod, R, exec, hdrop -f --focus --insensitive -p r -h 60 -w 49 kitty -e yazi "
+        "$mainMod, R, exec, hdrop -c kitty_yz -f -p r -h 60 -w 49 'kitty --class kitty_yz -e yazi'"
         #dropdown music
-        "$mainMod, M, exec, hdrop -f --focus --insensitive -p r -h 60 -w 49 kitty -e musicfox"
+        "$mainMod, M, exec, hdrop -c kitty_mfx -f -p r -h 60 -w 49 'kitty --class kitty_mfx -e musicfox'"
         #dropdown pass
         "$mainMod, P, exec, hdrop -f -i -p r -h 70 -w 50 keepassxc"
         # "$mainMod, P, exec, keepassxc"
         #dropdown zen-browser
-        "$mainMod, N, exec, hdrop -f -i -p l -h 70 -w 50 zen"
+        "$mainMod, N, exec, hdrop -f -i -p l -h 99 -w 51 zen"
 
         "$mainMod,G,exec,firefox" # browser
 
@@ -389,6 +389,16 @@
         "move 0 0,title:^(Firefox — Sharing Indicator)$"
         "size 700 450,title:^(Volume Control)$"
         "move 40 55%,title:^(Volume Control)$"
+        # waylyrics
+         "float, title:Waylyrics"
+         "pin, title:Waylyrics"
+         "noborder, title:Waylyrics"
+         "noshadow, title:Waylyrics"
+         "noblur, title:Waylyrics"
+         "size 100% 10%, title:Waylyrics"
+         "move 0 90%, title:Waylyrics"
+         "nofocus, title:Waylyrics"
+         "animation slide, title:Waylyrics"
       ];
 
       # windowrulev2

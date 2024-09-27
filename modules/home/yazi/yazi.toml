@@ -30,6 +30,12 @@ document = [
   { run = 'libreoffice "$@"', orphan = true, desc = "libreoffice", for = "linux" },
 ]
 
+pdf = [
+  { run = 'zathura "$@"', orphan = true, desc = "zathura", for = "linux" },
+  { run = 'okular "$@"', orphan = true, desc = "okular", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+  # { run = 'zathura "$@"', orphan = true, desc = "zathura", for = "linux" },
+]
 image = [
     # { run = 'qimgv "$@"', orphan = true, desc = "qimgv", for = "linux" },
     { run = 'qview "$@"', orphan = true, desc = "qview", for = "linux" },
@@ -69,7 +75,7 @@ rules = [
   { mime = "application/x-tar", use = "archive" },
   { mime = "application/x-7z-compressed", use = "archive" },
   { mime = "application/x-rar", use = "archive" },
-  { mime = "application/pdf", use = "document" },
+  { mime = "application/pdf", use = "pdf" },
   { mime = "application/epub+zip", use = "document" },
   { mime = "application/x-mobipocket-ebook", use = "document" },
 

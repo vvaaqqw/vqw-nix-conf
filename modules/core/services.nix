@@ -6,7 +6,6 @@
     gvfs.enable = true;
     udisks2.enable = true;
     fstrim.enable = true;
-    geoclue2.enable = true; # geoclue2 uses
     ##############################################
     flatpak = {
       enable = true;
