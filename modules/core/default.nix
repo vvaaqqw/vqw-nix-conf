@@ -9,6 +9,7 @@
   imports =
     [(import ./bootloader.nix)]
     ++ [(import ./hardware.nix)]
+    ++ [(import ./makedir.nix)]
     ++ [(import ./tlp.nix)]
     ++ [(import ./commonsft.nix)]
     ++ [(import ./xserver.nix)]

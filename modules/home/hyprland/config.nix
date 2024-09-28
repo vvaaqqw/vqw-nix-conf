@@ -28,7 +28,7 @@
         "brightness set 66%"
 
         ## App auto start
-        #"[workspace 10 silent] easyeffects"
+        # "[workspace 10 silent] easyeffects"
         #"[workspace 2 silent] kitty"
       ];
 
@@ -228,10 +228,10 @@
         #dropdown pass
         "$mainMod, P, exec, hdrop -f -i -p r -h 70 -w 50 keepassxc"
         # "$mainMod, P, exec, keepassxc"
-        #dropdown zen-browser
-        "$mainMod, N, exec, hdrop -f -i -p l -h 99 -w 51 zen"
+        #dropdown browser
+        "$mainMod, N, exec, hdrop -f -i -p l -h 90 -w 51 firefox"
 
-        "$mainMod,G,exec,firefox" # browser
+        "$mainMod,G,exec, zen" # zen-browser
 
         "$mainMod, Space, togglefloating,"
         #"$mainMod, Space, centerwindow,"
@@ -387,6 +387,8 @@
         "float,title:^(Volume Control)$"
         "float,title:^(Firefox — Sharing Indicator)$"
         "move 0 0,title:^(Firefox — Sharing Indicator)$"
+        "float,title:^(Zen — Sharing Indicator)$"
+        "move 0 0,title:^(Zen — Sharing Indicator)$"
         "size 700 450,title:^(Volume Control)$"
         "move 40 55%,title:^(Volume Control)$"
         # waylyrics

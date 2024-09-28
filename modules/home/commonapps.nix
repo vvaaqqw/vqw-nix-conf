@@ -15,11 +15,12 @@
     # netflix
     keepassxc
     helvum
-    # (symlinkJoin {
-    #   # wrap obsidian with pandoc for the pandoc plugin dependency
-    #   name = "Obsidian";
-    #   paths = with pkgs; [obsidian pandoc];
-    # })
+    #obsidian because my memories fade away constantly
+    (symlinkJoin {
+      # wrap obsidian with pandoc for the pandoc plugin dependency
+      name = "Obsidian";
+      paths = with pkgs; [obsidian pandoc];
+    })
 
     # plasma packages
     plasma5Packages.dolphin
