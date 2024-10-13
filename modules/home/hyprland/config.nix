@@ -26,10 +26,11 @@
         "hyprlock"
         # workaround for brightness being reset on root rollback (impermanence)
         "brightness set 66%"
+        "flatpak run com.jianguoyun.Nutstore" #nutstore
 
         ## App auto start
         # "[workspace 10 silent] easyeffects"
-        #"[workspace 2 silent] kitty"
+        "[workspace 9 silent] sirikali" #mount gocryptfs
       ];
 
       gestures = {
@@ -86,23 +87,17 @@
       };
 
       dwindle = {
-        no_gaps_when_only = false;
         force_split = 0;
         special_scale_factor = 1.0;
         split_width_multiplier = 1.0;
         use_active_for_splits = true;
         pseudotile = false;
         preserve_split = "yes";
-        # keyword to toggle "monocle" - a.k.a no_gaps_when_only
-        "$kw" = "dwindle:no_gaps_when_only";
-        "$disable" = ''act_opa=$(hyprctl getoption "decoration:active_opacity" -j | jq -r ".float");inact_opa=$(hyprctl getoption "decoration:inactive_opacity" -j | jq -r ".float");hyprctl --batch "keyword decoration:active_opacity 1;keyword decoration:inactive_opacity 1"'';
-        "$enable" = ''hyprctl --batch "keyword decoration:active_opacity $act_opa;keyword decoration:inactive_opacity $inact_opa"'';
       };
 
       master = {
         new_status = "master";
         special_scale_factor = 1;
-        no_gaps_when_only = false;
       };
 
       decoration = {
@@ -444,6 +439,7 @@
         # "move 75 44%,title:^(Volume Control)$"
         "float, class:^(imv)$"
 
+        "workspace 10, class:^(easyeffects)$"
         "workspace 4, class:^(Aseprite)$"
         "workspace 4, class:^(Gimp-2.10)$"
         "workspace 5, class:^(Audacious)$"

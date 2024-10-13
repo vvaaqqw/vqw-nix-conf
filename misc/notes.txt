@@ -1,0 +1,1 @@
+要用flatseal调整nutstore和baidu云盘的权限，目前我是禁用了wayland
