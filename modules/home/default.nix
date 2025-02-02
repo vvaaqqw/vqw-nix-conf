@@ -36,9 +36,9 @@
     ++ [(import ./swaylock.nix)] # lock screen
     #++ [(import ./vscodium.nix)]                  # vscode forck
     ++ [(import ./commonapps.nix)] # vscode forck
-    # ++ [(import ./waybar)] # status bar
-    # ++ [(import ./swaync/swaync.nix)] # notification deamon
-    ++[(import ./hyprpanel.nix)] # all-in-one
+    ++ [(import ./waybar)] # status bar
+    ++ [(import ./swaync/swaync.nix)] # notification deamon
+    #++[(import ./hyprpanel.nix)] # NixOS instructions are pending updates for HyprPanel v2
     ++ [(import ./yazi)]
     ++ [(import ./mime.nix)]
     ++ [(import ./fcitx5)] # fcitx5
