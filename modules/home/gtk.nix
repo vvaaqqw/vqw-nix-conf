@@ -7,7 +7,8 @@
   monolisa-nerd = pkgs.callPackage ../../pkgs/monolisa/monolisa-nerd.nix {inherit monolisa;};
 in {
   home.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["JetBrainsMono" "FiraCode"];})
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-code
     twemoji-color-font
     noto-fonts-emoji
     # monolisa

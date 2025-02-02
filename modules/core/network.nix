@@ -23,6 +23,6 @@
     networkmanagerapplet
     clash-nyanpasu # clash tauri gui
     clash-meta
-    clash-geoip
+    dbip-country-lite # error: 'clash-geoip' has been removed. Consider using 'dbip-country-lite' instead.
   ];
 }

@@ -5,7 +5,6 @@
     ranger
     wpsoffice-cn
     thunderbird
-    yesplaymusic
     easyeffects
     firefox
     # librewolf # opens firefox somehow

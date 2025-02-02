@@ -38,7 +38,6 @@
     ++ [(import ./commonapps.nix)] # vscode forck
     # ++ [(import ./waybar)] # status bar
     # ++ [(import ./swaync/swaync.nix)] # notification deamon
-    # ++[(import ./ags)]
     ++[(import ./hyprpanel.nix)] # all-in-one
     ++ [(import ./yazi)]
     ++ [(import ./mime.nix)]

@@ -10,7 +10,6 @@
     hypr-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
     xremap-flake.url = "github:xremap/nix-flake";
-    #ags.url = "github:Aylur/ags";
     nix-gaming.url = "github:fufexan/nix-gaming";
     zen-browser.url = "github:MarceColl/zen-browser-flake";
     # nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
@@ -25,6 +24,7 @@
     #   spicetify-nix.url = "github:gerg-l/spicetify-nix";
     #   spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
 
     hyprland = {
       type = "git";
