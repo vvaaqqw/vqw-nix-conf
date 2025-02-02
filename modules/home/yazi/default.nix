@@ -7,12 +7,11 @@
 	yazi-plugins = pkgs.fetchFromGitHub {
 		owner = "yazi-rs";
 		repo = "plugins";
-		rev = "c5785059611624e20a37ba573620f30acc28a26a";
-		hash = "sha256-wlSBtabIsEUJhuHmXwgpSnwZp9WaVQFBg6s1XXjubrE=";
+		rev = "02d18be03812415097e83c6a912924560e4cec6d";
+		hash = "sha256-1FZ8wcf2VVp6ZWY27vm1dUU1KAL32WwoYbNA/8RUAog=";
 	};
 in
  {
-  home.file.".config/yazi/plugins/smart-enter.yazi/init.lua".source = ./plugins/smart-enter-init.lua;
   home.file.".config/yazi/plugins/smart-paste.yazi/init.lua".source = ./plugins/smart-paste-init.lua;
   home.file.".config/yazi/plugins/arrow.yazi/init.lua".source = ./plugins/arrow-init.lua;
   # config
@@ -41,6 +40,7 @@ in
 			# chmod = "${yazi-plugins}/chmod.yazi";
 			full-border = "${yazi-plugins}/full-border.yazi";
 			max-preview = "${yazi-plugins}/max-preview.yazi";
+			smart-enter = "${yazi-plugins}/smart-enter.yazi";
       smart-filter =  "${yazi-plugins}/smart-filter.yazi";
       hide-preview =  "${yazi-plugins}/hide-preview.yazi";
       jump-to-char =  "${yazi-plugins}/jump-to-char.yazi";

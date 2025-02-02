@@ -39,11 +39,11 @@ prepend_keymap = [
   { on = [
     "T",
     "h",
-  ], run = "plugin --sync hide-preview", desc = "Hide or show the preview" },
+  ], run = "plugin hide-preview", desc = "Hide or show the preview" },
   { on = [
     "T",
     "m",
-  ], run = "plugin --sync max-preview", desc = "Max or restore the preview" },
+  ], run = "plugin max-preview", desc = "Max or restore the preview" },
   { on = [
     "y",
   ], run = [
@@ -52,13 +52,13 @@ prepend_keymap = [
   ], desc = "yank files and copy to clipboard" },
   { on = [
     "l",
-  ], run =  "plugin --sync smart-enter",desc = "Enter the child directory, or open the file" },
+  ], run =  "plugin smart-enter",desc = "Enter the child directory, or open the file" },
   { on = [
     "<Right>",
-  ], run =  "plugin --sync smart-enter",desc = "Enter the child directory, or open the file" },
+  ], run =  "plugin smart-enter",desc = "Enter the child directory, or open the file" },
   { on = [
     "p",
-  ], run =  "plugin --sync smart-paste",desc = "paste into the hovered dir or CWD" },
+  ], run =  "plugin smart-paste",desc = "paste into the hovered dir or CWD" },
   { on = [
     "m",
   ], run =  "plugin bookmarks --args=save",desc = "Save current position as a bookmark" },
