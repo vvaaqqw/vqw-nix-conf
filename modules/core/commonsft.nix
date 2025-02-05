@@ -7,7 +7,6 @@
     pkgs.thefuck
     pkgs.firejail
     pkgs.kate
-    pkgs.file-roller #gnome archive manager
     pkgs.waylyrics #desktop lyrics
     pkgs.go-musicfox # netease cloud music tui
     pkgs.htop
