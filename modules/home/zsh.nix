@@ -137,18 +137,23 @@
       tree = "eza --icons --tree --group-directories-first";
 
       # Nixos
+      cdnix = "cd /etc/nixos";
+
       nix-switch = "nh os switch";
       nix-update = "nh os switch --update";
-      lockprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nix flake update";
-
-      cdnix = "cd /etc/nixos";
-      nixnlockprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild switch --flake .#ghostrace --option eval-cache false --recreate-lock-file --show-trace";
-      nixprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild switch --flake .#ghostrace --option eval-cache false --show-trace";
       nix-clean = "nh clean all --keep 5";
-      deadnix = "sudo nix run github:astro/deadnix /etc/nixos";
-      deadfix = "sudo nix run github:astro/deadnix -- -e /etc/nixos";
       nix-search = "nh search";
       nix-test = "nh os test";
+      deadnix = "sudo nix run github:astro/deadnix /etc/nixos";
+      deadfix = "sudo nix run github:astro/deadnix -- -e /etc/nixos";
+
+      lockupd = "cd /etc/nixos && sudo nix flake update";
+      lockprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nix flake update";
+      nixupd = "cd /etc/nixos && sudo nixos-rebuild switch --flake .#ghostrace --option eval-cache false --show-trace";
+      nixprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild switch --flake .#ghostrace --option eval-cache false --show-trace";
+      nixnlockupd = "cd /etc/nixos && sudo nixos-rebuild switch --flake .#ghostrace --option eval-cache false --recreate-lock-file --show-trace";
+      nixnlockprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild switch --flake .#ghostrace --option eval-cache false --recreate-lock-file --show-trace";
+
 
       # python
       piv = "python -m venv .venv";
