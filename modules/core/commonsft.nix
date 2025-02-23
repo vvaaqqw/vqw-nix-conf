@@ -15,7 +15,7 @@
     pkgs.gocryptfs
     pkgs.sirikali # gocrpyptfs gui front
     pkgs.cachix
-    pkgs.ungoogled-chromium #chromium  
+    pkgs.ungoogled-chromium#chromium  
     inputs.zen-browser.packages."${system}".specific
     #inputs.nixos-conf-editor.packages.${system}.nixos-conf-editor
     #inputs.nix-software-center.packages.${system}.nix-software-center

@@ -1,6 +1,6 @@
 {...}: {
   home.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
+    NIXOS_OZONE_WL = "1";# You can turn on native Wayland support in all chrome and most electron apps by setting an environment variable: 
     __GL_GSYNC_ALLOWED = "0";
     __GL_VRR_ALLOWED = "0";
     _JAVA_AWT_WM_NONEREPARENTING = "1";

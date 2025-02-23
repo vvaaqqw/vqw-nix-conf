@@ -6,9 +6,9 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
-    enableExtensionUpdateCheck = true;
-    enableUpdateCheck = true;
-    extensions = with pkgs.vscode-extensions;
+    profiles.default.enableExtensionUpdateCheck = true;
+    profiles.default.enableUpdateCheck = true;
+    profiles.default.extensions = with pkgs.vscode-extensions;
       [
         # vscodevim.vim
         #jasew.vscode-helix-emulation # TODO
@@ -126,7 +126,7 @@
         # }
       ];
 
-    keybindings = [
+    profiles.default.keybindings = [
       {
         command = "selectNextSuggestion";
         key = "tab";
@@ -154,7 +154,7 @@
       }
     ];
 
-    userSettings = {
+    profiles.default.userSettings = {
       "workbench.iconTheme" = "material-icon-theme";
       "workbench.colorTheme" = "poimandres";
       # "workbench.colorTheme" = "Catppuccin Macchiato";

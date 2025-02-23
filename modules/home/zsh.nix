@@ -151,8 +151,8 @@
       lockprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nix flake update";
       nixupd = "cd /etc/nixos && sudo nixos-rebuild switch --flake .#ghostrace --option eval-cache false --show-trace";
       nixprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild switch --flake .#ghostrace --option eval-cache false --show-trace";
-      nixnlockupd = "cd /etc/nixos && sudo nixos-rebuild switch --flake .#ghostrace --option eval-cache false --recreate-lock-file --show-trace";
-      nixnlockprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild switch --flake .#ghostrace --option eval-cache false --recreate-lock-file --show-trace";
+      nixnlockupd = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild switch --flake .#ghostrace --option eval-cache false --show-trace";
+      nixnlockprxupd = "cd /etc/nixos && sudo nix flake update && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild switch --flake .#ghostrace --option eval-cache false --show-trace";
 
 
       # python
