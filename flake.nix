@@ -93,7 +93,6 @@
         modules = [
           (import ./hosts/laptop)
           nix-flatpak.nixosModules.nix-flatpak
-          stylix.nixosModules.stylix
           inputs.xremap-flake.nixosModules.default
         ];
         specialArgs = {
