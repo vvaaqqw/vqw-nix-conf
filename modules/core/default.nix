@@ -24,7 +24,6 @@
     ++ [(import ./system.nix)]
     ++ [(import ./user.nix)]
     ++ [(import ./stylix.nix)]
-    ++ [(import ./zellij.nix)]
     ++ [(import ./wayland.nix)]
     ++ [(import ./virtualization.nix)]
     ++ [(import ./rust.nix)];

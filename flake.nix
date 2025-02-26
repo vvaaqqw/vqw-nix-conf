@@ -23,6 +23,7 @@
     };
     #   spicetify-nix.url = "github:gerg-l/spicetify-nix";
     #   spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
+    stylix.url = "github:danth/stylix";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -48,6 +49,7 @@
     home-manager,
     nixos-hardware,
     nix-flatpak,
+    stylix,
     fenix,
     self,
     ...
@@ -91,6 +93,7 @@
         modules = [
           (import ./hosts/laptop)
           nix-flatpak.nixosModules.nix-flatpak
+          stylix.nixosModules.stylix
           inputs.xremap-flake.nixosModules.default
         ];
         specialArgs = {
