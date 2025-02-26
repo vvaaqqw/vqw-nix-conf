@@ -6,7 +6,7 @@
     pkgs.wlprop #xprop for wl
     pkgs.thefuck
     pkgs.firejail
-    pkgs.kate
+    pkgs.kdePackages.kate
     pkgs.waylyrics #desktop lyrics
     pkgs.go-musicfox # netease cloud music tui
     pkgs.htop
