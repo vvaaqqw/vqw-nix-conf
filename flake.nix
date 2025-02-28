@@ -17,10 +17,10 @@
 
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
 
-    # fenix = {
-    #   url = "github:nix-community/fenix";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     #   spicetify-nix.url = "github:gerg-l/spicetify-nix";
     #   spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:danth/stylix";
@@ -50,7 +50,7 @@
     nixos-hardware,
     nix-flatpak,
     stylix,
-    # fenix,
+    fenix,
     self,
     ...
   } @ inputs: let
@@ -65,7 +65,7 @@
       config.allowUnfree = true;
       #overlays = [unstsmallOverlay];
       overlays = [
-        # fenix.overlays.default
+        fenix.overlays.default
         inputs.hyprpanel.overlay
         ];
     };
