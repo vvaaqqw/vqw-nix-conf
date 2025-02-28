@@ -139,20 +139,22 @@
       # Nixos
       cdnix = "cd /etc/nixos";
 
-      nix-switch = "nh os switch";
-      nix-update = "nh os switch --update";
+      nix-init = "nix run github:nix-community/nix-init";
+      nurl = "nix run github:nix-community/nurl";
+      nix-boot = "cd /etc/nixos && nh os boot";
+      nix-update = "cd /etc/nixos && nh os boot --update";
       nix-clean = "nh clean all --keep 5";
       nix-search = "nh search";
-      nix-test = "nh os test";
+      nix-test = "cd /etc/nixos && nh os test";
       deadnix = "sudo nix run github:astro/deadnix /etc/nixos";
       deadfix = "sudo nix run github:astro/deadnix -- -e /etc/nixos";
 
       lockupd = "cd /etc/nixos && sudo nix flake update";
       lockprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nix flake update";
-      nixupd = "cd /etc/nixos && sudo nixos-rebuild switch --flake .#ghostrace --option eval-cache false --show-trace";
-      nixprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild switch --flake .#ghostrace --option eval-cache false --show-trace";
-      nixnlockupd = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild switch --flake .#ghostrace --option eval-cache false --show-trace";
-      nixnlockprxupd = "cd /etc/nixos && sudo nix flake update && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild switch --flake .#ghostrace --option eval-cache false --show-trace";
+      nixupd = "cd /etc/nixos && sudo nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace";
+      nixprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace";
+      nixnlockupd = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace";
+      nixnlockprxupd = "cd /etc/nixos && sudo nix flake update && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace";
 
 
       # python

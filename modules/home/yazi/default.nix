@@ -7,13 +7,13 @@
 	yazi-plugins = pkgs.fetchFromGitHub {
 		owner = "yazi-rs";
 		repo = "plugins";
-		rev = "02d18be03812415097e83c6a912924560e4cec6d";
-		hash = "sha256-1FZ8wcf2VVp6ZWY27vm1dUU1KAL32WwoYbNA/8RUAog=";
+		rev = "5186af7984aa8cb0550358aefe751201d7a6b5a8";
+		hash = "";
 	};
 in
  {
-  home.file.".config/yazi/plugins/smart-paste.yazi/init.lua".source = ./plugins/smart-paste-init.lua;
-  home.file.".config/yazi/plugins/arrow.yazi/init.lua".source = ./plugins/arrow-init.lua;
+  home.file.".config/yazi/plugins/smart-paste.yazi/main.lua".source = ./plugins/smart-paste-init.lua;
+  home.file.".config/yazi/plugins/arrow.yazi/main.lua".source = ./plugins/arrow-init.lua;
   # config
   home.file = {
     ".config/yazi/yazi.toml".source = ./yazi.toml;

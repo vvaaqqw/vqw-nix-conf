@@ -69,7 +69,6 @@
         "col.active_border" = "rgb(98971a) rgb(cc241d) 45deg";
         #"col.active_border" = "rgb(00ffff)";
         "col.inactive_border" = "0x00000000";
-        border_part_of_window = false;
         no_border_on_floating = false;
       };
 
@@ -388,15 +387,15 @@
         "size 700 450,title:^(Volume Control)$"
         "move 40 55%,title:^(Volume Control)$"
         # waylyrics
-         "float, title:Waylyrics"
-         "pin, title:Waylyrics"
-         "noborder, title:Waylyrics"
-         "noshadow, title:Waylyrics"
-         "noblur, title:Waylyrics"
-         "size 100% 10%, title:Waylyrics"
-         "move 0 90%, title:Waylyrics"
-         "nofocus, title:Waylyrics"
-         "animation slide, title:Waylyrics"
+         "float, title:^(Waylyrics)"
+         "pin, title:^(Waylyrics)"
+         "noborder, title:^(Waylyrics)"
+         "noshadow, title:^(Waylyrics)"
+         "noblur, title:^(Waylyrics)"
+         "size 100% 10%, title:^(Waylyrics)"
+         "move 0 90%, title:^(Waylyrics)"
+         "nofocus, title:^(Waylyrics)"
+         "animation slide, title:^(Waylyrics)"
       ];
 
       # windowrulev2

@@ -9,12 +9,12 @@
     pkgs.kdePackages.kate
     pkgs.waylyrics #desktop lyrics
     pkgs.go-musicfox # netease cloud music tui
+    pkgs.netease-cloud-music-gtk # netease cloud music gui
     pkgs.htop
     pkgs.pywal #hyprpanel uses
     pkgs.kdePackages.filelight
     pkgs.gocryptfs
     pkgs.sirikali # gocrpyptfs gui front
-    pkgs.cachix
     pkgs.ungoogled-chromium#chromium  
     inputs.zen-browser.packages."${system}".specific
     #inputs.nixos-conf-editor.packages.${system}.nixos-conf-editor
