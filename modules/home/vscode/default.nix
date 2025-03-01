@@ -21,8 +21,8 @@
         grapecity.gc-excelviewer
         usernamehw.errorlens
         catppuccin.catppuccin-vsc
-        #jdinhlife.gruvbox
-        #jonathanharty.gruvbox-material-icon-theme
+        jdinhlife.gruvbox
+        # jonathanharty.gruvbox-material-icon-theme
         #pmndrs.pmndrs # TODO 
         christian-kohler.path-intellisense
         dbaeumer.vscode-eslint
@@ -148,11 +148,33 @@
         command = "workbench.action.terminal.focusPrevious";
         when = "terminalFocus";
       }
+      {
+        key = "ctrl+e";
+        command = "workbench.view.explorer";
+        when= "editorTextFocus";
+      }
+      {
+        key= "alt+h";
+        command= "workbench.action.focusLeftGroup";
+      }
+      {
+        key= "alt+j";
+        command= "workbench.action.focusBelowGroup";
+      }
+      {
+        "key"= "alt+k";
+        "command"= "workbench.action.focusAboveGroup";
+      }
+      {
+        "key"= "alt+l";
+        "command"= "workbench.action.focusRightGroup";
+      }
     ];
 
     profiles.default.userSettings = {
       "workbench.iconTheme" = "material-icon-theme";
-      "workbench.colorTheme" = "poimandres";
+      "workbench.colorTheme" = "Gruvbox Dark Hard";
+      # "workbench.colorTheme" = "poimandres";
       # "workbench.colorTheme" = "Catppuccin Macchiato";
       # "catppuccin.accentColor" = "mauve";
       "editor.fontFamily" = "JetBrainsMono Nerd Font, Material Design Icons, 'monospace', monospace";
