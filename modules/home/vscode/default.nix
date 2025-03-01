@@ -5,7 +5,8 @@
 }: {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscodium;
+    # package = pkgs.vscodium;
+    package = pkgs.vscode-fhs; #need fhs for codelldb
     profiles.default.enableExtensionUpdateCheck = true;
     profiles.default.enableUpdateCheck = true;
     profiles.default.extensions = with pkgs.vscode-extensions;
@@ -51,7 +52,7 @@
         pkief.material-icon-theme
         rust-lang.rust-analyzer
         fill-labs.dependi # TODO
-        vadimcn.vscode-lldb #error in nixos 
+        vadimcn.vscode-lldb #need fhs 
         tamasfe.even-better-toml
         shardulm94.trailing-spaces
         sumneko.lua
