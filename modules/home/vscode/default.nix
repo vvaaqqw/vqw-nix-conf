@@ -11,9 +11,10 @@
     profiles.default.extensions = with pkgs.vscode-extensions;
       [
         # vscodevim.vim
-        #jasew.vscode-helix-emulation # TODO
+        # jasew.vscode-helix-emulation #TODO
         arrterian.nix-env-selector
         bbenoist.nix
+        supermaven.supermaven #AI
         alefragnani.bookmarks
         waderyan.gitblame
         grapecity.gc-excelviewer
@@ -49,8 +50,8 @@
         oderwat.indent-rainbow
         pkief.material-icon-theme
         rust-lang.rust-analyzer
-        #fill-labs.dependi # TODO
-        # vadimcn.vscode-lldb #error in nixos 
+        fill-labs.dependi # TODO
+        vadimcn.vscode-lldb #error in nixos 
         tamasfe.even-better-toml
         shardulm94.trailing-spaces
         sumneko.lua
@@ -95,23 +96,17 @@
           sha256 = "sha256-Jtxj6LmHgF7UNaXtXxHkq881BbuPtIJGxR7kdhKr0Uo=";
         }
         {
-          name = "dependi";
-          publisher = "fill-labs";
-          version = "0.7.10";
-          sha256 = "sha256-m8W21ztTmEOjDI1KCymeBgQzg9jdgKG9dCFp+U1D818=";
-        }
-        {
           name = "pmndrs";
           publisher = "pmndrs";
           version = "0.3.7";
           sha256 = "sha256-QgQH+BrKPxo7lv128V4l3WCiO3rBM41voqHMGNGrwWo=";
         }
-        {
-          name = "vscode-helix-emulation";
-          publisher = "jasew";
-          version = "0.6.2";
-          sha256 = "sha256-V/7Tu1Ze/CYRmtxwU2+cQLOxLwH7YRYYeHSUGbGTb5I=";
-        }
+        # {
+        #   name = "vscode-helix-emulation";
+        #   publisher = "jasew";
+        #   version = "0.6.2";
+        #   sha256 = "sha256-V/7Tu1Ze/CYRmtxwU2+cQLOxLwH7YRYYeHSUGbGTb5I=";
+        # }
         # {
         #   name = "vscode-typescript-next";
         #   publisher = "ms-vscode";
