@@ -12,18 +12,19 @@
     profiles.default.extensions = with pkgs.vscode-extensions;
       [
         # vscodevim.vim
-        # jasew.vscode-helix-emulation #TODO
+        # jasew.vscode-helix-emulation #
         arrterian.nix-env-selector
         bbenoist.nix
         supermaven.supermaven #AI
         alefragnani.bookmarks
+        # tintinweb.vscode-inline-bookmarks #
         waderyan.gitblame
         grapecity.gc-excelviewer
         usernamehw.errorlens
         catppuccin.catppuccin-vsc
         jdinhlife.gruvbox
         # jonathanharty.gruvbox-material-icon-theme
-        #pmndrs.pmndrs # TODO 
+        #pmndrs.pmndrs #
         christian-kohler.path-intellisense
         dbaeumer.vscode-eslint
         eamodio.gitlens
@@ -51,7 +52,7 @@
         oderwat.indent-rainbow
         pkief.material-icon-theme
         rust-lang.rust-analyzer
-        fill-labs.dependi # TODO
+        fill-labs.dependi
         vadimcn.vscode-lldb #need fhs 
         tamasfe.even-better-toml
         shardulm94.trailing-spaces
@@ -149,26 +150,26 @@
         when = "terminalFocus";
       }
       {
-        key = "ctrl+e";
-        command = "workbench.view.explorer";
+        key = "ctrl+alt+z";
+        command = "bookmarks.toggle";
         when= "editorTextFocus";
       }
-      {
-        key= "alt+h";
-        command= "workbench.action.focusLeftGroup";
-      }
-      {
-        key= "alt+j";
-        command= "workbench.action.focusBelowGroup";
-      }
-      {
-        "key"= "alt+k";
-        "command"= "workbench.action.focusAboveGroup";
-      }
-      {
-        "key"= "alt+l";
-        "command"= "workbench.action.focusRightGroup";
-      }
+      # {
+      #   key= "alt+h";
+      #   command= "workbench.action.focusLeftGroup";
+      # }
+      # {
+      #   key= "alt+j";
+      #   command= "workbench.action.focusBelowGroup";
+      # }
+      # {
+      #   "key"= "alt+k";
+      #   "command"= "workbench.action.focusAboveGroup";
+      # }
+      # {
+      #   "key"= "alt+l";
+      #   "command"= "workbench.action.focusRightGroup";
+      # }
     ];
 
     profiles.default.userSettings = {
