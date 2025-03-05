@@ -38,6 +38,7 @@
       };
     };
     #####################################################
+    ratbagd.enable = true; # ratbagd for logitech mouse
     blueman.enable = true;
     xremap = {
       withWlroots = true;

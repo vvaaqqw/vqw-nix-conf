@@ -10,6 +10,7 @@
     pkgs.waylyrics #desktop lyrics
     pkgs.go-musicfox # netease cloud music tui
     pkgs.netease-cloud-music-gtk # netease cloud music gui
+    pkgs.piper # front end for ratbagd
     pkgs.htop
     pkgs.pywal #hyprpanel uses
     pkgs.kdePackages.filelight
