@@ -2,6 +2,8 @@
   environment.systemPackages = with pkgs; [
     pkgs.cachix
     pkgs.bluez
+    pkgs.unar
+    pkgs.p7zip-rar
     pkgs.ripdrag #dragndrop
     pkgs.wlprop #xprop for wl
     pkgs.thefuck
