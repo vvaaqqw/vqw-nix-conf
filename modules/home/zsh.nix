@@ -149,12 +149,12 @@
       deadnix = "sudo nix run github:astro/deadnix /etc/nixos";
       deadfix = "sudo nix run github:astro/deadnix -- -e /etc/nixos";
 
-      lockupd = "cd /etc/nixos && sudo nix flake update";
-      lockprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nix flake update";
-      nixupd = "cd /etc/nixos && sudo nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace";
-      nixprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace";
-      nixnlockupd = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace";
-      nixnlockprxupd = "cd /etc/nixos && sudo nix flake update && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace";
+      lockupd = "cd /etc/nixos && sudo nix flake update && notify-send '❄ lock upd finished🫠'";
+      lockprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nix flake update && notify-send '❄ lock upd finished🫠'";
+      nixupd = "cd /etc/nixos && sudo nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace && notify-send '❄ upd finished🫠'";
+      nixprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace && notify-send '❄ upd finished🫠'";
+      nixnlockupd = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace && notify-send '❄ upd finished🫠'";
+      nixnlockprxupd = "cd /etc/nixos && sudo nix flake update && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace && notify-send '❄ upd finished🫠'";
 
 
       # python

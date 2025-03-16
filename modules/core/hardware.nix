@@ -8,5 +8,6 @@
       ];
     };
   };
-  hardware.enableRedistributableFirmware = true;
+  #hardware.enableRedistributableFirmware = true;
+  hardware.enableAllFirmware = true;
 }

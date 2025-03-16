@@ -10,6 +10,7 @@
   # Install necessary packages
   environment.systemPackages = with pkgs; [
     distrobox # with podman
+    boxbuddy # distrobox gui
     virt-manager
     virt-viewer
     spice

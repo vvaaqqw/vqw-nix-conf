@@ -7,6 +7,7 @@
     thunderbird
     easyeffects
     firefox
+    brave
     # librewolf # opens firefox somehow
     # cinnamon.nemo
     qbittorrent
