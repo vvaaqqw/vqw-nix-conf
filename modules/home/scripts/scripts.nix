@@ -20,6 +20,7 @@
   show-keybinds = pkgs.writeScriptBin "show-keybinds" (builtins.readFile ./scripts/keybinds.sh);
 
   vm-start = pkgs.writeScriptBin "vm-start" (builtins.readFile ./scripts/vm-start.sh);
+  podman-host = pkgs.writeScriptBin "podman-host" (builtins.readFile ./scripts/podman-host.sh);
 
   ascii = pkgs.writeScriptBin "ascii" (builtins.readFile ./scripts/ascii.sh);
 
@@ -50,6 +51,7 @@ in {
     show-keybinds
 
     vm-start
+    podman-host
 
     ascii
 
