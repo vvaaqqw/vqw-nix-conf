@@ -1,7 +1,7 @@
 {
   config,
   pkgs,
-  user,
+  username,
   ...
 }: {
   programs.vscode = {
@@ -213,7 +213,7 @@
       "security.workspace.trust.enabled" = false;
       "explorer.confirmDelete" = false;
       "breadcrumbs.enabled" = false;
-      "dev.containers.dockerPath"= "/etc/profiles/per-user/${user}/bin/podman-host"; #https://github.com/89luca89/distrobox/blob/main/docs/posts/integrate_vscode_distrobox.md
+      "dev.containers.dockerPath"= "/etc/profiles/per-user/${username}/bin/podman-host"; #https://github.com/89luca89/distrobox/blob/main/docs/posts/integrate_vscode_distrobox.md
       # "vim.camelCaseMotion.enable" = true;
       # "vim.debug.silent" = true;
       # "vim.easymotion" = true;
