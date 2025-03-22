@@ -24,6 +24,7 @@
     ++ [(import ./system.nix)]
     ++ [(import ./user.nix)]
     ++ [(import ./wayland.nix)]
+    ++ [(import ./steam.nix)]
     ++ [(import ./virtualization.nix)]
     ++ [(import ./rust.nix)];
 }
