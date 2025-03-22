@@ -19,6 +19,7 @@
     #    ++ [(import ./floorp/floorp.nix)]             # firefox based browser
     ++ [(import ./fzf.nix)] # fuzzy finder
     ++ [(import ./gaming.nix)] # packages related to gaming
+    ++ [(import ./steam.nix)] # packages related to gaming
     ++ [(import ./git.nix)] # version control
     ++ [(import ./gnome.nix)] # gnome apps
     ++ [(import ./gtk.nix)] # gtk theme
