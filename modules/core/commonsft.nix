@@ -14,12 +14,13 @@
     pkgs.netease-cloud-music-gtk # netease cloud music gui
     pkgs.piper # front end for ratbagd
     pkgs.htop
-    pkgs.pywal #hyprpanel uses
+    #pkgs.pywal #hyprpanel uses
     pkgs.kdePackages.filelight
     pkgs.gocryptfs
     pkgs.sirikali # gocrpyptfs gui front
     pkgs.ungoogled-chromium#chromium  
     inputs.zen-browser.packages."${system}".specific
+    pkgs.vesktop#discord
     #inputs.nixos-conf-editor.packages.${system}.nixos-conf-editor
     #inputs.nix-software-center.packages.${system}.nix-software-center
   ];
