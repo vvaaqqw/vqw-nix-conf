@@ -28,8 +28,9 @@
         "flatpak run com.jianguoyun.Nutstore" #nutstore
 
         ## App auto start
-        # "[workspace 10 silent] easyeffects"
-        "[workspace 9 silent] sirikali" #mount gocryptfs
+        "[workspace 10 silent] easyeffects"
+        #"[workspace 9 silent] sirikali" #mount gocryptfs
+        "[workspace 6 silent] vesktop" #discord
       ];
 
       gestures = {
