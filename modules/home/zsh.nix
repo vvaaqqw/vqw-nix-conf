@@ -140,7 +140,7 @@
       cdnix = "cd /etc/nixos";
 
       nix-init = "nix run github:nix-community/nix-init";
-      nurl = "nix run github:nix-community/nurl";
+      #nurl = "nix run github:nix-community/nurl";
       nix-boot = "cd /etc/nixos && nh os boot";
       nix-update = "cd /etc/nixos && nh os boot --update";
       nix-clean = "nh clean all --keep 5";

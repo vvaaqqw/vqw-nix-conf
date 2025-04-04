@@ -1,6 +1,7 @@
 {pkgs, inputs, ...}: {
   environment.systemPackages = with pkgs; [
     pkgs.cachix
+    pkgs.nurl
     pkgs.bluez
     pkgs.unar
     pkgs.p7zip-rar
