@@ -30,7 +30,7 @@
         ## App auto start
         "[workspace 10 silent] easyeffects"
         #"[workspace 9 silent] sirikali" #mount gocryptfs
-        # "[workspace 6 silent] vesktop" #discord
+        "[workspace 6 silent] sleep 6 && vesktop" #discord
       ];
 
       gestures = {
