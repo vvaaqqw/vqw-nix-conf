@@ -361,46 +361,6 @@
 
       # windowrule
       windowrule = [
-        "float,qView"
-        "center,qView"
-        # "size 1200 725,qView"
-        "float,imv"
-        "center,imv"
-        # "size 1200 725,imv"
-        "float,mpv"
-        "center,mpv"
-        "tile,Aseprite"
-        # "size 1200 725,mpv"
-        "float,title:^(float_kitty)$"
-        "center,title:^(float_kitty)$"
-        "size 950 600,title:^(float_kitty)$"
-        "float,audacious"
-        "pin,rofi"
-        "tile, neovide"
-        "idleinhibit focus,mpv"
-        "float,udiskie"
-        "float,title:^(Transmission)$"
-        "float,title:^(Volume Control)$"
-        "float,title:^(Firefox — Sharing Indicator)$"
-        "move 0 0,title:^(Firefox — Sharing Indicator)$"
-        "float,title:^(Zen — Sharing Indicator)$"
-        "move 0 0,title:^(Zen — Sharing Indicator)$"
-        "size 700 450,title:^(Volume Control)$"
-        "move 40 55%,title:^(Volume Control)$"
-        # waylyrics
-         "float, title:^(Waylyrics)"
-         "pin, title:^(Waylyrics)"
-         "noborder, title:^(Waylyrics)"
-         "noshadow, title:^(Waylyrics)"
-         "noblur, title:^(Waylyrics)"
-         "size 100% 10%, title:^(Waylyrics)"
-         "move 0 90%, title:^(Waylyrics)"
-         "nofocus, title:^(Waylyrics)"
-         "animation slide, title:^(Waylyrics)"
-      ];
-
-      # windowrulev2
-      windowrulev2 = [
         "float, title:^(Picture-in-Picture)$"
         "opacity 1.0 override 1.0 override, title:^(Picture-in-Picture)$"
         "pin, title:^(Picture-in-Picture)$"
