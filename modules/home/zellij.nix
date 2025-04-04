@@ -6,5 +6,8 @@
     enable = true;
     enableZshIntegration = true;
     enableBashIntegration = true;
+    settings = {
+        theme = "gruvbox-dark";
+        };
   };
 }
