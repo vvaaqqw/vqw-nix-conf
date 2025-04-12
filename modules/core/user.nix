@@ -9,7 +9,8 @@
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
-    backupFileExtension = "hmbackup";
+    #backupFileExtension = "hmbackup";
+    backupFileExtension = "hmbackup-${builtins.substring 0 8 (builtins.toString builtins.currentTime)}";
     extraSpecialArgs = {inherit inputs username host;};
     users.${username} = {
       imports =
