@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     pkgs.cachix
     pkgs.nurl
+    pkgs.nix-search-tv # search nix packages
     pkgs.bluez
     pkgs.unar
     pkgs.p7zip-rar

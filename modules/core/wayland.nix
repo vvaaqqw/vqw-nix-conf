@@ -13,6 +13,7 @@
     # flatpak needs it
     # yazi needs it
       pkgs.xdg-desktop-portal-gtk #waybar failed to start when using this
+      pkgs.xdg-desktop-portal-hyprland
     ];
   };
 

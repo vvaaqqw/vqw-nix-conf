@@ -141,10 +141,11 @@
 
       nix-init = "nix run github:nix-community/nix-init";
       #nurl = "nix run github:nix-community/nurl";
-      nix-boot = "cd /etc/nixos && nh os boot";
-      nix-update = "cd /etc/nixos && nh os boot --update";
+      nix-boot = "cd /etc/nixos && nh os boot && notify-send '❄ upd finished🫠'";
+      nix-update = "cd /etc/nixos && nh os boot --update && notify-send '❄ upd finished🫠'";
       nix-clean = "nh clean all --keep 5";
       nix-search = "nh search";
+      ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
       nix-test = "cd /etc/nixos && nh os test";
       deadnix = "sudo nix run github:astro/deadnix /etc/nixos";
       deadfix = "sudo nix run github:astro/deadnix -- -e /etc/nixos";
