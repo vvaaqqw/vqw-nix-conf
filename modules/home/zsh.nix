@@ -138,6 +138,9 @@
 
       # Nixos
       cdnix = "cd /etc/nixos";
+      nix-listgen = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";#list generations
+      nix-delgen = "sudo nix-env -p /nix/var/nix/profiles/system --delete-generations"; #后面接想删除的世代标号
+      nix-rollback = "sudo nixos-rebuild switch --rollback";
 
       nix-init = "nix run github:nix-community/nix-init";
       #nurl = "nix run github:nix-community/nurl";
