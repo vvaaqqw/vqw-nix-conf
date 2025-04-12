@@ -4,7 +4,6 @@
   ...
 }: {
   programs.hyprland.enable = true;
-  programs.hyprland.withUWSM = true; #https://search.nixos.org/options?channel=unstable&show=programs.hyprland.withUWSM&
   programs.hyprland.portalPackage=inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   xdg.portal = {
     enable = true;
