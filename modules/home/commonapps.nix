@@ -5,6 +5,7 @@
     ranger
     wpsoffice-cn
     thunderbird
+    evolution
     easyeffects
     firefox
     brave
