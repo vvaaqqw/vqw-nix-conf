@@ -1,4 +1,5 @@
 {
+  self,
   pkgs,
   inputs,
   username,
@@ -10,7 +11,7 @@
     useUserPackages = true;
     useGlobalPkgs = true;
     #backupFileExtension = "hmbackup";
-    backupFileExtension = "hmbackup-${builtins.substring 0 8 (builtins.toString builtins.currentTime)}";
+    backupFileExtension = "hmbackup-${builtins.substring 0 8 (builtins.toString self.lastModifiedDate)}";
     extraSpecialArgs = {inherit inputs username host;};
     users.${username} = {
       imports =

@@ -8,7 +8,7 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    xdgOpenUsePortal = true;
+    #xdgOpenUsePortal = true; # I need to provide a portal
     extraPortals = [
     # flatpak needs it
     # yazi needs it

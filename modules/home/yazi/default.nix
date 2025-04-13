@@ -5,12 +5,12 @@
   ...
 }:let
 	yazi-plugins = pkgs.fetchFromGitHub {
-		owner = "yazi-rs";
-		repo = "plugins";
-		rev = "5186af7984aa8cb0550358aefe751201d7a6b5a8";
-		hash = "sha256-Cw5iMljJJkxOzAGjWGIlCa7gnItvBln60laFMf6PSPM=";
-	};
-in
+  owner = "yazi-rs";
+  repo = "plugins";
+  rev = "b12a9ab085a8c2fe2b921e1547ee667b714185f9";
+  hash = "sha256-LWN0riaUazQl3llTNNUMktG+7GLAHaG/IxNj1gFhDRE=";
+  };
+  in
  {
   home.file.".config/yazi/plugins/smart-paste.yazi/main.lua".source = ./plugins/smart-paste-init.lua;
   home.file.".config/yazi/plugins/arrow.yazi/main.lua".source = ./plugins/arrow-init.lua;
@@ -45,18 +45,11 @@ in
       hide-preview =  "${yazi-plugins}/hide-preview.yazi";
       jump-to-char =  "${yazi-plugins}/jump-to-char.yazi";
       git = "${yazi-plugins}/git.yazi";
- 			compress = pkgs.fetchFromGitHub {
-			  owner = "KKV9";
-			  repo = "compress.yazi";
-			  rev = "60b24af23d1050f1700953a367dd4a2990ee51aa";
-			  hash = "sha256-Yf5R3H8t6cJBMan8FSpK3BDSG5UnGlypKSMOi0ZFqzE=";
-			};
 			 bookmarks = pkgs.fetchFromGitHub {
-				owner = "dedukun";
-				repo = "bookmarks.yazi";
-				rev = "95b2c586f4a40da8b6a079ec9256058ad0292e47";
-				sha256 = "sha256-cNgcTa8s+tTqAvF10fmd+o5PBludiidRua/dXArquZI=";
-			};
+        owner = "dedukun";
+        repo = "bookmarks.yazi";
+        rev = "95b2c586f4a40da8b6a079ec9256058ad0292e47";
+        hash = "sha256-cNgcTa8s+tTqAvF10fmd+o5PBludiidRua/dXArquZI=";
 		};
 
 		initLua = ''
