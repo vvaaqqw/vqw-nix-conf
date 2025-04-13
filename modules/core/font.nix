@@ -15,6 +15,14 @@
       mplus-outline-fonts.githubRelease
       dina-font
       proggyfonts
+      # used in some of my latex file
+      ##################################
+      dejavu_fonts
+      liberation_ttf
+      source-han-serif
+      wqy_zenhei
+      noto-fonts-cjk-sans
+      ##################################
     ];
   };
 }
