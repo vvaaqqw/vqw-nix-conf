@@ -31,7 +31,7 @@
         "[workspace 10 silent] easyeffects"
         #"[workspace 9 silent] sirikali" #mount gocryptfs
         "[workspace 4 silent] sleep 1 && thunderbird" #email
-        # "[workspace 6 silent] sleep 6 && vesktop" #discord
+        "[workspace 6 silent] sleep 6 && vesktop" #discord
       ];
 
       gestures = {
