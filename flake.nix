@@ -23,7 +23,6 @@
     };
     #   spicetify-nix.url = "github:gerg-l/spicetify-nix";
     #   spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
-    stylix.url = "github:danth/stylix";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -31,6 +30,11 @@
       type = "git";
       url = "https://github.com/hyprwm/Hyprland";
       submodules = true;
+    };
+
+    hyprland-easymotion = {
+    url = "github:zakk4223/hyprland-easymotion";
+    inputs.hyprland.follows = "hyprland";
     };
 
     hyprland-plugins = {
@@ -49,7 +53,6 @@
     home-manager,
     nixos-hardware,
     nix-flatpak,
-    stylix,
     fenix,
     self,
     ...

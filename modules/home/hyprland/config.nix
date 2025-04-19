@@ -2,7 +2,6 @@
 {
   wayland.windowManager.hyprland = {
     settings = {
-      # TODO: easyfocus
       # autostart
       exec-once = [
         "systemctl --user import-environment &"
@@ -228,6 +227,7 @@
         #dropdown browser
         "$mainMod, N, exec, hdrop -f -i -p l -h 90 -w 51 firefox"
 
+        "$mainMod,F,easymotion, action:hyprctl dispatch focuswindow address:{}" # easymotion plugin
         "$mainMod,G,exec, zen" # zen-browser
 
         "$mainMod, Space, togglefloating,"
