@@ -210,6 +210,7 @@
       "workbench.editor.tabCloseButton" = "left";
       "workbench.startupEditor" = "none";
       "workbench.list.smoothScrolling" = true;
+      "workbench.editor.tabActionLocation"= "left";
       "security.workspace.trust.enabled" = false;
       "explorer.confirmDelete" = false;
       "breadcrumbs.enabled" = false;
