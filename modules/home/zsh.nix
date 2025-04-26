@@ -116,6 +116,7 @@
       fuck = "thefuck";
       cdt = "cd ~/.local/share/Trash/files";
       cdd = "cd ~/Downloads";
+      cdv = "cd ~/VI";
       cdD = "cd ~/Desktop";
       c = "clear";
       cd = "z";
@@ -134,6 +135,8 @@
       l = "eza --icons  -a --group-directories-first -1"; #EZA_ICON_SPACING=2
       ll = "eza --icons  -a --group-directories-first -1 --no-user --long";
       tree = "eza --icons --tree --group-directories-first";
+      # gocryptfs
+      gcvi = "gocryptfs ~/Nutstore\ Files/VI ~/VI";
 
       # Nixos
       cdnix = "cd /etc/nixos";
