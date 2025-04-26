@@ -136,7 +136,7 @@
       ll = "eza --icons  -a --group-directories-first -1 --no-user --long";
       tree = "eza --icons --tree --group-directories-first";
       # gocryptfs
-      gcvi = "gocryptfs ~/Nutstore\ Files/VI ~/VI";
+      gcvi = "gocryptfs ~/Nutstore\\ Files/VI ~/VI";
 
       # Nixos
       cdnix = "cd /etc/nixos";
