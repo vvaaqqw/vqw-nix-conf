@@ -35,10 +35,10 @@
       submodules = true;
     };
 
-    hyprland-easymotion = {
-    url = "github:zakk4223/hyprland-easymotion";
-    inputs.hyprland.follows = "hyprland";
-    };
+    # hyprland-easymotion = {
+    # url = "github:zakk4223/hyprland-easymotion";
+    # inputs.hyprland.follows = "hyprland";
+    # };
 
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";

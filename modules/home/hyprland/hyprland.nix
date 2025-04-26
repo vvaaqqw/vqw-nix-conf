@@ -24,7 +24,7 @@
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     plugins = [
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
-      inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
+      # inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
     ];
     xwayland = {
       enable = true;
