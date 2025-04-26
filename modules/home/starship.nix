@@ -12,7 +12,7 @@
 
     settings = {
       format = lib.concatStrings [
-        "[░▒▓](color_orange)"
+        "[▓](color_orange)"
         "$os"
         "[](bg:color_yellow fg:color_orange)"
         "$directory"
