@@ -20,10 +20,9 @@
     #pkgs.pywal #hyprpanel uses
     pkgs.kdePackages.filelight
     pkgs.gocryptfs
-    pkgs.sirikali # gocrpyptfs gui front
-    pkgs.ungoogled-chromium#chromium  
-    inputs.zen-browser.packages."${system}".specific
+    # pkgs.sirikali # gocrpyptfs gui front
     pkgs.vesktop#discord
+    pkgs.ungoogled-chromium#chromium  
     #inputs.nixos-conf-editor.packages.${system}.nixos-conf-editor
     #inputs.nix-software-center.packages.${system}.nix-software-center
   ];

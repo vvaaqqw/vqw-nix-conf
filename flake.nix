@@ -11,7 +11,10 @@
     hyprpicker.url = "github:hyprwm/hyprpicker";
     xremap-flake.url = "github:xremap/nix-flake";
     nix-gaming.url = "github:fufexan/nix-gaming";
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
+    zen-browser = {
+        url = "github:0xc000022070/zen-browser-flake";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
     # nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
     # nix-software-center.url = "github:snowfallorg/nix-software-center";
 

@@ -44,5 +44,6 @@
     ++ [(import ./fcitx5)] # fcitx5
     ++ [(import ./vscode)] # vscode
     ++ [(import ./zsh.nix)] # shell
-    ++ [(import ./zellij.nix)]; 
+    ++ [(import ./zellij.nix)] 
+    ++ [(import ./zen-browser.nix)]; 
 }
