@@ -146,8 +146,8 @@
 
       nix-init = "nix run github:nix-community/nix-init";
       #nurl = "nix run github:nix-community/nurl";
-      nix-boot = "cd /etc/nixos && nh os boot && notify-send '❄ upd finished🫠'";
-      nix-upd = "cd /etc/nixos && nh os boot --update && notify-send '❄ upd finished🫠'";
+      nix-boot = "cd /etc/nixos && nh os boot /etc/nixos && notify-send '❄ upd finished🫠'";
+      nix-upd = "cd /etc/nixos && sudo nix flake update && nh os boot /etc/nixos && notify-send '❄ upd finished🫠'";
       nix-clean = "nh clean all --keep 5";
       nix-search = "nh search";
       ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";

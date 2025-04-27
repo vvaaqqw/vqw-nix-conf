@@ -43,6 +43,7 @@
     ++ [(import ./mime.nix)]
     ++ [(import ./fcitx5)] # fcitx5
     ++ [(import ./vscode)] # vscode
+    ++ [(import ./direnv.nix)] # direnv
     ++ [(import ./zsh.nix)] # shell
     ++ [(import ./zellij.nix)] 
     ++ [(import ./zen-browser.nix)]; 
