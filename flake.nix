@@ -62,6 +62,7 @@
   } @ inputs: let
     username = "spectre";
     system = "x86_64-linux";
+    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
     unstable-small-pkgs = import inputs.nixos-unstable-small {inherit system;};
     unstsmallOverlay = final: prev: {
       inherit (unstable-small-pkgs) xdg-desktop-portal-hyprland swaylock-effects;
