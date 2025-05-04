@@ -62,7 +62,7 @@
   } @ inputs: let
     username = "spectre";
     system = "x86_64-linux";
-    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style; #https://github.com/NixOS/nixfmt
     unstable-small-pkgs = import inputs.nixos-unstable-small {inherit system;};
     unstsmallOverlay = final: prev: {
       inherit (unstable-small-pkgs) xdg-desktop-portal-hyprland swaylock-effects;
@@ -87,12 +87,16 @@
     lib = mkLib inputs.nixpkgs;
   in {
     nixosConfigurations = {
-      desktop = nixpkgs.lib.nixosSystem {
+      cosmicrace = nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = [(import ./hosts/desktop)];
+        modules = [
+          (import ./hosts/desktop)
+          nix-flatpak.nixosModules.nix-flatpak
+          inputs.xremap-flake.nixosModules.default
+          ];
         specialArgs = {
-          host = "desktop";
-          inherit self inputs username;
+          host = "cosmicrace";
+          inherit self inputs pkgs lib username;
         };
       };
       ghostrace = nixpkgs.lib.nixosSystem {

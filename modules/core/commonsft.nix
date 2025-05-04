@@ -3,7 +3,7 @@
     pkgs.cachix
     pkgs.nurl
     pkgs.nix-search-tv # search nix packages
-    pkgs.nix-update # update rev n hash
+    # pkgs.nix-update # update rev n hash, could also do it with nvfetcher
     pkgs.bluez
     pkgs.unar
     pkgs.p7zip-rar
