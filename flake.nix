@@ -62,7 +62,7 @@
   } @ inputs: let
     username = "spectre";
     system = "x86_64-linux";
-    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style; #https://github.com/NixOS/nixfmt 用来 nix fmt
+    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style; #https://github.com/NixOS/nixfmt 用来 nix fmt, could also use "alejandra ." to do the fmt
     unstable-small-pkgs = import inputs.nixos-unstable-small {inherit system;};
     unstsmallOverlay = final: prev: {
       inherit (unstable-small-pkgs) xdg-desktop-portal-hyprland swaylock-effects;
@@ -102,7 +102,7 @@
       ghostrace = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          (import ./hosts/laptop)
+          (import ./hosts/ghostrace)
           nix-flatpak.nixosModules.nix-flatpak
           inputs.xremap-flake.nixosModules.default
         ];
