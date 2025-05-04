@@ -1,5 +1,4 @@
-{pkgs, ...}:
-{
+{pkgs, ...}: {
   wayland.windowManager.hyprland = {
     settings = {
       # autostart
@@ -199,8 +198,8 @@
         "$mainMod SHIFT, K, movewindoworgroup, u" # move window above
         "$mainMod SHIFT, J, movewindoworgroup, d" # move window below
 
-        "$mainMod ALT, H, changegroupactive, b" # focus with group 
-        "$mainMod ALT, L, changegroupactive, f" #  focus with group 
+        "$mainMod ALT, H, changegroupactive, b" # focus with group
+        "$mainMod ALT, L, changegroupactive, f" #  focus with group
 
         "$mainMod ALT, 1, changegroupactive, 1" #
         "$mainMod ALT, 2, changegroupactive, 2" #
@@ -435,47 +434,47 @@
         "maxsize 1 1,class:^(xwaylandvideobridge)$"
         "noblur,class:^(xwaylandvideobridge)$"
 
-          # 浮动窗口规则
-         "float,class:^(qView)$"
-         "center,class:^(qView)$"
-         "float,class:^(imv)$"
-         "center,class:^(imv)$"
-         "float,class:^(mpv)$"
-         "center,class:^(mpv)$"
-         "tile,class:^(Aseprite)$"
-         "float,title:^(float_kitty)$"
-         "center,title:^(float_kitty)$"
-         "size 950 600,title:^(float_kitty)$"
-         "float,class:^(audacious)$"
-         "pin,class:^(rofi)$"
-         "tile,class:^(neovide)$"
-         "idleinhibit focus,class:^(mpv)$"
-         "float,class:^(udiskie)$"
-         # 窗口定位规
-         "float,title:^(Transmission)$"
-         "float,title:^(Volume Control)$"
-         "size 700 450,title:^(Volume Control)$"
-         "move 40 55%,title:^(Volume Control)$"
-         "float,title:^(Firefox — Sharing Indicator)$"
-         "move 0 0,title:^(Firefox — Sharing Indicator)$"
-         "float,title:^(Zen — Sharing Indicator)$"
-         "move 0 0,title:^(Zen — Sharing Indicator)$"
-         # Waylyrics歌词悬浮
-         "float,title:^(Waylyrics)$"
-         "pin,title:^(Waylyrics)$"
-         "noborder,title:^(Waylyrics)$"
-         "noshadow,title:^(Waylyrics)$"
-         "noblur,title:^(Waylyrics)$"
-         "size 100% 10%,title:^(Waylyrics)$"
-         "move 0 90%,title:^(Waylyrics)$"
-         "nofocus,title:^(Waylyrics)$"
-         "animation slide,title:^(Waylyrics)$"
-         # 其他增强规
-         "opacity 1.0 override 1.0 override,class:^(Aseprite)$"
-         "opacity 1.0 override 1.0 override,class:^(Unity)$"
-         "opacity 1.0 override 1.0 override,class:^(floorp)$"
-         "opacity 1.0 override 1.0 override,class:^(evince)$"
-         "noshadow,floating:0"
+        # 浮动窗口规则
+        "float,class:^(qView)$"
+        "center,class:^(qView)$"
+        "float,class:^(imv)$"
+        "center,class:^(imv)$"
+        "float,class:^(mpv)$"
+        "center,class:^(mpv)$"
+        "tile,class:^(Aseprite)$"
+        "float,title:^(float_kitty)$"
+        "center,title:^(float_kitty)$"
+        "size 950 600,title:^(float_kitty)$"
+        "float,class:^(audacious)$"
+        "pin,class:^(rofi)$"
+        "tile,class:^(neovide)$"
+        "idleinhibit focus,class:^(mpv)$"
+        "float,class:^(udiskie)$"
+        # 窗口定位规
+        "float,title:^(Transmission)$"
+        "float,title:^(Volume Control)$"
+        "size 700 450,title:^(Volume Control)$"
+        "move 40 55%,title:^(Volume Control)$"
+        "float,title:^(Firefox — Sharing Indicator)$"
+        "move 0 0,title:^(Firefox — Sharing Indicator)$"
+        "float,title:^(Zen — Sharing Indicator)$"
+        "move 0 0,title:^(Zen — Sharing Indicator)$"
+        # Waylyrics歌词悬浮
+        "float,title:^(Waylyrics)$"
+        "pin,title:^(Waylyrics)$"
+        "noborder,title:^(Waylyrics)$"
+        "noshadow,title:^(Waylyrics)$"
+        "noblur,title:^(Waylyrics)$"
+        "size 100% 10%,title:^(Waylyrics)$"
+        "move 0 90%,title:^(Waylyrics)$"
+        "nofocus,title:^(Waylyrics)$"
+        "animation slide,title:^(Waylyrics)$"
+        # 其他增强规
+        "opacity 1.0 override 1.0 override,class:^(Aseprite)$"
+        "opacity 1.0 override 1.0 override,class:^(Unity)$"
+        "opacity 1.0 override 1.0 override,class:^(floorp)$"
+        "opacity 1.0 override 1.0 override,class:^(evince)$"
+        "noshadow,floating:0"
       ];
     };
 

@@ -140,7 +140,7 @@
 
       # Nixos
       cdnix = "cd /etc/nixos";
-      nix-listgen = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system";#list generations
+      nix-listgen = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system"; #list generations
       nix-delgen = "sudo nix-env -p /nix/var/nix/profiles/system --delete-generations"; #后面接想删除的世代标号
       nix-rollback = "sudo nixos-rebuild switch --rollback";
 
@@ -161,7 +161,6 @@
       nixprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace && notify-send '❄ upd finished🫠'";
       nixnlockupd = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace && notify-send '❄ upd finished🫠'";
       nixnlockprxupd = "cd /etc/nixos && sudo nix flake update && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace && notify-send '❄ upd finished🫠'";
-
 
       # python
       piv = "python -m venv .venv";

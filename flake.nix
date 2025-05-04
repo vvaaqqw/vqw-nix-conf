@@ -12,8 +12,8 @@
     xremap-flake.url = "github:xremap/nix-flake";
     nix-gaming.url = "github:fufexan/nix-gaming";
     zen-browser = {
-        url = "github:0xc000022070/zen-browser-flake";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     # nixos-conf-editor.url = "github:snowfallorg/nixos-conf-editor";
     # nix-software-center.url = "github:snowfallorg/nix-software-center";
@@ -62,7 +62,7 @@
   } @ inputs: let
     username = "spectre";
     system = "x86_64-linux";
-    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style; #https://github.com/NixOS/nixfmt
+    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style; #https://github.com/NixOS/nixfmt 用来 nix fmt
     unstable-small-pkgs = import inputs.nixos-unstable-small {inherit system;};
     unstsmallOverlay = final: prev: {
       inherit (unstable-small-pkgs) xdg-desktop-portal-hyprland swaylock-effects;
@@ -74,7 +74,7 @@
       overlays = [
         fenix.overlays.default
         inputs.hyprpanel.overlay
-        ];
+      ];
     };
 
     # lib = nixpkgs.lib;
@@ -90,10 +90,10 @@
       cosmicrace = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          (import ./hosts/desktop)
+          (import ./hosts/cosmicrace)
           nix-flatpak.nixosModules.nix-flatpak
           inputs.xremap-flake.nixosModules.default
-          ];
+        ];
         specialArgs = {
           host = "cosmicrace";
           inherit self inputs pkgs lib username;
@@ -119,6 +119,16 @@
           inherit self inputs username;
         };
       };
+    };
+
+    # 用来nix develop，在一台新电脑上配置的时候用得到
+    devShells.${system}.default = pkgs.mkShell {
+      packages = with pkgs; [
+        just
+        age
+        sops
+        nvfetcher
+      ];
     };
   };
 }

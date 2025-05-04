@@ -1,4 +1,8 @@
-{pkgs, inputs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     pkgs.cachix
     pkgs.nurl
@@ -21,8 +25,8 @@
     pkgs.kdePackages.filelight
     pkgs.gocryptfs
     # pkgs.sirikali # gocrpyptfs gui front
-    pkgs.vesktop#discord
-    pkgs.ungoogled-chromium#chromium  
+    pkgs.vesktop #discord
+    pkgs.ungoogled-chromium #chromium
     #inputs.nixos-conf-editor.packages.${system}.nixos-conf-editor
     #inputs.nix-software-center.packages.${system}.nix-software-center
   ];

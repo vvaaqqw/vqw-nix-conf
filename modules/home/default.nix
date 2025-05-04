@@ -35,7 +35,7 @@
     ++ [(import ./starship.nix)] # shell prompt
     ++ [(import ./swaylock.nix)] # lock screen
     #++ [(import ./vscodium.nix)]                  # vscode forck
-    ++ [(import ./commonapps.nix)] 
+    ++ [(import ./commonapps.nix)]
     ++ [(import ./waybar)] # status bar
     ++ [(import ./swaync/swaync.nix)] # notification deamon
     #++[(import ./hyprpanel.nix)] # NixOS instructions are pending updates for HyprPanel v2
@@ -45,6 +45,6 @@
     ++ [(import ./vscode)] # vscode
     ++ [(import ./direnv.nix)] # direnv
     ++ [(import ./zsh.nix)] # shell
-    ++ [(import ./zellij.nix)] 
-    ++ [(import ./zen-browser.nix)]; 
+    ++ [(import ./zellij.nix)]
+    ++ [(import ./zen-browser.nix)];
 }

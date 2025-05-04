@@ -5,8 +5,10 @@ pkgs.mkShell {
       inherit
         (pkgs.texlive)
         # 基础组件
+        
         scheme-medium
         # 额外需要的包（根据你的文档分析得出）
+        
         ctex
         gobble
         enumitem
@@ -29,6 +31,7 @@ pkgs.mkShell {
         parskip
         fontawesome5
         # 其他可能需要的包...
+        
         ;
     })
 

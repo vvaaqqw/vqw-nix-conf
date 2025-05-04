@@ -17,7 +17,6 @@
       "tray"
       "pulseaudio"
       "battery"
-    
     ];
     modules-right = [
       "cpu"
@@ -93,28 +92,28 @@
       icon-size = 20;
       spacing = 8;
     };
-  privacy = {
-    icon-spacing = 4;
-    icon-size = 18;
-    transition-duration = 250;
-    modules = [
-      {
-        type = "screenshare";
-        tooltip = true;
-        tooltip-icon-size = 24;
-      }
-      {
-        type = "audio-out";
-        tooltip = true;
-        tooltip-icon-size = 24;
-      }
-      {
-        type = "audio-in";
-        tooltip = true;
-        tooltip-icon-size = 24;
-      }
-    ];
-  };
+    privacy = {
+      icon-spacing = 4;
+      icon-size = 18;
+      transition-duration = 250;
+      modules = [
+        {
+          type = "screenshare";
+          tooltip = true;
+          tooltip-icon-size = 24;
+        }
+        {
+          type = "audio-out";
+          tooltip = true;
+          tooltip-icon-size = 24;
+        }
+        {
+          type = "audio-in";
+          tooltip = true;
+          tooltip-icon-size = 24;
+        }
+      ];
+    };
     pulseaudio = {
       format = "{icon} {volume}%";
       format-muted = "  {volume}%";
@@ -158,22 +157,22 @@
         dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>  ";
         dnd-inhibited-none = "  ";
       };
-    mpris = {
-      format = "{player_icon} {dynamic}";
-      format-paused = " {status_icon} <i>{dynamic}</i>";
-      ellipsis = "...";
-      dynamic-separator = ">";
-      dynamic-len = 20;
-      dynamic-importance-order = ["title" "position" "length" "artist" "album"];      
-      player-icons = {
-        default = "☵㵵";
-        mpv = "🌊䪫";
+      mpris = {
+        format = "{player_icon} {dynamic}";
+        format-paused = " {status_icon} <i>{dynamic}</i>";
+        ellipsis = "...";
+        dynamic-separator = ">";
+        dynamic-len = 20;
+        dynamic-importance-order = ["title" "position" "length" "artist" "album"];
+        player-icons = {
+          default = "☵㵵";
+          mpv = "🌊䪫";
+        };
+        status-icons = {
+          paused = "澂";
+        };
+        ignored-players = ["firefox" "librewolf" "chromium"];
       };
-      status-icons = {
-        paused = "澂";
-      };
-      ignored-players = ["firefox" "librewolf" "chromium"];
-    };
 
       return-type = "json";
       exec-if = "which swaync-client";

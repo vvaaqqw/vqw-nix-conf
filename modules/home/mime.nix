@@ -429,5 +429,4 @@ in {
     # prevent wine from creating file associations
     WINEDLLOVERRIDES = "winemenubuilder.exe=d";
   };
-
 }

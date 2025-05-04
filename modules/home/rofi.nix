@@ -87,7 +87,7 @@
       border: 0px 0px 0px;
       padding: 6px 0px 0px;
       margin: 10px 0px 0px 6px;
-      columns: 2; 
+      columns: 2;
       background-color: @bg-col;
     }
 

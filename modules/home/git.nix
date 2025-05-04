@@ -1,9 +1,9 @@
 {pkgs, ...}: {
-# to manager /etc/nixos with git
-# cd /etc/nixos
-# sudo mkdir .git
-# sudo chown YOURUSERNAME:users .git
-# git init
+  # to manager /etc/nixos with git
+  # cd /etc/nixos
+  # sudo mkdir .git
+  # sudo chown YOURUSERNAME:users .git
+  # git init
 
   programs.git = {
     enable = true;
@@ -29,7 +29,7 @@
     };
   };
 
-  home.packages = [ pkgs.gh pkgs.git-lfs ];
+  home.packages = [pkgs.gh pkgs.git-lfs];
 
   programs.zsh.shellAliases = {
     g = "lazygit";

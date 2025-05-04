@@ -7,5 +7,5 @@
     enable = true;
     vimAlias = true;
     # Packages only accessible from neovim
-    };
-  }
+  };
+}

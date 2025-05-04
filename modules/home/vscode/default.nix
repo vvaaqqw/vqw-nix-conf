@@ -54,7 +54,7 @@
         pkief.material-icon-theme
         rust-lang.rust-analyzer
         fill-labs.dependi
-        vadimcn.vscode-lldb #need fhs 
+        vadimcn.vscode-lldb #need fhs
         tamasfe.even-better-toml
         shardulm94.trailing-spaces
         sumneko.lua
@@ -153,7 +153,7 @@
       {
         key = "ctrl+alt+z";
         command = "bookmarks.toggle";
-        when= "editorTextFocus";
+        when = "editorTextFocus";
       }
       # {
       #   key= "alt+h";
@@ -210,11 +210,11 @@
       "workbench.editor.tabCloseButton" = "left";
       "workbench.startupEditor" = "none";
       "workbench.list.smoothScrolling" = true;
-      "workbench.editor.tabActionLocation"= "left";
+      "workbench.editor.tabActionLocation" = "left";
       "security.workspace.trust.enabled" = false;
       "explorer.confirmDelete" = false;
       "breadcrumbs.enabled" = false;
-      "dev.containers.dockerPath"= "/etc/profiles/per-user/${username}/bin/podman-host"; #https://github.com/89luca89/distrobox/blob/main/docs/posts/integrate_vscode_distrobox.md
+      "dev.containers.dockerPath" = "/etc/profiles/per-user/${username}/bin/podman-host"; #https://github.com/89luca89/distrobox/blob/main/docs/posts/integrate_vscode_distrobox.md
       # "vim.camelCaseMotion.enable" = true;
       # "vim.debug.silent" = true;
       # "vim.easymotion" = true;
