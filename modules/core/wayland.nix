@@ -1,10 +1,14 @@
 {
   inputs,
   pkgs,
+  lib,
+  host,
   ...
 }: {
-  programs.hyprland.enable = true;
-  programs.hyprland.portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  lib.mkIf(host == "ghostrace"){  # 仅在 ghostrace 主机启用
+    programs.hyprland.enable = true;
+    programs.hyprland.portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    };
   xdg.portal = {
     enable = true;
     wlr.enable = true;
@@ -12,7 +16,8 @@
     extraPortals = [
       # flatpak needs it
       # yazi needs it
-      pkgs.xdg-desktop-portal-gtk #waybar failed to start when using this
+      pkgs.xdg-desktop-portal-gtk 
+      pkgs.xdg-desktop-portal-kde          # 部分 KDE 应用需要
     ];
   };
 

@@ -22,7 +22,6 @@
     ++ [(import ./git.nix)] # version control
     ++ [(import ./gnome.nix)] # gnome apps
     ++ [(import ./gtk.nix)] # gtk theme
-    ++ [(import ./hyprland)] # window manager
     ++ [(import ./kitty.nix)] # terminal
     ++ [(import ./micro.nix)] # nano replacement
     ++ [(import ./nvim.nix)] # neovim editor
@@ -36,9 +35,6 @@
     ++ [(import ./swaylock.nix)] # lock screen
     #++ [(import ./vscodium.nix)]                  # vscode forck
     ++ [(import ./commonapps.nix)]
-    ++ [(import ./waybar)] # status bar
-    ++ [(import ./swaync/swaync.nix)] # notification deamon
-    #++[(import ./hyprpanel.nix)] # NixOS instructions are pending updates for HyprPanel v2
     ++ [(import ./yazi)]
     ++ [(import ./mime.nix)]
     ++ [(import ./fcitx5)] # fcitx5
@@ -46,5 +42,12 @@
     ++ [(import ./direnv.nix)] # direnv
     ++ [(import ./zsh.nix)] # shell
     ++ [(import ./zellij.nix)]
-    ++ [(import ./zen-browser.nix)];
+    ++ [(import ./zen-browser.nix)]
+    ++ lib.optionals (host == "ghostrace") [
+      # Hyprland 相关配置
+      ./hyprland
+      ./waybar
+      ./swaync/swaync.nix
+      #./hyprpanel.nix# NixOS instructions are pending updates for HyprPanel v2
+      ];
 }
