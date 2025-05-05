@@ -61,6 +61,7 @@
   } @ inputs: let
     username = "spectre";
     system = "x86_64-linux";
+    generated = import ./nvfpkgs/_sources/generated.nix;
     selfPkgs = import ./nvfpkgs;
     packages.x86_64-linux.default = fenix.packages.x86_64-linux.minimal.toolchain;
     formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style; #https://github.com/NixOS/nixfmt 用来 nix fmt, could also use "alejandra ." to do the fmt
@@ -96,7 +97,7 @@
           ];
         specialArgs = {
           host = "cosmicrace";
-          inherit self inputs lib username;
+          inherit self inputs lib username generated;
         };
       };
       ghostrace = nixpkgs.lib.nixosSystem {
@@ -111,7 +112,7 @@
         ];
         specialArgs = {
           host = "ghostrace";
-          inherit self inputs lib username;
+          inherit self inputs lib username generated;
         };
       };
       # vm = nixpkgs.lib.nixosSystem {

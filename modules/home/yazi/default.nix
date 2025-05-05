@@ -1,10 +1,11 @@
 {
   lib,
   pkgs,
+  generated,
   config,
   ...
 }: let
-  yazi-plugins = pkgs.yazi-plugins;
+  yazi-plugins = generated.yazi-plugins.src;
   # yazi-plugins = pkgs.fetchFromGitHub {
   #   owner = "yazi-rs";
   #   repo = "plugins";
@@ -45,7 +46,7 @@ in {
       hide-preview = "${yazi-plugins}/hide-preview.yazi";
       jump-to-char = "${yazi-plugins}/jump-to-char.yazi";
       git = "${yazi-plugins}/git.yazi";
-      bookmarks = pkgs.yazi-bookmarks;
+      bookmarks = generated.yazi-bookmarks.src;
       # bookmarks = pkgs.fetchFromGitHub {
       #   owner = "dedukun";
       #   repo = "bookmarks.yazi";
