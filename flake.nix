@@ -62,6 +62,7 @@
     username = "spectre";
     system = "x86_64-linux";
     selfPkgs = import ./nvfpkgs;
+    packages.x86_64-linux.default = fenix.packages.x86_64-linux.minimal.toolchain;
     formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style; #https://github.com/NixOS/nixfmt 用来 nix fmt, could also use "alejandra ." to do the fmt
     unstable-small-pkgs = import inputs.nixos-unstable-small {inherit system;};
     unstsmallOverlay = final: prev: {
@@ -87,12 +88,11 @@
         inherit system;
         modules = [
           (import ./hosts/cosmicrace)
-          { nixpkgs.overlays = [ selfPkgs.overlay ]; }
+          { nixpkgs.overlays = [ selfPkgs.overlay fenix.overlays.default ]; }
           nix-flatpak.nixosModules.nix-flatpak
           inputs.xremap-flake.nixosModules.default
           # Adds the NUR overlay
           nur.modules.nixos.default
-          fenix.overlays.default
           ];
         specialArgs = {
           host = "cosmicrace";
@@ -103,12 +103,11 @@
         inherit system;
         modules = [
           (import ./hosts/ghostrace)
-          { nixpkgs.overlays = [ selfPkgs.overlay ]; }
+          { nixpkgs.overlays = [ selfPkgs.overlay fenix.overlays.default]; }
           nix-flatpak.nixosModules.nix-flatpak
           inputs.xremap-flake.nixosModules.default
           # Adds the NUR overlay
           nur.modules.nixos.default
-          fenix.overlays.default
         ];
         specialArgs = {
           host = "ghostrace";
