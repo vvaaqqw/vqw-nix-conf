@@ -5,7 +5,7 @@
     ranger
     wpsoffice-cn
     thunderbird
-    evolution
+    # evolution #gtk e-mail client
     easyeffects
     firefox
     brave

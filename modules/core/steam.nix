@@ -8,6 +8,19 @@
     remotePlay.openFirewall = false; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = false; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = false; # Open ports in the firewall for Steam Local Network Game Transfers
+    extraCompatPackages = [
+        pkgs.proton-ge-bin
+      ];
+    gamescopeSession.enable = true;
+  };
+
+  programs.gamescope = {
+    enable = true;
+    capSysNice = true;
+    args = [
+      "--rt"
+      "--expose-wayland"
+    ];
   };
 
   programs.gamemode.enable = true;
@@ -19,11 +32,4 @@
       "steam-unwrapped"
       "steam-run"
     ];
-  # proton-ge-bin
-
-  #   warning: The package proton-ge in nix-gaming has been deprecated as of 2024-03-17.
-
-  # You should use proton-ge-bin from Nixpkgs, which conforms to
-  # the new `extraCompatTools` module option under `programs.steam`
-  # For details, see the relevant pull request:
 }

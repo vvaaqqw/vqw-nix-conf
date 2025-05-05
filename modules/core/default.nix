@@ -3,6 +3,7 @@
   nixpkgs,
   self,
   username,
+  lib,
   host,
   ...
 }: {
@@ -26,5 +27,7 @@
     ++ [(import ./wayland.nix)]
     ++ [(import ./steam.nix)]
     ++ [(import ./virtualization.nix)]
-    ++ [(import ./rust.nix)];
+    ++ lib.optionals (host == "ghostrace") [
+      ./rust.nix
+      ];
 }

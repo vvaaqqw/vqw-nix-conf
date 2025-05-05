@@ -3,7 +3,14 @@ _: {
     enable = true;
     options = {
       selection-clipboard = "clipboard";
-      # theme below:https://github.com/eastack/zathura-gruvbox/blob/master/zathura-gruvbox-dark
+      adjust-open = "best-fit";
+      pages-per-row = "1";
+      scroll-page-aware = "true";
+      scroll-full-overlap = "0.01";
+      scroll-step = "100";
+      smooth-scroll = true;
+      zoom-min = "10";
+     # theme below:https://github.com/eastack/zathura-gruvbox/blob/master/zathura-gruvbox-dark
       notification-error-bg = "rgba(40,40,40,1)"; # bg
       notification-error-fg = "rgba(251,73,52,1)"; # bright:red
       notification-warning-bg = "rgba(40,40,40,1)"; # bg

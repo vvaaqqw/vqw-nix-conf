@@ -26,8 +26,8 @@
     };
     #   spicetify-nix.url = "github:gerg-l/spicetify-nix";
     #   spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-    hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
+    # hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    # hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
 
     hyprland = {
       type = "git";
@@ -62,6 +62,7 @@
   } @ inputs: let
     username = "spectre";
     system = "x86_64-linux";
+    selfPkgs = import ./nvfpkgs;
     formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style; #https://github.com/NixOS/nixfmt 用来 nix fmt, could also use "alejandra ." to do the fmt
     unstable-small-pkgs = import inputs.nixos-unstable-small {inherit system;};
     unstsmallOverlay = final: prev: {
@@ -73,7 +74,7 @@
       #overlays = [unstsmallOverlay];
       overlays = [
         fenix.overlays.default
-        inputs.hyprpanel.overlay
+        # inputs.hyprpanel.overlay
       ];
     };
 
@@ -93,6 +94,7 @@
           (import ./hosts/cosmicrace)
           nix-flatpak.nixosModules.nix-flatpak
           inputs.xremap-flake.nixosModules.default
+          { nixpkgs.overlays = [ selfPkgs.overlay ]; }
         ];
         specialArgs = {
           host = "cosmicrace";
@@ -105,6 +107,7 @@
           (import ./hosts/ghostrace)
           nix-flatpak.nixosModules.nix-flatpak
           inputs.xremap-flake.nixosModules.default
+          { nixpkgs.overlays = [ selfPkgs.overlay ]; }
         ];
         specialArgs = {
           host = "ghostrace";
@@ -125,6 +128,7 @@
     devShells.${system}.default = pkgs.mkShell {
       packages = with pkgs; [
         just
+        helix
         nh
         age
         sops

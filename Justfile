@@ -6,7 +6,7 @@ check:
 
 update:
 	@nix flake update
-	@cd pkgs && nvfetcher
+	@cd nvfpkgs && nvfetcher
 
 history:
 	@nix profile history --profile /nix/var/nix/profiles/system
