@@ -19,7 +19,7 @@
       fcitx5-chinese-addons
       fcitx5-gtk
       fcitx5-lua
-      libsForQt5.fcitx5-qt
+      kdePackages.fcitx5-qt
     ];
   };
 

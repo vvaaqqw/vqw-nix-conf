@@ -26,8 +26,6 @@
     };
     #   spicetify-nix.url = "github:gerg-l/spicetify-nix";
     #   spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
-    # hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-    # hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
 
     hyprland = {
       type = "git";
@@ -52,13 +50,13 @@
   };
 
   outputs = {
+    self,
     nixpkgs,
     home-manager,
     nur,
     nixos-hardware,
     nix-flatpak,
     fenix,
-    self,
     ...
   } @ inputs: let
     username = "spectre";
@@ -73,11 +71,6 @@
       inherit system;
       config.allowUnfree = true;
       #overlays = [unstsmallOverlay];
-      overlays = [
-        selfPkgs.overlay
-        fenix.overlays.default
-        # inputs.hyprpanel.overlay
-      ];
     };
 
     # lib = nixpkgs.lib;
@@ -94,10 +87,12 @@
         inherit system;
         modules = [
           (import ./hosts/cosmicrace)
+          { nixpkgs.overlays = [ selfPkgs.overlay ]; }
           nix-flatpak.nixosModules.nix-flatpak
           inputs.xremap-flake.nixosModules.default
           # Adds the NUR overlay
           nur.modules.nixos.default
+          fenix.overlays.default
           ];
         specialArgs = {
           host = "cosmicrace";
@@ -108,10 +103,12 @@
         inherit system;
         modules = [
           (import ./hosts/ghostrace)
+          { nixpkgs.overlays = [ selfPkgs.overlay ]; }
           nix-flatpak.nixosModules.nix-flatpak
           inputs.xremap-flake.nixosModules.default
           # Adds the NUR overlay
           nur.modules.nixos.default
+          fenix.overlays.default
         ];
         specialArgs = {
           host = "ghostrace";
