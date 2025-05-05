@@ -54,6 +54,7 @@
   outputs = {
     nixpkgs,
     home-manager,
+    nur,
     nixos-hardware,
     nix-flatpak,
     fenix,
@@ -94,8 +95,10 @@
           (import ./hosts/cosmicrace)
           nix-flatpak.nixosModules.nix-flatpak
           inputs.xremap-flake.nixosModules.default
-          { nixpkgs.overlays = [ selfPkgs.overlay ]; }
-        ];
+          # Adds the NUR overlay
+          nur.modules.nixos.default
+          { nixpkgs.overlays = nixpkgs.overlays ++ [ selfPkgs.overlay ]; }
+          ];
         specialArgs = {
           host = "cosmicrace";
           inherit self inputs pkgs lib username;
@@ -107,7 +110,9 @@
           (import ./hosts/ghostrace)
           nix-flatpak.nixosModules.nix-flatpak
           inputs.xremap-flake.nixosModules.default
-          { nixpkgs.overlays = [ selfPkgs.overlay ]; }
+          # Adds the NUR overlay
+          nur.modules.nixos.default
+          { nixpkgs.overlays = nixpkgs.overlays ++ [ selfPkgs.overlay ]; }
         ];
         specialArgs = {
           host = "ghostrace";

@@ -15,7 +15,7 @@
       # flatpak needs it
       # yazi needs it
       pkgs.xdg-desktop-portal-gtk 
-      pkgs.xdg-desktop-portal-kde          # 部分 KDE 应用需要
+      pkgs.kdePackages.xdg-desktop-portal-kde          # 部分 KDE 应用需要
     ];
   };
 
