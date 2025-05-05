@@ -114,14 +114,14 @@
           inherit self inputs lib username;
         };
       };
-      vm = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [(import ./hosts/vm)];
-        specialArgs = {
-          host = "vm";
-          inherit self inputs username;
-        };
-      };
+      # vm = nixpkgs.lib.nixosSystem {
+      #   inherit system;
+      #   modules = [(import ./hosts/vm)];
+      #   specialArgs = {
+      #     host = "vm";
+      #     inherit self inputs username;
+      #   };
+      # };
     };
 
     # 用来nix develop，在一台新电脑上配置的时候用得到
