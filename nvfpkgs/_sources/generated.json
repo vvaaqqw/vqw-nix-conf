@@ -19,5 +19,47 @@
             "type": "github"
         },
         "version": "5322bcd86f47d18e0785cac4a5da239664b46235"
+    },
+    "yazi-bookmarks": {
+        "cargoLocks": null,
+        "date": "2025-04-16",
+        "extract": null,
+        "name": "yazi-bookmarks",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "dedukun",
+            "repo": "bookmarks.yazi",
+            "rev": "a70648a22b609113ed8fe3f940e262c57fc1195f",
+            "sha256": "sha256-tsSSLyljSrXlsA/moiGzjACxA80vsfOCTIJQrJ83Yd0=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "a70648a22b609113ed8fe3f940e262c57fc1195f"
+    },
+    "yazi-plugins": {
+        "cargoLocks": null,
+        "date": "2025-04-27",
+        "extract": null,
+        "name": "yazi-plugins",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "yazi-rs",
+            "repo": "plugins",
+            "rev": "864a0210d9ba1e8eb925160c2e2a25342031d8d3",
+            "sha256": "sha256-m3709h7/AHJAtoJ3ebDA40c77D+5dCycpecprjVqj/k=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "864a0210d9ba1e8eb925160c2e2a25342031d8d3"
     }
 }

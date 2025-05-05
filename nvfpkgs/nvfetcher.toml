@@ -2,3 +2,10 @@
 src.git = "https://github.com/iDvel/rime-ice"
 fetch.github = "iDvel/rime-ice"
 
+[yazi-plugins]
+src.git = "https://github.com/yazi-rs/plugins"
+fetch.github = "yazi-rs/plugins"
+
+[yazi-bookmarks]
+src.git = "https://github.com/dedukun/bookmarks.yazi"
+fetch.github = "dedukun/bookmarks.yazi"

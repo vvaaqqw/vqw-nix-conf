@@ -145,9 +145,9 @@
       nix-rollback = "sudo nixos-rebuild switch --rollback";
 
       nix-init = "nix run github:nix-community/nix-init";
-      #nurl = "nix run github:nix-community/nurl";
+      #nurl = "nix run github:nix-community/nurl"; # installed
       nix-boot = "cd /etc/nixos && nh os boot /etc/nixos && notify-send '❄ upd finished🫠'";
-      nix-upd = "cd /etc/nixos && sudo nix flake update && nh os boot /etc/nixos && notify-send '❄ upd finished🫠'";
+      nix-upd = "cd /etc/nixos/nvfpkgs nvfetcher && cd /etc/nixos && sudo nix flake update && nh os boot /etc/nixos && notify-send '❄ upd finished🫠'";
       nix-clean = "nh clean all --keep 5";
       nix-search = "nh search";
       ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
@@ -155,7 +155,7 @@
       deadnix = "sudo nix run github:astro/deadnix /etc/nixos";
       deadfix = "sudo nix run github:astro/deadnix -- -e /etc/nixos";
 
-      lockupd = "cd /etc/nixos && sudo nix flake update && notify-send '❄ lock upd finished🫠'";
+      lockupd = "cd /etc/nixos && sudo nix flake update && cd /etc/nixos/nvfpkgs nvfetcher && notify-send '❄ lock upd finished🫠'";
       lockprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nix flake update && notify-send '❄ lock upd finished🫠'";
       nixupd = "cd /etc/nixos && sudo nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace && notify-send '❄ upd finished🫠'";
       nixprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace && notify-send '❄ upd finished🫠'";
