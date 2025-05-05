@@ -74,6 +74,7 @@
       config.allowUnfree = true;
       #overlays = [unstsmallOverlay];
       overlays = [
+        selfPkgs.overlay
         fenix.overlays.default
         # inputs.hyprpanel.overlay
       ];
@@ -97,11 +98,10 @@
           inputs.xremap-flake.nixosModules.default
           # Adds the NUR overlay
           nur.modules.nixos.default
-          { nixpkgs.overlays = nixpkgs.overlays ++ [ selfPkgs.overlay ]; }
           ];
         specialArgs = {
           host = "cosmicrace";
-          inherit self inputs pkgs lib username;
+          inherit self inputs lib username;
         };
       };
       ghostrace = nixpkgs.lib.nixosSystem {
@@ -112,11 +112,10 @@
           inputs.xremap-flake.nixosModules.default
           # Adds the NUR overlay
           nur.modules.nixos.default
-          { nixpkgs.overlays = nixpkgs.overlays ++ [ selfPkgs.overlay ]; }
         ];
         specialArgs = {
           host = "ghostrace";
-          inherit self inputs pkgs lib username;
+          inherit self inputs lib username;
         };
       };
       vm = nixpkgs.lib.nixosSystem {
