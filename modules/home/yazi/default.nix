@@ -27,6 +27,7 @@ in {
       (pkgs)
       exiftool
       mediainfo
+      ueberzugpp # for image preview in zellij
       ;
   };
 
