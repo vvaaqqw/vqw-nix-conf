@@ -26,7 +26,7 @@
     pkgs.kdePackages.filelight
     pkgs.gocryptfs
     # pkgs.sirikali # gocrpyptfs gui front
-    pkgs.vesktop #discord
+    pkgs.vesktop #discord, TODO:move to home manager
     pkgs.ungoogled-chromium #chromium
     #inputs.nixos-conf-editor.packages.${system}.nixos-conf-editor
     #inputs.nix-software-center.packages.${system}.nix-software-center
