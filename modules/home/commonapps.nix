@@ -7,7 +7,7 @@
     thunderbird
     # evolution #gtk e-mail client
     easyeffects
-    brave
+    # brave
     # cinnamon.nemo
     qbittorrent
     # hexchat
