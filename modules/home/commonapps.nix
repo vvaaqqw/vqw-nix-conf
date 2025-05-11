@@ -7,9 +7,9 @@
     thunderbird
     # evolution #gtk e-mail client
     easyeffects
-    firefox
+    # firefox
     brave
-    # librewolf # opens firefox somehow
+    librewolf # opens firefox somehow
     # cinnamon.nemo
     qbittorrent
     # hexchat

@@ -224,7 +224,7 @@
         "$mainMod, P, exec, hdrop -f -i -p r -h 70 -w 50 keepassxc"
         # "$mainMod, P, exec, keepassxc"
         #dropdown browser
-        "$mainMod, N, exec, hdrop -f -i -p l -h 90 -w 51 firefox"
+        "$mainMod, N, exec, hdrop -f -i -p l -h 90 -w 51 librewolf"
 
         # "$mainMod,F,easymotion, action:hyprctl dispatch focuswindow address:{}" # easymotion plugin
         "$mainMod,G,exec, zen" # zen-browser
