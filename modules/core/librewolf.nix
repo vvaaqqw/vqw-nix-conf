@@ -1,6 +1,7 @@
 {pkgs, ...}: {
-  programs.librewolf = {
+  programs.firefox = {
     enable = true;
+    package = pkgs.librewolf;
     policies = {
       ExtensionSettings = {
         "*".installation_mode = "blocked";
