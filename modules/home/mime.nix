@@ -363,7 +363,7 @@
   # .desktop names:
   # - /etc/profiles/per-user/kiara/share/applications/
   # - ~/.local/share/applications/
-  browsers = ["firefox"];
+  browsers = ["chromium"];
   editors = ["helix" "neovim" "code" "lapce" "kate"];
   # MIME associations: specific items go lower left
   # (first in the inner list but late in the outer list),
