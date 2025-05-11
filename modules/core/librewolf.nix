@@ -4,8 +4,6 @@
     package = pkgs.librewolf;
     policies = {
       ExtensionSettings = {
-        "*".installation_mode = "blocked";
-
         # "addon@simplelogin" = {
         #   install_url = "https://addons.mozilla.org/firefox/downloads/latest/simplelogin/latest.xpi";
         #   installation_mode = "force_installed";
