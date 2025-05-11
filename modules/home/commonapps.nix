@@ -7,16 +7,13 @@
     thunderbird
     # evolution #gtk e-mail client
     easyeffects
-    # firefox
     brave
-    librewolf # opens firefox somehow
     # cinnamon.nemo
     qbittorrent
     # hexchat
     # netflix
     keepassxc
     helvum
-    #obsidian because my memories fade away constantly
     (symlinkJoin {
       # wrap obsidian with pandoc for the pandoc plugin dependency
       name = "Obsidian";

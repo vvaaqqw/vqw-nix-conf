@@ -48,6 +48,6 @@ in {
     name = "Bibata-Original-Classic";
     package = pkgs.bibata-cursors;
     # package = pkgs.breeze-hacked-cursor-theme;
-    size = 24;
+    size = 19;
   };
 }
