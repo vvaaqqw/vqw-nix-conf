@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   programs.librewolf = {
     enable = true;
+    packages = pkgs.librewolf;
     policies = {
       BlockAboutConfig = true;
       BlockAboutProfiles = true;
