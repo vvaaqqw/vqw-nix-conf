@@ -26,7 +26,6 @@
     ++ [(import ./user.nix)]
     ++ [(import ./wayland.nix)]
     ++ [(import ./steam.nix)]
-    ++ [(import ./librewolf.nix)]
     ++ [(import ./virtualization.nix)]
     ++ lib.optionals (host == "ghostrace") [
       ./rust.nix

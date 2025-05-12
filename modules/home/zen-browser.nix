@@ -18,6 +18,10 @@
       DisableFirefoxStudies = true;
       DisableTelemetry = true;
       DontCheckDefaultBrowser = true;
+      AutofillAddressEnabled = true;
+      AutofillCreditCardEnabled = false;
+      DisableFeedbackCommands = true;
+      DisablePocket = true; # save webs for later reading
       # find more options here: https://mozilla.github.io/policy-templates/
     };
   };

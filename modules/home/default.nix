@@ -43,6 +43,7 @@
     ++ [(import ./zsh.nix)] # shell
     ++ [(import ./zellij.nix)]
     ++ [(import ./zen-browser.nix)]
+    ++ [(import ./librewolf.nix)]
     ++ lib.optionals (host == "ghostrace") [
       # Hyprland 相关配置
       ./hyprland
