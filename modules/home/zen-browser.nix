@@ -14,6 +14,10 @@
     enable = true;
     nativeMessagingHosts = [pkgs.firefoxpwa]; #https://github.com/0xc000022070/zen-browser-flake
     policies = {
+      DisplayBookmarksToolbar = "newtab"; # alternatives: "always" or "newtab" or "never"
+      DisplayMenuBar = "never"; # alternatives: "always", "never" or "default-on"
+      SearchBar = "unified"; # alternative: "separate"
+      DisableMasterPasswordCreation = true;
       DisableAppUpdate = true;
       DisableFirefoxStudies = true;
       DisableTelemetry = true;
