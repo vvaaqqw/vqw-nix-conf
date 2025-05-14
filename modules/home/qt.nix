@@ -6,7 +6,7 @@ in
   home.packages = with pkgs; [
   kdePackages.qtwayland
   kdePackages.qtstyleplugin-kvantum
-  kdePackages.gruvbox-kvantum
+  gruvbox-kvantum
   ];
 
   qt = {
