@@ -22,6 +22,7 @@
     ++ [(import ./git.nix)] # version control
     ++ [(import ./gnome.nix)] # gnome apps
     ++ [(import ./gtk.nix)] # gtk theme
+    ++ [(import ./qt.nix)] # qt theme
     ++ [(import ./kitty.nix)] # terminal
     ++ [(import ./micro.nix)] # nano replacement
     ++ [(import ./nvim.nix)] # neovim editor

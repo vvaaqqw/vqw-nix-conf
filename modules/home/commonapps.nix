@@ -19,16 +19,6 @@
       name = "Obsidian";
       paths = with pkgs; [obsidian pandoc];
     })
-
-    # plasma packages
-    plasma5Packages.dolphin
-    plasma5Packages.dolphin-plugins
-    plasma5Packages.okular
-    plasma5Packages.kio
-    plasma5Packages.kio-extras
-    plasma5Packages.kimageformats
-    plasma5Packages.kdegraphics-thumbnailers
-
     # gnome packages
     pkgs.gnome-tweaks
     pkgs.gnome-calendar

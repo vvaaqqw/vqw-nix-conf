@@ -23,7 +23,16 @@
     pkgs.piper # front end for ratbagd
     pkgs.htop
     #pkgs.pywal #hyprpanel uses
+    # kde stuff
     pkgs.kdePackages.filelight
+    pkgs.kdePackages.dolphin
+    pkgs.kdePackages.dolphin-plugins
+    pkgs.kdePackages.okular
+    pkgs.kdePackages.kio
+    pkgs.kdePackages.kio-extras
+    pkgs.kdePackages.kimageformats
+    pkgs.kdePackages.kdegraphics-thumbnailers
+
     pkgs.gocryptfs
     # pkgs.sirikali # gocrpyptfs gui front
     pkgs.vesktop #discord, TODO:move to home manager
