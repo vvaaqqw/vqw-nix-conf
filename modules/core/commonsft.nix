@@ -16,7 +16,6 @@
     pkgs.wlprop #xprop for wl
     pkgs.thefuck
     pkgs.firejail
-    pkgs.kdePackages.kate
     pkgs.waylyrics #desktop lyrics
     pkgs.go-musicfox # netease cloud music tui
     pkgs.netease-cloud-music-gtk # netease cloud music gui
@@ -24,6 +23,7 @@
     pkgs.htop
     #pkgs.pywal #hyprpanel uses
     # kde stuff
+    pkgs.kdePackages.kate
     pkgs.kdePackages.filelight
     pkgs.kdePackages.dolphin
     pkgs.kdePackages.dolphin-plugins
@@ -35,7 +35,6 @@
 
     pkgs.gocryptfs
     # pkgs.sirikali # gocrpyptfs gui front
-    pkgs.vesktop #discord, TODO:move to home manager
     pkgs.ungoogled-chromium #chromium
     #inputs.nixos-conf-editor.packages.${system}.nixos-conf-editor
     #inputs.nix-software-center.packages.${system}.nix-software-center

@@ -15,5 +15,6 @@ I would like to thank the following projects for providing essential foundations
 - [wuliuqii/nixos-config](https://github.com/wuliuqii/nixos-config)
 - [mjschwenne/dotfiles](https://github.com/mjschwenne/dotfiles)
 - [boilmyplate/dotfiles](https://github.com/boilmyplate/dotfiles)
+- [Flameopathic/nixos-config](https://github.com/Flameopathic/nixos-config)
 
 Thanks for making it way too easy to look like I know what I'm doing
