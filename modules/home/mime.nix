@@ -384,9 +384,9 @@
     (lib.genAttrs video (_: ["vlc" "mpv"]))
     (lib.genAttrs archives
       (_: ["unar" "org.gnome.FileRoller" "thunar"]))
-    (lib.genAttrs documents (_: ["writer" "less"]))
-    (lib.genAttrs spreadsheets (_: ["calc" "visidata" "less"]))
-    (lib.genAttrs slides (_: ["impress" "et"]))
+    (lib.genAttrs documents (_: ["wps" "writer" "less"]))
+    (lib.genAttrs spreadsheets (_: ["et" "calc" "visidata" "less"]))
+    (lib.genAttrs slides (_: ["wpp" "simpress"]))
     (lib.genAttrs models (_: ["PrusaSlicer"]))
     (lib.genAttrs ["text/x-gcode"] (_: ["PrusaGcodeviewer"]))
     (lib.genAttrs cad (_: ["org.freecadweb.FreeCAD"]))

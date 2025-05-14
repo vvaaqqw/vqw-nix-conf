@@ -17,7 +17,8 @@
       settings = {
         autoUpdate = false;
         autoUpdateNotification = false;
-        useQuickCss = false;
+        useQuickCss = true;
+        themeLinks = ["https://capnkitten.github.io/BetterDiscord/Themes/Spotify-Discord/css/source.css"];
         plugins = {
           SilentTyping.enabled = true;
           AnonymiseFileNames.enabled = true;
