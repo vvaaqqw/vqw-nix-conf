@@ -22,8 +22,10 @@
           SilentTyping.enabled = true;
           AnonymiseFileNames.enabled = true;
           CtrlEnterSend.enabled = true;
+          VoiceChatDoubleClick = true;
           ClearURLs.enabled = true;
           CrashHandler.enabled = true;
+          EmoteCloner.enabled = true;
           BetterGifAltText.enabled = true;
           BetterGifPicker.enabled = true;
           BetterSettings.enabled = true;
