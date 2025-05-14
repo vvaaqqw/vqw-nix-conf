@@ -45,7 +45,7 @@
     ++ [(import ./zellij.nix)]
     ++ [(import ./zen-browser.nix)]
     ++ [(import ./librewolf.nix)]
-    ++ [(import ./vesktop.nix)]
+    ++ [(import ./vesktop)]
     ++ lib.optionals (host == "ghostrace") [
       # Hyprland 相关配置
       ./hyprland
