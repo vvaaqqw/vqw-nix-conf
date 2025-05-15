@@ -15,6 +15,10 @@
           appId = "com.baidu.NetDisk";
           origin = "flathub";
         }
+        {
+          appId = "com.tencent.wemeet";
+          origin = "flathub";
+        }
         "com.jianguoyun.Nutstore"
       ];
       update.auto = {
