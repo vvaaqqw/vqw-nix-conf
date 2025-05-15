@@ -5,8 +5,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixos-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     nur.url = "github:nix-community/NUR";
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
-    #nixnix-flatpak 還在開發階段，所以ref=是用來固定版本的。不穩定。
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    #nixnix-flatpak 還在開發階段，所以ref=是用來固定版本的。
     hypr-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
     xremap-flake.url = "github:xremap/nix-flake";
