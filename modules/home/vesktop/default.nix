@@ -1,5 +1,9 @@
-{ ... }:
 {
+generated,
+...
+}: let
+ system24-theme = generated.vesktop-theme-system24.src;
+in {
   config.programs.vesktop = {
     enable = true;
     settings = {
@@ -14,11 +18,15 @@
     };
 
     vencord = {
+       themes = {
+          "system24-vencord.theme" = "${system24-theme}/theme/flavors/system24-vencord.theme.css";
+        };
       settings = {
         autoUpdate = false;
         autoUpdateNotification = false;
-        useQuickCss = true;
-        themeLinks = ["https://capnkitten.github.io/BetterDiscord/Themes/Spotify-Discord/css/source.css"];
+        useQuickCss = false;
+        enabledThemes = ["system24-vencord.theme.css"];
+        # themeLinks = ["https://capnkitten.github.io/BetterDiscord/Themes/Spotify-Discord/css/source.css"];
         plugins = {
           SilentTyping.enabled = true;
           AnonymiseFileNames.enabled = true;

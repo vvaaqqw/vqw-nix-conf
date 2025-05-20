@@ -3,15 +3,27 @@
 {
   rime-ice = {
     pname = "rime-ice";
-    version = "face4fabbe9d2ab01e73ec3cc6253924cca5e2f7";
+    version = "7fab37280f1a90055007f561518c7daf59da9a09";
     src = fetchFromGitHub {
       owner = "iDvel";
       repo = "rime-ice";
-      rev = "face4fabbe9d2ab01e73ec3cc6253924cca5e2f7";
+      rev = "7fab37280f1a90055007f561518c7daf59da9a09";
       fetchSubmodules = false;
-      sha256 = "sha256-K+xYo4SBDws5oPKVkxkfosw8sizzFO9DWxWEu7PRPQ0=";
+      sha256 = "sha256-vWjAJ7UEnuGpYVfqwLt0Cq1jzz+S+DjivQpR9QKyad8=";
     };
-    date = "2025-05-11";
+    date = "2025-05-19";
+  };
+  vesktop-theme-system24 = {
+    pname = "vesktop-theme-system24";
+    version = "2e662212b48d29d9e70a5304d66e8ffbc8ca4b0d";
+    src = fetchFromGitHub {
+      owner = "refact0r";
+      repo = "system24";
+      rev = "2e662212b48d29d9e70a5304d66e8ffbc8ca4b0d";
+      fetchSubmodules = false;
+      sha256 = "sha256-UpGHyPL+uPZi/G6uy/Vua3b1k2nxTs1HnMUnohGsgaw=";
+    };
+    date = "2025-05-05";
   };
   yazi-bookmarks = {
     pname = "yazi-bookmarks";

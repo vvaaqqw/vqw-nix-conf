@@ -9,3 +9,7 @@ fetch.github = "yazi-rs/plugins"
 [yazi-bookmarks]
 src.git = "https://github.com/dedukun/bookmarks.yazi"
 fetch.github = "dedukun/bookmarks.yazi"
+
+[vesktop-theme-system24]
+src.git = "https://github.com/refact0r/system24.git"
+fetch.github = "refact0r/system24"
