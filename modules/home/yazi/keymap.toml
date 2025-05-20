@@ -31,7 +31,6 @@ prepend_keymap = [
     "f",
     "F",
   ], run = "plugin smart-filter", desc = "Smart Filter" },
-  { on = "S", run = "search fd", desc = "Search files by name using fd" },
   { on = [
     "T",
     "h",
