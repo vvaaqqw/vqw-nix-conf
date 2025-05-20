@@ -19,7 +19,7 @@ in {
 
     vencord = {
        themes = {
-          "system24-vencord.theme" = "${system24-theme}/theme/flavors/system24-vencord.theme.css";
+          "system24-vencord.theme" = /. + "${system24-theme}/theme/flavors/system24-vencord.theme.css";
         };
       settings = {
         autoUpdate = false;
