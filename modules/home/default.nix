@@ -16,6 +16,7 @@
     ++ [(import ./zathura.nix)] # pdf viewer
     #++ [(import ./discord/discord.nix)]                   # discord with catppuccin theme
     ++ [(import ./fastfetch.nix)] # fetch tool
+    ++ [(import ./musicfox)] # fetch tool
     #    ++ [(import ./floorp/floorp.nix)]             # firefox based browser
     ++ [(import ./fzf.nix)] # fuzzy finder
     ++ [(import ./gaming.nix)] # packages related to gaming
