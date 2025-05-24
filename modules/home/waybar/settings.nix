@@ -16,7 +16,7 @@
       "clock"
       "tray"
       "privacy"
-      "pulseaudio"
+      "wireplumber"
       "battery"
     ];
     modules-right = [
@@ -114,20 +114,21 @@
         }
       ];
     };
-    pulseaudio = {
+    wireplumber = {
       format = "{icon} {volume}%";
       format-muted = "  {volume}%";
       format-icons = {
         default = [" "];
-        headphone= "";
+        headphone= " ";
         headset= "";
       };
       scroll-step = 2;
-      # on-click = "pamixer -t";
-      on-click = "kitty --class=floating_waybar -e pulsemixer";
+      on-click = "pamixer -t";
+      # on-click = "kitty --class=floating_waybar -e pulsemixer";
       on-click-right = "pavucontrol";
       ignored-sinks = ["Easy Effects Sink" "Monitor of Easy Effects Sink"];
     };
+
     battery = {
       format = "{icon} {capacity}%";
       # format-icons = [" " " " " " " " " " ];

@@ -8,6 +8,7 @@
     # lowLatency.enable = true;
   };
   environment.systemPackages = with pkgs; [
+    wireplumber
     pulseaudioFull
   ];
 }
