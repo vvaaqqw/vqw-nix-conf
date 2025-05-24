@@ -33,7 +33,7 @@
       format = "  {:%H:%M}";
       tooltip = "true";
       tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-      format-alt = "  {:%d/%m}";
+      format-alt = "  {:%m/%d}";
     };
     "hyprland/workspaces" = {
       active-only = false;
@@ -119,14 +119,19 @@
       format-muted = "  {volume}%";
       format-icons = {
         default = [" "];
+        headphone= "";
+        headset= "";
       };
       scroll-step = 2;
-      on-click = "pamixer -t";
+      # on-click = "pamixer -t";
+      on-click = "kitty --class=floating_waybar -e pulsemixer";
       on-click-right = "pavucontrol";
+      ignored-sinks = ["Easy Effects Sink" "Monitor of Easy Effects Sink"];
     };
     battery = {
       format = "{icon} {capacity}%";
-      format-icons = [" " " " " " " " " "];
+      # format-icons = [" " " " " " " " " " ];
+      format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
       format-charging = " {capacity}%";
       format-full = " {capacity}%";
       format-warning = " {capacity}%";

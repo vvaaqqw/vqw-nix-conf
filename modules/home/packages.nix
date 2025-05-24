@@ -10,7 +10,6 @@ in {
     udiskie
     ## CLI utility
     cryptsetup
-    ani-cli
     bitwise # cli tool for bit / hex manipulation
     caligula # User-friendly, lightweight TUI for disk imaging
     cliphist # clipboard manager
@@ -19,7 +18,6 @@ in {
     fd # find replacement
     ffmpeg
     file # Show file information
-    gtt # google translate TUI
     gifsicle # gif utility
     gtrash # rm replacement, put deleted files in system trash
     hexdump
@@ -40,9 +38,8 @@ in {
     ripgrep # grep replacement
     tdf # cli pdf viewer
     tldr
-    todo # cli todo list
-    toipe # typing test in the terminal
-    ttyper # cli typing test
+    # toipe # typing test in the terminal
+    # ttyper # cli typing test
     unzip
     valgrind # c memory analyzer
     wl-clipboard # clipboard utils for wayland (wl-copy, wl-paste)
@@ -52,10 +49,7 @@ in {
     xxd
 
     ## CLI
-    cbonsai # terminal screensaver
-    cmatrix
-    pipes # terminal screensaver
-    sl
+    # cbonsai # terminal screensaver
     tty-clock # cli clock
 
     ## GUI Apps
@@ -63,7 +57,6 @@ in {
     bleachbit # cache cleaner
     gimp
     libreoffice
-    nix-prefetch-github
     pavucontrol # pulseaudio volume controle (GUI)
     #prismlauncher                     # minecraft launcher
     qalculate-gtk # calculator
