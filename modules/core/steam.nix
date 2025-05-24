@@ -9,8 +9,8 @@
     dedicatedServer.openFirewall = false; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = false; # Open ports in the firewall for Steam Local Network Game Transfers
     extraCompatPackages = [
-        pkgs.proton-ge-bin
-      ];
+      pkgs.proton-ge-bin
+    ];
     gamescopeSession.enable = true;
   };
 

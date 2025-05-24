@@ -4,7 +4,6 @@
   stdenvNoCC,
   ...
 }:
-
 stdenvNoCC.mkDerivation {
   inherit (sources.rime-ice) pname version src;
 

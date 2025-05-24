@@ -1,12 +1,10 @@
-{ pkgs, ... }:
-let
-  gruvboxKvantum = pkgs.gruvbox-kvantum.override { variant = "Gruvbox-Dark-Green"; };
-in
-{
+{pkgs, ...}: let
+  gruvboxKvantum = pkgs.gruvbox-kvantum.override {variant = "Gruvbox-Dark-Green";};
+in {
   home.packages = with pkgs; [
-  kdePackages.qtwayland
-  kdePackages.qtstyleplugin-kvantum
-  gruvbox-kvantum
+    kdePackages.qtwayland
+    kdePackages.qtstyleplugin-kvantum
+    gruvbox-kvantum
   ];
 
   qt = {

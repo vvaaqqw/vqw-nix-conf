@@ -61,7 +61,8 @@
   } @ inputs: let
     username = "spectre";
     system = "x86_64-linux";
-    generated = import ./nvfpkgs/_sources/generated.nix {  # 关键：传递参数
+    generated = import ./nvfpkgs/_sources/generated.nix {
+      # 关键：传递参数
       inherit (pkgs) fetchgit fetchurl fetchFromGitHub dockerTools;
       # 其他参数根据实际需要传递（如 fetchgit, dockerTools）
     };
@@ -92,12 +93,12 @@
         inherit system;
         modules = [
           (import ./hosts/cosmicrace)
-          { nixpkgs.overlays = [ selfPkgs.overlay fenix.overlays.default ]; }
+          {nixpkgs.overlays = [selfPkgs.overlay fenix.overlays.default];}
           nix-flatpak.nixosModules.nix-flatpak
           inputs.xremap-flake.nixosModules.default
           # Adds the NUR overlay
           nur.modules.nixos.default
-          ];
+        ];
         specialArgs = {
           host = "cosmicrace";
           inherit self inputs lib username generated;
@@ -107,7 +108,7 @@
         inherit system;
         modules = [
           (import ./hosts/ghostrace)
-          { nixpkgs.overlays = [ selfPkgs.overlay fenix.overlays.default]; }
+          {nixpkgs.overlays = [selfPkgs.overlay fenix.overlays.default];}
           nix-flatpak.nixosModules.nix-flatpak
           inputs.xremap-flake.nixosModules.default
           # Adds the NUR overlay

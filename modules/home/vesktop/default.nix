@@ -1,8 +1,5 @@
-{
-generated,
-...
-}: let
- system24-theme = generated.vesktop-theme-system24.src;
+{generated, ...}: let
+  system24-theme = generated.vesktop-theme-system24.src;
 in {
   config.programs.vesktop = {
     enable = true;
@@ -11,20 +8,20 @@ in {
       arRPC = true;
       disableMinSize = true;
       splashTheming = true;
-      tray=true;
-      minimizeToTray=true;
-      checkUpdates=false;
+      tray = true;
+      minimizeToTray = true;
+      checkUpdates = false;
       staticTitle = true;
     };
 
     vencord = {
-       themes = {
-          "system24-vencord.theme" = builtins.readFile "${system24-theme}/theme/flavors/system24-vencord.theme.css";
-        };
+      themes = {
+        "system24-vencord.theme" = builtins.readFile "${system24-theme}/theme/flavors/system24-vencord.theme.css";
+      };
       settings = {
         autoUpdate = false;
         autoUpdateNotification = false;
-        useQuickCss = false;
+        useQuickCss = true;
         enabledThemes = ["system24-vencord.theme.css"];
         # themeLinks = ["https://capnkitten.github.io/BetterDiscord/Themes/Spotify-Discord/css/source.css"];
         plugins = {

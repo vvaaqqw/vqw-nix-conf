@@ -52,5 +52,5 @@
       ./waybar
       ./swaync/swaync.nix
       #./hyprpanel.nix# NixOS instructions are pending updates for HyprPanel v2
-      ];
+    ];
 }

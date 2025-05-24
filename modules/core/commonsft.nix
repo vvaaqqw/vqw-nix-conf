@@ -15,7 +15,6 @@
     pkgs.ripdrag #dragndrop
     pkgs.wlprop #xprop for wl
     pkgs.thefuck
-    pkgs.firejail
     pkgs.waylyrics #desktop lyrics
     pkgs.go-musicfox # netease cloud music tui
     pkgs.netease-cloud-music-gtk # netease cloud music gui

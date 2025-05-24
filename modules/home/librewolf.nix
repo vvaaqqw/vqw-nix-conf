@@ -36,8 +36,8 @@
 
       ExtensionSettings = {
         "*" = {
-                installation_mode = "blocked"; # Blocks all addons except the ones specified below
-          };
+          installation_mode = "blocked"; # Blocks all addons except the ones specified below
+        };
         # "addon@simplelogin" = {
         #   install_url = "https://addons.mozilla.org/firefox/downloads/latest/simplelogin/latest.xpi";
         #   installation_mode = "force_installed";
@@ -85,7 +85,5 @@
         };
       };
     };
-
-
   };
 }

@@ -2,7 +2,7 @@
   programs.waybar.settings.mainBar = {
     position = "top";
     layer = "top";
-    height = 29;
+    height = 24;
     margin-top = 0;
     margin-bottom = 0;
     margin-left = 0;
@@ -15,6 +15,7 @@
     modules-center = [
       "clock"
       "tray"
+      "privacy"
       "pulseaudio"
       "battery"
     ];
@@ -23,7 +24,6 @@
       "memory"
       "disk"
       "network"
-      "privacy"
       "custom/notification"
     ];
     clock = {
@@ -41,14 +41,14 @@
       format = "{icon}";
       on-click = "activate";
       format-icons = {
-        "1" = "壹";
-        "2" = "貳";
-        "3" = "參";
-        "4" = "肆";
-        "5" = "伍";
-        "6" = "⛧";
+        "1" = "一";
+        "2" = "二";
+        "3" = "三";
+        "4" = "亖";
+        "5" = "武";
+        "6" = "琉";
         "7" = "柒";
-        "8" = "捌";
+        "8" = "魃";
         "9" = "玖";
         "10" = "∅";
         sort-by-number = true;
@@ -72,8 +72,8 @@
       interval = 2;
     };
     cpu = {
-      format = "  {usage}%";
-      format-alt = "  {avg_frequency} GHz";
+      format = " {usage}%";
+      format-alt = " {avg_frequency} GHz";
       interval = 2;
     };
     disk = {
@@ -82,8 +82,8 @@
       interval = 60;
     };
     network = {
-      format-wifi = "  {signalStrength}%";
-      format-ethernet = "󰀂 ";
+      format-wifi = "󰶡{bandwidthDownOctets:>} 󰶣{bandwidthUpOctets:>}";
+      format-ethernet = "󰈀 {bandwidthDownOctets:>}󰶡 {bandwidthUpOctets:>}󰶣";
       tooltip-format = "Connected to {essid} {ifname} via {gwaddr}";
       format-linked = "{ifname} (No IP)";
       format-disconnected = "󰖪 ";

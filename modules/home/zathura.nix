@@ -10,7 +10,7 @@ _: {
       scroll-step = "100";
       smooth-scroll = true;
       zoom-min = "10";
-     # theme below:https://github.com/eastack/zathura-gruvbox/blob/master/zathura-gruvbox-dark
+      # theme below:https://github.com/eastack/zathura-gruvbox/blob/master/zathura-gruvbox-dark
       notification-error-bg = "rgba(40,40,40,1)"; # bg
       notification-error-fg = "rgba(251,73,52,1)"; # bright:red
       notification-warning-bg = "rgba(40,40,40,1)"; # bg

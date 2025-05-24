@@ -12,6 +12,7 @@
     ++ [(import ./hardware.nix)]
     ++ [(import ./makedir.nix)]
     ++ [(import ./tlp.nix)]
+    ++ [(import ./firejail.nix)]
     ++ [(import ./commonsft.nix)]
     ++ [(import ./xserver.nix)]
     ++ [(import ./network.nix)]
@@ -29,5 +30,5 @@
     ++ [(import ./virtualization.nix)]
     ++ lib.optionals (host == "ghostrace") [
       ./rust.nix
-      ];
+    ];
 }
