@@ -1,10 +1,10 @@
 {
   inputs,
   pkgs,
+  lib,
   ...
 }: {
-  programs.firejail = pkgs:
-    with pkgs; {
+  programs.firejail = {
       enable = true;
       wrappedBinaries = {
         librewolf = {
