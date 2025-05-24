@@ -80,7 +80,7 @@ in {
       padding: 1px;
     }
 
-    #pulseaudio, #network, #cpu, #memory, #disk, #battery, #custom-notification {
+    #wireplumber, #network, #cpu, #memory, #disk, #battery, #custom-notification {
       padding-left: 5px;
       padding-right: 5px;
       margin-right: 10px;
@@ -98,7 +98,7 @@ in {
       border-bottom: ${indicator_height} solid ${orange};
     }
 
-    #pulseaudio {
+    #wireplumber {
       margin-left: 15px;
       border-bottom: ${indicator_height} solid ${blue};
     }

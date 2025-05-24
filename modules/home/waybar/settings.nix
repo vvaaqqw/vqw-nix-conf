@@ -117,11 +117,7 @@
     wireplumber = {
       format = "{icon} {volume}%";
       format-muted = "  {volume}%";
-      format-icons = {
-        default = [" "];
-        headphone= " ";
-        headset= "";
-      };
+      format-icons = ["" "" " "];
       scroll-step = 2;
       on-click = "pamixer -t";
       # on-click = "kitty --class=floating_waybar -e pulsemixer";
