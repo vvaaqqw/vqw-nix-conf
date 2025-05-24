@@ -32,6 +32,7 @@ in {
           ClearURLs.enabled = true;
           CrashHandler.enabled = true;
           EmoteCloner.enabled = true;
+          ReadAllNotificationsButton = true;
           BetterGifAltText.enabled = true;
           BetterGifPicker.enabled = true;
           BetterSettings.enabled = true;
