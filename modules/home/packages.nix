@@ -31,7 +31,6 @@ in {
     nitch # systhem fetch util
     openssl
     onefetch # fetch utility for git repo
-    pamixer # pulseaudio command line mixer
     playerctl # controller for media players
     poweralertd
     qview # minimal image viewer

@@ -119,7 +119,7 @@
       format-muted = "  {volume}%";
       format-icons = ["" "" " "];
       scroll-step = 2;
-      on-click = "pamixer -t";
+      on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
       # on-click = "kitty --class=floating_waybar -e pulsemixer";
       on-click-right = "pavucontrol";
       ignored-sinks = ["Easy Effects Sink" "Monitor of Easy Effects Sink"];
