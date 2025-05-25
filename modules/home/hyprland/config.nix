@@ -169,8 +169,9 @@
         "$mainMod SHIFT, B, exec, toggle_waybar"
         "$mainMod, Z, movetoworkspacesilent,10" # move to 10 as a way to minimize
         "$mainMod, X, killactive,"
+        "$mainMod, SHIFT, X, exec, hyprctl activewindow | grep pid | tr -d 'pid:' | xargs kill" # Quit active window and all open instances
         "$mainMod, C, fullscreen, 1"
-        #"$mainMod SHIFT, C, fullscreen, 1"
+        "$mainMod, SHIFT, C, fullscreen, 0"
         "$mainMod ALT, C, fullscreen, 1"
         "$mainMod SHIFT,M,exec,hyprctl keyword $kw $(($(hyprctl getoption $kw -j | jaq -r '.int') ^ 1))" # toggle no_gaps_when_only
         "Alt,Tab, cyclenext"
@@ -231,17 +232,18 @@
 
         "$mainMod, Space, togglefloating,"
         #"$mainMod, Space, centerwindow,"
-        "$mainMod, Space, resizeactive, exact 950 600"
+        # "$mainMod, Space, resizeactive, exact 950 600"
+        "$mainMod, SHIFT, Space, workspaceopt, allfloat" # toggle all windows into floating
         "$mainMod, W, exec, killall rofi || run-as-service $(rofi -combi-modi window,ssh -show combi -show-icons)" # show windows
         #"$mainMod,W,exec, pypr expose" #expose show windows
         "$mainMod,D,exec, killall rofi || run-as-service $(rofi -combi-modi drun,ssh -show combi -show-icons)" # application launcher
 
         #"$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 4 silent] discord --enable-features=UseOzonePlatform --ozone-platform=wayland'"
-        "$mainMod SHIFT, S, exec, hyprctl dispatch exec '[workspace 5 silent] SoundWireServer'"
-        # "$mainMod ALT, Escape, exec, hyprlock"
-        "$mainMod ALT, Escape, exec, swaylock"
+        "$mainMod ALT, Escape, exec, hyprlock"
+        # "$mainMod ALT, Escape, exec, swaylock"
         "$mainMod SHIFT, Escape, exec, power-menu"
         "$mainMod, U, togglesplit,"
+        "$mainMod, S, swapsplit,"
         "$mainMod,I,togglegroup," # group focused window
         "$mainMod,O,changegroupactive," # switch within the active group
         "$mainMod SHIFT, O, exec, toggle_oppacity"
