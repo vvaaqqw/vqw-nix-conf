@@ -2,10 +2,12 @@
   pkgs,
   config,
   ...
-}: let
-  monolisa = pkgs.callPackage ../../pkgs/monolisa/monolisa.nix {};
-  monolisa-nerd = pkgs.callPackage ../../pkgs/monolisa/monolisa-nerd.nix {inherit monolisa;};
-in {
+}:
+# let
+#   monolisa = pkgs.callPackage ../../pkgs/monolisa/monolisa.nix {};
+#   monolisa-nerd = pkgs.callPackage ../../pkgs/monolisa/monolisa-nerd.nix {inherit monolisa;};
+# in
+{
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
