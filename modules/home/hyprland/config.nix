@@ -166,7 +166,7 @@
         "$mainMod ALT, Return, exec, kitty --title float_kitty"
         "$mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'"
         # "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] floorp'"
-        #"$mainMod SHIFT, B, exec, toggle_waybar"
+        "$mainMod SHIFT, B, exec, toggle_waybar"
         "$mainMod, Z, movetoworkspacesilent,10" # move to 10 as a way to minimize
         "$mainMod, X, killactive,"
         "$mainMod, C, fullscreen, 1"
