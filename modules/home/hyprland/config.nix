@@ -246,7 +246,7 @@
         "$mainMod,O,changegroupactive," # switch within the active group
         "$mainMod SHIFT, O, exec, toggle_oppacity"
         "$mainMod SHIFT, P ,exec, hyprpicker -a"
-        "$mainMod , V, pseudo," # 切换伪 tiling 模式，伪 tiling 模式的窗口保持它们浮动时的大小
+        "$mainMod , Q, pseudo," # 切换伪 tiling 模式，伪 tiling 模式的窗口保持它们浮动时的大小
         "$mainMod SHIFT, W,exec, wallpaper-picker"
         #"$mainMod ALT, W, exec, vm-start"
         # "$mainMod, N, exec, swaync-client -t -sw"
@@ -331,7 +331,7 @@
         "$mainMod, XF86MonBrightnessDown, exec, brightnessctl set 100%-"
 
         # clipboard manager
-        "$mainMod, Q, exec, cliphist list | rofi -dmenu -theme-str 'window {width: 50%;}' | cliphist decode | wl-copy"
+        "$mainMod, V, exec, cliphist list | rofi -dmenu -theme-str 'window {width: 50%;}' | cliphist decode | wl-copy"
       ];
 
       # mouse binding
