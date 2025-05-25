@@ -16,8 +16,8 @@
     extraSpecialArgs = {inherit inputs username host generated;};
     users.${username} = {
       imports =
-        if (host == "cosmicrace")
-        then [./../home/default.cosmicrace.nix]
+        if (host == "leshy")
+        then [./../home/default.leshy.nix]
         else [./../home];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";

@@ -89,10 +89,10 @@
     lib = mkLib inputs.nixpkgs;
   in {
     nixosConfigurations = {
-      cosmicrace = nixpkgs.lib.nixosSystem {
+      leshy = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          (import ./hosts/cosmicrace)
+          (import ./hosts/leshy)
           {nixpkgs.overlays = [selfPkgs.overlay fenix.overlays.default];}
           nix-flatpak.nixosModules.nix-flatpak
           inputs.xremap-flake.nixosModules.default
@@ -100,7 +100,7 @@
           nur.modules.nixos.default
         ];
         specialArgs = {
-          host = "cosmicrace";
+          host = "leshy";
           inherit self inputs lib username generated;
         };
       };
