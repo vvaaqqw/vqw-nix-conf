@@ -169,9 +169,9 @@
         "$mainMod SHIFT, B, exec, toggle_waybar"
         "$mainMod, Z, movetoworkspacesilent,10" # move to 10 as a way to minimize
         "$mainMod, X, killactive,"
-        "$mainMod, SHIFT, X, exec, hyprctl activewindow | grep pid | tr -d 'pid:' | xargs kill" # Quit active window and all open instances
+        "$mainMod SHIFT, X, exec, hyprctl activewindow | grep pid | tr -d 'pid:' | xargs kill" # Quit active window and all open instances
         "$mainMod, C, fullscreen, 1"
-        "$mainMod, SHIFT, C, fullscreen, 0"
+        "$mainMod SHIFT, C, fullscreen, 0"
         "$mainMod ALT, C, fullscreen, 1"
         "$mainMod SHIFT,M,exec,hyprctl keyword $kw $(($(hyprctl getoption $kw -j | jaq -r '.int') ^ 1))" # toggle no_gaps_when_only
         "Alt,Tab, cyclenext"
@@ -233,7 +233,7 @@
         "$mainMod, Space, togglefloating,"
         #"$mainMod, Space, centerwindow,"
         # "$mainMod, Space, resizeactive, exact 950 600"
-        "$mainMod, SHIFT, Space, workspaceopt, allfloat" # toggle all windows into floating
+        "$mainMod SHIFT, Space, workspaceopt, allfloat" # toggle all windows into floating
         "$mainMod, W, exec, killall rofi || run-as-service $(rofi -combi-modi window,ssh -show combi -show-icons)" # show windows
         #"$mainMod,W,exec, pypr expose" #expose show windows
         "$mainMod,D,exec, killall rofi || run-as-service $(rofi -combi-modi drun,ssh -show combi -show-icons)" # application launcher
