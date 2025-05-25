@@ -18,8 +18,8 @@
     ++ [(import ./fastfetch.nix)] # fetch tool
     ++ [(import ./musicfox)] # fetch tool
     #    ++ [(import ./floorp/floorp.nix)]             # firefox based browser
+    ++ [(import ./wine.nix)]  
     ++ [(import ./fzf.nix)] # fuzzy finder
-    ++ [(import ./gaming.nix)] # packages related to gaming
     ++ [(import ./git.nix)] # version control
     ++ [(import ./gnome.nix)] # gnome apps
     ++ [(import ./gtk.nix)] # gtk theme

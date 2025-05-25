@@ -59,8 +59,6 @@
     qalculate-gtk # calculator
     #soundwireserver                   # pass audio to android phone
     vlc
-    winetricks
-    wineWowPackages.wayland
     zenity
 
     # C / C++
