@@ -3,15 +3,15 @@
 {
   rime-ice = {
     pname = "rime-ice";
-    version = "7fab37280f1a90055007f561518c7daf59da9a09";
+    version = "2e0d8d9a3ba292ecca3f6dccb5719a06764917ca";
     src = fetchFromGitHub {
       owner = "iDvel";
       repo = "rime-ice";
-      rev = "7fab37280f1a90055007f561518c7daf59da9a09";
+      rev = "2e0d8d9a3ba292ecca3f6dccb5719a06764917ca";
       fetchSubmodules = false;
-      sha256 = "sha256-vWjAJ7UEnuGpYVfqwLt0Cq1jzz+S+DjivQpR9QKyad8=";
+      sha256 = "sha256-v+j2Bp7+OEbiWImf0/6YbZTTHlaORvtK2foXTfjZW9s=";
     };
-    date = "2025-05-19";
+    date = "2025-05-29";
   };
   vesktop-theme-system24 = {
     pname = "vesktop-theme-system24";
@@ -37,16 +37,28 @@
     };
     date = "2025-05-06";
   };
+  yazi-compress = {
+    pname = "yazi-compress";
+    version = "17b87ae1a96b615d7df08550797453cc65d1fd3e";
+    src = fetchFromGitHub {
+      owner = "KKV9";
+      repo = "compress.yazi";
+      rev = "17b87ae1a96b615d7df08550797453cc65d1fd3e";
+      fetchSubmodules = false;
+      sha256 = "sha256-DZgAmN1NwHHNjLnGD5NUcJKTsUXz8RVitrwdagpPsw8=";
+    };
+    date = "2025-05-30";
+  };
   yazi-plugins = {
     pname = "yazi-plugins";
-    version = "55bf6996ada3df4cbad331ce3be0c1090769fc7c";
+    version = "c0ad8a3c995e2e71c471515b9cf17d68c8425fd7";
     src = fetchFromGitHub {
       owner = "yazi-rs";
       repo = "plugins";
-      rev = "55bf6996ada3df4cbad331ce3be0c1090769fc7c";
+      rev = "c0ad8a3c995e2e71c471515b9cf17d68c8425fd7";
       fetchSubmodules = false;
-      sha256 = "sha256-v/C+ZBrF1ghDt1SXpZcDELmHMVAqfr44iWxzUWynyRk=";
+      sha256 = "sha256-WC/5FNzZiGxl9HKWjF+QMEJC8RXqT8WtOmjVH6kBqaY=";
     };
-    date = "2025-05-11";
+    date = "2025-05-29";
   };
 }
