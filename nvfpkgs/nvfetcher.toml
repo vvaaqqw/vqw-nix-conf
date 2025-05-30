@@ -6,6 +6,10 @@ fetch.github = "iDvel/rime-ice"
 src.git = "https://github.com/yazi-rs/plugins"
 fetch.github = "yazi-rs/plugins"
 
+[yazi-compress]
+src.git = "https://github.com/KKV9/compress.yazi"
+fetch.github = "KKV9/compress.yazi"
+
 [yazi-bookmarks]
 src.git = "https://github.com/dedukun/bookmarks.yazi"
 fetch.github = "dedukun/bookmarks.yazi"

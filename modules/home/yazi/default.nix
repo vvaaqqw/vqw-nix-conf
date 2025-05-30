@@ -48,6 +48,7 @@ in {
       jump-to-char = "${yazi-plugins}/jump-to-char.yazi";
       git = "${yazi-plugins}/git.yazi";
       bookmarks = generated.yazi-bookmarks.src;
+      compress = generated.yazi-compress.src;
       # bookmarks = pkgs.fetchFromGitHub {
       #   owner = "dedukun";
       #   repo = "bookmarks.yazi";

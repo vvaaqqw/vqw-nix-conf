@@ -12,6 +12,7 @@
     pkgs.bluez
     pkgs.unar
     pkgs.p7zip-rar
+    pkgs.zip
     pkgs.ripdrag #dragndrop
     pkgs.wlprop #xprop for wl
     pkgs.thefuck

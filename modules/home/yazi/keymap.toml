@@ -69,6 +69,11 @@ prepend_keymap = [
     "D",
   ], run =  "plugin bookmarks delete_all",desc = "delete all bookmark" },
   { on = "M", run = "create --dir", desc = "Create a dir" },
+  { on = [ "c", "a" ], run = "plugin compress", desc = "Archive selected files" },
+  { on = [ "c", "p" ], run = "plugin compress -p", desc = "Archive selected files (password)" },
+  { on = [ "c", "h" ], run = "plugin compress -ph", desc = "Archive selected files (password+header)" },
+  { on = [ "c", "l" ], run = "plugin compress -l", desc = "Archive selected files (compression level)" },
+  { on = [ "c", "u" ], run = "plugin compress -phl", desc = "Archive selected files (password+header+level)" },
 ]
 
 append_keymap = [
