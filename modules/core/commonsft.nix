@@ -15,7 +15,6 @@
     pkgs.zip
     pkgs.ripdrag #dragndrop
     pkgs.wlprop #xprop for wl
-    pkgs.thefuck
     pkgs.waylyrics #desktop lyrics
     pkgs.netease-cloud-music-gtk # netease cloud music gui
     pkgs.piper # front end for ratbagd

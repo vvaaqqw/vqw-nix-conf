@@ -113,7 +113,7 @@
 
     shellAliases = {
       # Utils
-      fuck = "thefuck";
+      # fuck = "thefuck"; # hm's <programs.thefuck.alias>'s default value is this
       cdt = "cd ~/.local/share/Trash/files";
       cdd = "cd ~/Downloads";
       cdv = "cd ~/VI";
