@@ -1,7 +1,7 @@
 {
     "rime-ice": {
         "cargoLocks": null,
-        "date": "2025-05-29",
+        "date": "2025-06-01",
         "extract": null,
         "name": "rime-ice",
         "passthru": null,
@@ -13,12 +13,12 @@
             "name": null,
             "owner": "iDvel",
             "repo": "rime-ice",
-            "rev": "2e0d8d9a3ba292ecca3f6dccb5719a06764917ca",
-            "sha256": "sha256-v+j2Bp7+OEbiWImf0/6YbZTTHlaORvtK2foXTfjZW9s=",
+            "rev": "ab5bf4f20de28d3fd8f2f21653a2cfff64e1b4d7",
+            "sha256": "sha256-QIwcf+7C2h/3TAdwc19ntBgnDi3ZjoDngkJQ4HowGE8=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "2e0d8d9a3ba292ecca3f6dccb5719a06764917ca"
+        "version": "ab5bf4f20de28d3fd8f2f21653a2cfff64e1b4d7"
     },
     "vesktop-theme-system24": {
         "cargoLocks": null,
@@ -64,7 +64,7 @@
     },
     "yazi-compress": {
         "cargoLocks": null,
-        "date": "2025-05-30",
+        "date": "2025-06-01",
         "extract": null,
         "name": "yazi-compress",
         "passthru": null,
@@ -76,16 +76,16 @@
             "name": null,
             "owner": "KKV9",
             "repo": "compress.yazi",
-            "rev": "17b87ae1a96b615d7df08550797453cc65d1fd3e",
-            "sha256": "sha256-DZgAmN1NwHHNjLnGD5NUcJKTsUXz8RVitrwdagpPsw8=",
+            "rev": "2ab7a42af742d50639e4231ee0354983698ec871",
+            "sha256": "sha256-gqbkoBtXBZlw1jK8wQRBBnhJBqWyl4Vc78qT5euuC3U=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "17b87ae1a96b615d7df08550797453cc65d1fd3e"
+        "version": "2ab7a42af742d50639e4231ee0354983698ec871"
     },
     "yazi-plugins": {
         "cargoLocks": null,
-        "date": "2025-05-29",
+        "date": "2025-05-31",
         "extract": null,
         "name": "yazi-plugins",
         "passthru": null,
@@ -97,11 +97,11 @@
             "name": null,
             "owner": "yazi-rs",
             "repo": "plugins",
-            "rev": "c0ad8a3c995e2e71c471515b9cf17d68c8425fd7",
-            "sha256": "sha256-WC/5FNzZiGxl9HKWjF+QMEJC8RXqT8WtOmjVH6kBqaY=",
+            "rev": "63f9650e522336e0010261dcd0ffb0bf114cf912",
+            "sha256": "sha256-ZCLJ6BjMAj64/zM606qxnmzl2la4dvO/F5QFicBEYfU=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "c0ad8a3c995e2e71c471515b9cf17d68c8425fd7"
+        "version": "63f9650e522336e0010261dcd0ffb0bf114cf912"
     }
 }
