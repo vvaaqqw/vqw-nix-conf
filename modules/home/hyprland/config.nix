@@ -484,7 +484,7 @@
     };
 
     extraConfig = "
-      monitor=,preferred,auto,auto
+      monitor=,preferred,auto,1
       bind = SUPER, TAB, hyprexpo:expo, toggle 
       $scratchpadsize = size 80% 85%
 
