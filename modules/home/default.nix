@@ -20,7 +20,6 @@
     #    ++ [(import ./floorp/floorp.nix)]             # firefox based browser
     ++ [(import ./wine.nix)]  
     ++ [(import ./fzf.nix)] # fuzzy finder
-    ++ [(import ./thefuck.nix)] # thefuck
     ++ [(import ./git.nix)] # version control
     ++ [(import ./gnome.nix)] # gnome apps
     ++ [(import ./gtk.nix)] # gtk theme

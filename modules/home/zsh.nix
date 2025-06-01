@@ -49,7 +49,7 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = ["git" "thefuck"];
+      plugins = ["git" "gh" "rust" "safe-paste" "tailscale"];
     };
     initContent = lib.mkBefore ''
       DISABLE_AUTO_UPDATE=true
@@ -113,7 +113,7 @@
 
     shellAliases = {
       # Utils
-      # fuck = "thefuck"; # hm's <programs.thefuck.alias>'s default value is this
+      # fuck = "thefuck"; # hm's <programs.thefuck.alias>'s default value is this, and then thefuck has been removed
       cdt = "cd ~/.local/share/Trash/files";
       cdd = "cd ~/Downloads";
       cdv = "cd ~/VI";
