@@ -22,5 +22,14 @@
     SDL_VIDEODRIVER = "wayland";
     CLUTTER_BACKEND = "wayland";
     GTK_THEME = "Gruvbox-Dark";
+    #fcitx
+    XMODIFIERS = "@im=fcitx";
+    QT_IM_MODULE = "fcitx";
+    QT_IM_MODULES="wayland;fcitx;ibus";
+    GTK_IM_MODULE = "fcitx";
+    GLFW_IM_MODULE = "fcitx";
+    SDL_IM_MODULE = "fcitx";
+    INPUT_METHOD = "fcitx";
+    IMSETTINGS_MODULE = "fcitx";
   };
 }
