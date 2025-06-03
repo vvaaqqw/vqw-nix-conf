@@ -27,7 +27,6 @@
     QT_IM_MODULE = "fcitx";
     QT_IM_MODULES="wayland;fcitx;ibus";
     GTK_IM_MODULE = "fcitx";
-    GLFW_IM_MODULE = "fcitx";
     SDL_IM_MODULE = "fcitx";
     INPUT_METHOD = "fcitx";
     IMSETTINGS_MODULE = "fcitx";
