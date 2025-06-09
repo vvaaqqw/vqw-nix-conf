@@ -228,7 +228,9 @@
         "$mainMod, N, exec, hdrop -f -i -p l -h 90 -w 51 librewolf"
 
         # "$mainMod,F,easymotion, action:hyprctl dispatch focuswindow address:{}" # easymotion plugin
-        "$mainMod,G,exec, zen" # zen-browser
+         
+        "$mainMod, F, workspaceopt, allfloat" # the key to float all window in a workspace
+        "$mainMod, G, exec, zen" # zen-browser
 
         "$mainMod, Space, togglefloating,"
         #"$mainMod, Space, centerwindow,"
