@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     # swww
     swaybg
+    nwg-dock-hyprland
     # pyprland
     inputs.hypr-contrib.packages.${pkgs.system}.grimblast
     inputs.hypr-contrib.packages.${pkgs.system}.hdrop
@@ -18,6 +19,12 @@
     wayland
     direnv
   ];
+
+  #nwg-dock-hyprland
+  home.file.".config/nwg-dock-hyprland/style.css" = ./nwg-dock-hyprland/style-dark.css;
+  # home.file.".config/nwg-dock-pinned".text = ''
+  #nwg-dock-hyprland
+  
   systemd.user.targets.hyprland-session.Unit.Wants = ["xdg-desktop-autostart.target"];
   wayland.windowManager.hyprland = {
     enable = true;
@@ -33,4 +40,7 @@
     # enableNvidiaPatches = false;
     systemd.enable = true;
   };
+  # clipboard manager
+  services.clipse.enable = true;
+  services.clipse.imageDisplay.type = "kitty";
 }

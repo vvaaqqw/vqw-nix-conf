@@ -13,13 +13,14 @@
         #udiskie
         "udiskie -s"
         "wl-clip-persist --clipboard both"
+        #"wl-paste --watch cliphist store &" # I'm trying clipse
+        "exec-once = clipse -listen" # run clipboard listener on startup
         "swaybg -m fill -i $(find ~/Pictures/wallpapers/ -maxdepth 1 -type f) &"
         "hyprctl setcursor Bibata-Original-Classic 19 &"
         "poweralertd &"
         "waybar &"
         "swaync &"
         #"${pkgs.hyprpanel}/bin/hyprpanel"
-        "wl-paste --watch cliphist store &"
         "hyprlock"
         # workaround for brightness being reset on root rollback (impermanence)
         "brightness set 66%"
@@ -230,6 +231,7 @@
         # "$mainMod,F,easymotion, action:hyprctl dispatch focuswindow address:{}" # easymotion plugin
          
         "$mainMod, F, workspaceopt, allfloat" # the key to float all window in a workspace
+        "$mainMod, F, exec, nwg-dock-hyprland -r" # need a dock somehow
         "$mainMod, G, exec, zen" # zen-browser
 
         "$mainMod, Space, togglefloating,"
@@ -335,7 +337,8 @@
         "$mainMod, XF86MonBrightnessDown, exec, brightnessctl set 100%-"
 
         # clipboard manager
-        "$mainMod, V, exec, cliphist list | rofi -dmenu -theme-str 'window {width: 50%;}' | cliphist decode | wl-copy"
+        # "$mainMod, V, exec, cliphist list | rofi -dmenu -theme-str 'window {width: 50%;}' | cliphist decode | wl-copy"
+        "$mainMod, V, exec, kitty --class clipse -e clipse"
       ];
 
       # mouse binding
@@ -379,6 +382,9 @@
         "opacity 1.0 override 1.0 override, class:(evince)"
         # only allow shadows for floating windows
         "noshadow, floating:0"
+
+        "float,class:(clipse)"
+        "size 622 652,class:(clipse)"
 
         "float,class:udiskie"
         "fullscreen,class:wlogout"
