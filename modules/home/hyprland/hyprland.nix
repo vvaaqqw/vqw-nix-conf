@@ -21,7 +21,7 @@
   ];
 
   #nwg-dock-hyprland
-  home.file.".config/nwg-dock-hyprland/style.css" = ./nwg-dock-hyprland/style-dark.css;
+  home.file.".config/nwg-dock-hyprland/style.css".source = ./nwg-dock-hyprland/style-dark.css;
   # home.file.".config/nwg-dock-pinned".text = ''
   #nwg-dock-hyprland
   
