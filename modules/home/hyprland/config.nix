@@ -14,7 +14,7 @@
         "udiskie -s"
         "wl-clip-persist --clipboard both"
         #"wl-paste --watch cliphist store &" # I'm trying clipse
-        "exec-once = clipse -listen" # run clipboard listener on startup
+        "clipse -listen" # run clipboard listener on startup
         "swaybg -m fill -i $(find ~/Pictures/wallpapers/ -maxdepth 1 -type f) &"
         "hyprctl setcursor Bibata-Original-Classic 19 &"
         "poweralertd &"
