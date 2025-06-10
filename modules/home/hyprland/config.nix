@@ -231,7 +231,7 @@
         # "$mainMod,F,easymotion, action:hyprctl dispatch focuswindow address:{}" # easymotion plugin
          
         "$mainMod, F, workspaceopt, allfloat" # the key to float all window in a workspace
-        "$mainMod, F, exec, nwg-dock-hyprland -r" # need a dock somehow
+        "$mainMod, A, exec, nwg-dock-hyprland" # need a dock somehow
         "$mainMod, G, exec, zen" # zen-browser
 
         "$mainMod, Space, togglefloating,"
