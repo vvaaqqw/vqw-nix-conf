@@ -9,6 +9,7 @@
   toggle_blur = pkgs.writeScriptBin "toggle_blur" (builtins.readFile ./scripts/toggle_blur.sh);
   toggle_oppacity = pkgs.writeScriptBin "toggle_oppacity" (builtins.readFile ./scripts/toggle_oppacity.sh);
   toggle_waybar = pkgs.writeScriptBin "toggle_waybar" (builtins.readFile ./scripts/toggle_waybar.sh);
+  toggle_nwgdock = pkgs.writeScriptBin "toggle_nwgdock" (builtins.readFile ./scripts/toggle_nwgdock.sh);
 
   maxfetch = pkgs.writeScriptBin "maxfetch" (builtins.readFile ./scripts/maxfetch.sh);
 
@@ -40,6 +41,7 @@ in {
     toggle_blur
     toggle_oppacity
     toggle_waybar
+    toggle_nwgdock
 
     maxfetch
 
