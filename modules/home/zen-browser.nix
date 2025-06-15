@@ -5,9 +5,11 @@
 }: {
   # home.nix
   imports = [
-    # inputs.zen-browser.homeModules.beta
+    inputs.zen-browser.homeModules.beta
     # or inputs.zen-browser.homeModules.twilight
-    inputs.zen-browser.homeModules.twilight
+    # inputs.zen-browser.homeModules.twilight
+    # IMPORTANT: this package relies on the twilight release artifacts from the
+    # official zen repo and no new release is created, the artifacts are replaced
     # inputs.zen-browser.homeModules.twilight-official
   ];
 
