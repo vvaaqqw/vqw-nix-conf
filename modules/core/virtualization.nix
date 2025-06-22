@@ -22,15 +22,19 @@
   ];
 
   # Manage the virtualisation services
+  # services.spice-vdagentd.enable = true;
+   
   virtualisation = {
-    libvirtd = {
-      enable = true;
-      qemu = {
-        swtpm.enable = true;
-        ovmf.enable = true;
-        ovmf.packages = [pkgs.OVMFFull.fd];
-      };
-    };
+    # libvirtd = {
+    #   enable = true;
+    #   qemu = {
+    #     swtpm.enable = true;
+    #     ovmf.enable = true;
+    #     ovmf.packages = [pkgs.OVMFFull.fd];
+    #   };
+    # };
+    # spiceUSBRedirection.enable = true;
+
     #podman for distrobox
     podman = {
       enable = true;
@@ -40,7 +44,5 @@
       defaultNetwork.settings.dns_enabled = true;
     };
 
-    spiceUSBRedirection.enable = true;
   };
-  services.spice-vdagentd.enable = true;
 }
