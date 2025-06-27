@@ -2,6 +2,7 @@
   services = {
     gnome.gnome-keyring.enable = true;
     dbus.enable = true;
+    printing.enable = true; # Enable CUPS to print documents.
     #usb
     gvfs.enable = true;
     udisks2.enable = true;
