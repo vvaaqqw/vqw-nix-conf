@@ -116,8 +116,9 @@
       # fuck = "thefuck"; # hm's <programs.thefuck.alias>'s default value is this, and then thefuck has been removed
       cdt = "cd ~/.local/share/Trash/files";
       cdd = "cd ~/Downloads";
-      cdv = "cd ~/VI";
       cdD = "cd ~/Desktop";
+      cdv = "cd ~/VI";
+      cdw = "cd ~/workspace";
       c = "clear";
       cd = "z";
       tt = "gtrash put";
