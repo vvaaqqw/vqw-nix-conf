@@ -12,7 +12,7 @@
     profiles.default.enableUpdateCheck = true;
     profiles.default.extensions = with pkgs.vscode-extensions;
       [
-        # vscodevim.vim
+        vscodevim.vim
         # jasew.vscode-helix-emulation #
         arrterian.nix-env-selector
         bbenoist.nix
@@ -155,22 +155,22 @@
         command = "bookmarks.toggle";
         when = "editorTextFocus";
       }
-      # {
-      #   key= "alt+h";
-      #   command= "workbench.action.focusLeftGroup";
-      # }
-      # {
-      #   key= "alt+j";
-      #   command= "workbench.action.focusBelowGroup";
-      # }
-      # {
-      #   "key"= "alt+k";
-      #   "command"= "workbench.action.focusAboveGroup";
-      # }
-      # {
-      #   "key"= "alt+l";
-      #   "command"= "workbench.action.focusRightGroup";
-      # }
+      {
+        key= "alt+h";
+        command= "workbench.action.focusLeftGroup";
+      }
+      {
+        key= "alt+j";
+        command= "workbench.action.focusBelowGroup";
+      }
+      {
+        "key"= "alt+k";
+        "command"= "workbench.action.focusAboveGroup";
+      }
+      {
+        "key"= "alt+l";
+        "command"= "workbench.action.focusRightGroup";
+      }
     ];
 
     profiles.default.userSettings = {
@@ -215,19 +215,20 @@
       "explorer.confirmDelete" = false;
       "breadcrumbs.enabled" = false;
       "dev.containers.dockerPath" = "/etc/profiles/per-user/${username}/bin/podman-host"; #https://github.com/89luca89/distrobox/blob/main/docs/posts/integrate_vscode_distrobox.md
-      # "vim.camelCaseMotion.enable" = true;
-      # "vim.debug.silent" = true;
-      # "vim.easymotion" = true;
-      # "vim.enableNeovim" = true;
-      # "vim.handleKeys" = {
-      #   "<C-a>" = false;
-      #   "<C-c>" = false;
-      #   "<C-d>" = false;
-      #   "<C-f>" = false;
-      #   "<C-j>" = false;
-      #   "<C-k>" = false;
-      #   "<C-p>" = false;
-      # };
+
+      "vim.camelCaseMotion.enable" = true;
+       "vim.debug.silent" = true;
+       "vim.easymotion" = true;
+      # "vim.enableNeovim" = false;
+      "vim.handleKeys" = {
+      "<C-a>" = false;
+       "<C-c>" = false;
+       "<C-d>" = false;
+       "<C-f>" = false;
+       "<C-j>" = false;
+       "<C-k>" = false;
+      "<C-p>" = false;
+      };
       # "vim.insertModeKeyBindings" = [
       #   {
       #     "before" = ["k" "j"];
@@ -238,255 +239,267 @@
       #     "after" = ["<Esc>"];
       #   }
       # ];
-      # "vim.normalModeKeyBindingsNonRecursive" = [
-      #   {
-      #     "before" = ["K"];
-      #     "commands" = [
-      #       {
-      #         "command" = "editor.action.showHover";
-      #         "args" = {
-      #           "key" = "editor.action.showHover";
-      #           "kind" = "editor";
-      #         };
-      #       }
-      #     ];
-      #   }
-      #   {
-      #     "before" = ["K" "K"];
-      #     "commands" = [
-      #       {
-      #         "command" = "editor.action.showHover";
-      #         "args" = {
-      #           "key" = "editor.action.showHover";
-      #           "kind" = "editor";
-      #         };
-      #       }
-      #       "cursorDown"
-      #     ];
-      #   }
-      #   {
-      #     "before" = ["g" "d"];
-      #     "commands" = [
-      #       {
-      #         "command" = "editor.action.goToDeclaration";
-      #         "args" = {};
-      #       }
-      #     ];
-      #   }
-      #   {
-      #     "before" = ["g" "D"];
-      #     "commands" = [
-      #       {
-      #         "command" = "editor.action.goToDefinition";
-      #         "args" = {};
-      #       }
-      #     ];
-      #   }
-      #   {
-      #     "before" = ["g" "r"];
-      #     "commands" = [
-      #       {
-      #         "command" = "editor.action.findReferences";
-      #         "args" = {};
-      #       }
-      #     ];
-      #   }
-      #   {
-      #     "before" = ["g" "I"];
-      #     "commands" = [
-      #       {
-      #         "command" = "editor.action.goToImplementation";
-      #         "args" = {};
-      #       }
-      #     ];
-      #   }
-      #   {
-      #     "before" = ["g" "s"];
-      #     "commands" = [
-      #       {
-      #         "command" = "editor.action.triggerSuggest";
-      #         "args" = {};
-      #       }
-      #     ];
-      #   }
-      #   {
-      #     "before" = ["g" "l"];
-      #     "commands" = [
-      #       {
-      #         "command" = "editor.action.showDiagnostics";
-      #         "args" = {};
-      #       }
-      #     ];
-      #   }
-      #   {
-      #     "before" = ["g" "l" "g" "l"];
-      #     "commands" = [
-      #       {
-      #         "command" = "editor.action.showDiagnostics";
-      #         "args" = {};
-      #       }
-      #       "cursorDown"
-      #     ];
-      #   }
-      #   {
-      #     "before" = [
-      #       "<leader>"
-      #       "m"
-      #     ];
-      #     "commands" = [
-      #       "bookmarks.toggle"
-      #     ];
-      #   }
-      #   {
-      #     "before" = [
-      #       "<leader>"
-      #       "b"
-      #     ];
-      #     "commands" = [
-      #       "bookmarks.list"
-      #     ];
-      #   }
-      #   {
-      #     "before" = [
-      #       "<C-n>"
-      #     ];
-      #     "commands" = [
-      #       "=nohl"
-      #     ];
-      #   }
-      #   {
-      #     "before" = [
-      #       "<C-x>"
-      #     ];
-      #     "commands" = [
-      #       "=wq"
-      #     ];
-      #   }
-      #   {
-      #     "before" = [
-      #       "<leader>"
-      #       "o"
-      #     ];
-      #     "after" = [
-      #       "o"
-      #       "<Esc>"
-      #       "k"
-      #     ];
-      #     "silent" = true;
-      #   }
-      #   {
-      #     "before" = [
-      #       "<leader>"
-      #       "O"
-      #     ];
-      #     "after" = [
-      #       "O"
-      #       "<Esc>"
-      #       "j"
-      #     ];
-      #     "silent" = true;
-      #   }
-      #   {
-      #     "before" = [
-      #       "J"
-      #     ];
-      #     "after" = [
-      #       "5"
-      #       "j"
-      #     ];
-      #     "silent" = true;
-      #   }
-      #   {
-      #     "before" = [
-      #       "H"
-      #     ];
-      #     "after" = [
-      #       "5"
-      #       "h"
-      #     ];
-      #     "silent" = true;
-      #   }
-      #   {
-      #     "before" = [
-      #       "L"
-      #     ];
-      #     "after" = [
-      #       "5"
-      #       "l"
-      #     ];
-      #     "silent" = true;
-      #   }
-      #   {
-      #     "before" = [
-      #       ">"
-      #     ];
-      #     "commands" = [
-      #       "editor.action.indentLines"
-      #     ];
-      #   }
-      #   {
-      #     "before" = [
-      #       "<"
-      #     ];
-      #     "commands" = [
-      #       "editor.action.outdentLines"
-      #     ];
-      #   }
-      # ];
-      # "vim.visualModeKeyBindings" = [
-      #   {
-      #     "before" = [
-      #       ">"
-      #     ];
-      #     "commands" = [
-      #       "editor.action.indentLines"
-      #     ];
-      #   }
-      #   {
-      #     "before" = [
-      #       "<"
-      #     ];
-      #     "commands" = [
-      #       "editor.action.outdentLines"
-      #     ];
-      #   }
-      # ];
-      # "vim.visualModeKeyBindingsNonRecursive" = [
-      #   {
-      #     "before" = [
-      #       "p"
-      #     ];
-      #     "after" = [
-      #       "p"
-      #       "g"
-      #       "v"
-      #       "y"
-      #     ];
-      #   }
-      # ];
-      # "vim.statusBarColorControl" = true;
-      # "vim.statusBarColors.normal" = ["#8FBCBB" "#434C5E"];
-      # "vim.statusBarColors.insert" = "#00FFFF";
-      # "vim.statusBarColors.visual" = "#B48EAD";
-      # "vim.statusBarColors.visualline" = "#B48EAD";
-      # "vim.statusBarColors.visualblock" = "#A3BE8C";
-      # "vim.statusBarColors.replace" = "#D08770";
-      # "vim.statusBarColors.commandlineinprogress" = "#007ACC";
-      # "vim.statusBarColors.searchinprogressmode" = "#007ACC";
-      # "vim.statusBarColors.easymotionmode" = "#007ACC";
-      # "vim.statusBarColors.easymotioninputmode" = "#007ACC";
-      # "vim.statusBarColors.surroundinputmode" = "#007ACC";
-      # "vim.autoSwitchInputMethod.enable" = true;
-      # "vim.autoSwitchInputMethod.defaultIM" = "1";
+      "vim.normalModeKeyBindings"= [
+        {
+            "before"= [":"];
+            "commands"= [
+                "workbench.action.showCommands"
+            ];
+            "silent"= true;
+        }
+    ];
+
+      "vim.normalModeKeyBindingsNonRecursive" = [
+        {
+          "before" = ["K"];
+          "commands" = [
+            {
+              "command" = "editor.action.showHover";
+              "args" = {
+                "key" = "editor.action.showHover";
+                "kind" = "editor";
+              };
+            }
+          ];
+        }
+        {
+          "before" = ["K" "K"];
+          "commands" = [
+            {
+              "command" = "editor.action.showHover";
+              "args" = {
+                "key" = "editor.action.showHover";
+                "kind" = "editor";
+              };
+            }
+            "cursorDown"
+          ];
+        }
+        {
+          "before" = ["g" "d"];
+          "commands" = [
+            {
+              "command" = "editor.action.goToDeclaration";
+              "args" = {};
+            }
+          ];
+        }
+        {
+          "before" = ["g" "D"];
+          "commands" = [
+            {
+              "command" = "editor.action.goToDefinition";
+              "args" = {};
+            }
+          ];
+        }
+        {
+          "before" = ["g" "r"];
+          "commands" = [
+            {
+              "command" = "editor.action.findReferences";
+              "args" = {};
+            }
+          ];
+        }
+        {
+          "before" = ["g" "I"];
+          "commands" = [
+            {
+              "command" = "editor.action.goToImplementation";
+              "args" = {};
+            }
+          ];
+        }
+        {
+          "before" = ["g" "s"];
+          "commands" = [
+            {
+              "command" = "editor.action.triggerSuggest";
+              "args" = {};
+            }
+          ];
+        }
+        {
+          "before" = ["g" "l"];
+          "commands" = [
+            {
+              "command" = "editor.action.showDiagnostics";
+              "args" = {};
+            }
+          ];
+        }
+        {
+          "before" = ["g" "l" "g" "l"];
+          "commands" = [
+            {
+              "command" = "editor.action.showDiagnostics";
+              "args" = {};
+            }
+            "cursorDown"
+          ];
+        }
+        {
+          "before" = [
+            "<leader>"
+            "m"
+          ];
+          "commands" = [
+            "bookmarks.toggle"
+          ];
+        }
+        {
+          "before" = [
+            "<leader>"
+            "b"
+          ];
+          "commands" = [
+            "bookmarks.list"
+          ];
+        }
+        {
+          "before" = [
+            "<C-n>"
+          ];
+          "commands" = [
+            "=nohl"
+          ];
+        }
+        {
+          "before" = [
+            "<C-x>"
+          ];
+          "commands" = [
+            "=wq"
+          ];
+        }
+        {
+          "before" = [
+            "<leader>"
+            "o"
+          ];
+          "after" = [
+            "o"
+            "<Esc>"
+            "k"
+          ];
+          "silent" = true;
+        }
+        {
+          "before" = [
+            "<leader>"
+            "O"
+          ];
+          "after" = [
+            "O"
+            "<Esc>"
+            "j"
+          ];
+          "silent" = true;
+        }
+        {
+          "before" = [
+            "J"
+          ];
+          "after" = [
+            "5"
+            "j"
+          ];
+          "silent" = true;
+        }
+        {
+          "before" = [
+            "H"
+          ];
+          "after" = [
+            "5"
+            "h"
+          ];
+          "silent" = true;
+        }
+        {
+          "before" = [
+            "L"
+          ];
+          "after" = [
+            "5"
+            "l"
+          ];
+          "silent" = true;
+        }
+        {
+          "before" = [
+            ">"
+          ];
+          "commands" = [
+            "editor.action.indentLines"
+          ];
+        }
+        {
+          "before" = [
+            "<"
+          ];
+          "commands" = [
+            "editor.action.outdentLines"
+          ];
+        }
+      ];
+      "vim.visualModeKeyBindings" = [
+        {
+          "before" = [
+            ">"
+          ];
+          "commands" = [
+            "editor.action.indentLines"
+          ];
+        }
+        {
+          "before" = [
+            "<"
+          ];
+          "commands" = [
+            "editor.action.outdentLines"
+          ];
+        }
+      ];
+      "vim.visualModeKeyBindingsNonRecursive" = [
+        {
+          "before" = [
+            "p"
+          ];
+          "after" = [
+            "p"
+            "g"
+            "v"
+            "y"
+          ];
+        }
+      ];
+      "vim.statusBarColorControl" = true;
+      "vim.statusBarColors.normal" = ["#8FBCBB" "#434C5E"];
+      "vim.statusBarColors.insert" = "#00FFFF";
+      "vim.statusBarColors.visual" = "#B48EAD";
+      "vim.statusBarColors.visualline" = "#B48EAD";
+      "vim.statusBarColors.visualblock" = "#A3BE8C";
+      "vim.statusBarColors.replace" = "#D08770";
+      "vim.statusBarColors.commandlineinprogress" = "#007ACC";
+      "vim.statusBarColors.searchinprogressmode" = "#007ACC";
+      "vim.statusBarColors.easymotionmode" = "#007ACC";
+      "vim.statusBarColors.easymotioninputmode" = "#007ACC";
+      "vim.statusBarColors.surroundinputmode" = "#007ACC";
+      "vim.autoSwitchInputMethod.enable" = true;
+      "vim.autoSwitchInputMethod.defaultIM" = "1";
       # "vim.autoSwitchInputMethod.obtainIMCmd" = "/usr/bin/fcitx5-remote";
       # "vim.autoSwitchInputMethod.switchIMCmd" = "/usr/bin/fcitx5-remote -t {im}";
+      "vim.autoSwitchInputMethod.obtainIMCmd" = "/etc/profiles/per-user/${username}/bin/fcitx5-remote";
+      "vim.autoSwitchInputMethod.switchIMCmd" = "/etc/profiles/per-user/${username}/bin/fcitx5-remote -t {im}";
 
-      # "vim.highlightedyank.enable" = true;
-      # "vim.leader" = "<space>";
-      # "vim.incsearch" = true;
-      # "vim.useSystemClipboard" = true;
-      # "vim.useCtrlKeys" = true;
-      # "vim.hlsearch" = true;
+      "vim.highlightedyank.enable" = true;
+      "vim.leader" = "<space>";
+      "vim.incsearch" = true;
+      "vim.useSystemClipboard" = true;
+      "vim.useCtrlKeys" = true;
+      "vim.hlsearch" = true;
     };
   };
 }
