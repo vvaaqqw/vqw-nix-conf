@@ -17,7 +17,8 @@ folder = [
 ]
 
 text = [
-  # { run = 'nvim "$@"', block = true, desc = "neovim", for = "linux" },
+  { run = 'nvim "$@"', block = true, desc = "neovim", for = "linux" },
+  { run = 'kitty --detach nvim "$@"', block = true, desc = "nv (detached)", for = "linux" },
   { run = 'hx "$@"', block = true, desc = "helix", for = "linux" },
   { run = 'kitty --detach hx "$@"', block = true, desc = "hx (detached)", for = "linux" },
   { run = 'codium  "$@"', orphan = true, desc = "vscodium", for = "linux" },

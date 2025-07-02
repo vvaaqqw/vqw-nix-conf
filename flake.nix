@@ -139,6 +139,7 @@
     devShells.${system}.default = pkgs.mkShell {
       packages = with pkgs; [
         just
+	neovim
         helix
         nh
         age
