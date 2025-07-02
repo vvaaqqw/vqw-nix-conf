@@ -189,6 +189,7 @@
       "terminal.integrated.automationShell.linux" = "nix-shell";
       "terminal.integrated.defaultProfile.linux" = "zsh";
       "terminal.integrated.cursorBlinking" = true;
+      "editor.cursorSmoothCaretAnimation"= "on";
       "terminal.integrated.enableVisualBell" = false;
       "editor.formatOnPaste" = true;
       "editor.formatOnSave" = true;
