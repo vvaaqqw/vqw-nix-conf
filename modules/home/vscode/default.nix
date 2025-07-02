@@ -476,17 +476,17 @@
         }
       ];
       "vim.statusBarColorControl" = true;
-      "vim.statusBarColors.normal" = ["#8FBCBB" "#434C5E"];
-      "vim.statusBarColors.insert" = "#00FFFF";
-      "vim.statusBarColors.visual" = "#B48EAD";
-      "vim.statusBarColors.visualline" = "#B48EAD";
-      "vim.statusBarColors.visualblock" = "#A3BE8C";
-      "vim.statusBarColors.replace" = "#D08770";
-      "vim.statusBarColors.commandlineinprogress" = "#007ACC";
-      "vim.statusBarColors.searchinprogressmode" = "#007ACC";
-      "vim.statusBarColors.easymotionmode" = "#007ACC";
-      "vim.statusBarColors.easymotioninputmode" = "#007ACC";
-      "vim.statusBarColors.surroundinputmode" = "#007ACC";
+      # "vim.statusBarColors.normal" = ["#8FBCBB" "#434C5E"];
+      # "vim.statusBarColors.insert" = "#00FFFF";
+      # "vim.statusBarColors.visual" = "#B48EAD";
+      # "vim.statusBarColors.visualline" = "#B48EAD";
+      # "vim.statusBarColors.visualblock" = "#A3BE8C";
+      # "vim.statusBarColors.replace" = "#D08770";
+      # "vim.statusBarColors.commandlineinprogress" = "#007ACC";
+      # "vim.statusBarColors.searchinprogressmode" = "#007ACC";
+      # "vim.statusBarColors.easymotionmode" = "#007ACC";
+      # "vim.statusBarColors.easymotioninputmode" = "#007ACC";
+      # "vim.statusBarColors.surroundinputmode" = "#007ACC";
       "vim.autoSwitchInputMethod.enable" = true;
       "vim.autoSwitchInputMethod.defaultIM" = "1";
       # "vim.autoSwitchInputMethod.obtainIMCmd" = "/usr/bin/fcitx5-remote";
