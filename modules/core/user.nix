@@ -5,11 +5,11 @@
   username,
   host,
   generated,
-  nixvim,
+  nixxxvim,
   ...
 }: {
   imports = [inputs.home-manager.nixosModules.home-manager
-  nixvim.homeModules.nixvim
+  nixxxvim.homeModules.nixvim
   ];
   home-manager = {
     useUserPackages = true;
