@@ -5,6 +5,8 @@
     ++ [(import ./plugins/lsp.nix)]
     ++ [(import ./plugins/git.nix)]
     ++ [(import ./plugins/whichkeys.nix)]
+    ++ [(import ./plugins/commonplg.nix)]
+    ++ [(import ./plugins/lazygit.nix)]
     ++ [(import ./plugins/treesitter.nix)];
 
   programs.nixvim ={
