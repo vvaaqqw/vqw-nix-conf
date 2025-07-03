@@ -1,6 +1,5 @@
 {...}: {
   imports =
-    [(import ./keymaps.nix)]
     [(import ./cmp.nix)]
     ++ [(import ./plugins/telescope.nix)]
     ++ [(import ./plugins/lsp.nix)]

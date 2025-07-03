@@ -15,15 +15,15 @@
   };
   vesktop-theme-system24 = {
     pname = "vesktop-theme-system24";
-    version = "5263f1576f9c37b1c604be78ae49defab98ad764";
+    version = "b4efc76a0408589c35784e919077a31d6fe09b26";
     src = fetchFromGitHub {
       owner = "refact0r";
       repo = "system24";
-      rev = "5263f1576f9c37b1c604be78ae49defab98ad764";
+      rev = "b4efc76a0408589c35784e919077a31d6fe09b26";
       fetchSubmodules = false;
-      sha256 = "sha256-zi3NDrRsxr4ZprixnVHWYr+DIQQu1dyhY/ng93cY+GA=";
+      sha256 = "sha256-VaWvs/EXeVBnTQ9iABxXH4D0sFeoNE7RzYW+OuT42A4=";
     };
-    date = "2025-06-15";
+    date = "2025-06-26";
   };
   yazi-bookmarks = {
     pname = "yazi-bookmarks";
@@ -51,14 +51,14 @@
   };
   yazi-plugins = {
     pname = "yazi-plugins";
-    version = "3d1efb706924112daed986a4eef634e408bad65e";
+    version = "e5f00e2716fd177b0ca0d313f1a6e64f01c12760";
     src = fetchFromGitHub {
       owner = "yazi-rs";
       repo = "plugins";
-      rev = "3d1efb706924112daed986a4eef634e408bad65e";
+      rev = "e5f00e2716fd177b0ca0d313f1a6e64f01c12760";
       fetchSubmodules = false;
-      sha256 = "sha256-GgEg1A5sxaH7hR1CUOO9WV21kH8B2YUGAtOapcWLP7Y=";
+      sha256 = "sha256-DLcmzCmITybWrYuBpTyswtoGUimpagkyeVUWmbKjarY=";
     };
-    date = "2025-06-21";
+    date = "2025-07-02";
   };
 }
