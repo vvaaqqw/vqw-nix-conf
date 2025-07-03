@@ -8,7 +8,7 @@
   ...
 }: {
   imports = [inputs.home-manager.nixosModules.home-manager
-  inputs.nixvim.homeManagerModules.nixvim
+  inputs.nixvim.homeModules.nixvim
   ];
   home-manager = {
     useUserPackages = true;
