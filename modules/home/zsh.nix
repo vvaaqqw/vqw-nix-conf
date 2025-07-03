@@ -114,12 +114,13 @@
     shellAliases = {
       # Utils
       # fuck = "thefuck"; # hm's <programs.thefuck.alias>'s default value is this, and then thefuck has been removed
-      cdt = "cd ~/.local/share/Trash/files";
-      cdd = "cd ~/Downloads";
-      cdD = "cd ~/Desktop";
-      cdv = "cd ~/VI";
-      cdw = "cd ~/workspace";
+      cdt = "z ~/.local/share/Trash/files";
+      cdd = "z ~/Downloads";
+      cdD = "z ~/Desktop";
+      cdv = "z ~/VI";
+      cdw = "z ~/workspace";
       c = "clear";
+      v = "nvim";
       cd = "z";
       tt = "gtrash put";
       cat = "bat";
@@ -140,19 +141,19 @@
       gcvi = "gocryptfs ~/Nutstore\\ Files/VI ~/VI";
 
       # Nixos
-      cdnix = "cd /etc/nixos";
+      cdnix = "z /etc/nixos";
       nix-listgen = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system"; #list generations
       nix-delgen = "sudo nix-env -p /nix/var/nix/profiles/system --delete-generations"; #后面接想删除的世代标号
       nix-rollback = "sudo nixos-rebuild switch --rollback";
 
       nix-init = "nix run github:nix-community/nix-init";
       #nurl = "nix run github:nix-community/nurl"; # installed
-      nix-boot = "cd /etc/nixos && nh os boot /etc/nixos && notify-send '❄ upd finished🫠'";
-      nix-upd = "cd /etc/nixos/nvfpkgs && sudo nvfetcher && cd /etc/nixos && sudo nix flake update && nh os boot /etc/nixos && notify-send '❄ upd finished🫠'";
+      nix-boot = "z /etc/nixos && nh os boot /etc/nixos && notify-send '❄ upd finished🫠'";
+      nix-upd = "z /etc/nixos/nvfpkgs && sudo nvfetcher && z /etc/nixos && sudo nix flake update && nh os boot /etc/nixos && notify-send '❄ upd finished🫠'";
       nix-clean = "nh clean all --keep 5";
       nix-search = "nh search";
       ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
-      nix-test = "cd /etc/nixos && nh os test";
+      nix-test = "z /etc/nixos && nh os test";
       deadnix = "sudo nix run github:astro/deadnix /etc/nixos";
       deadfix = "sudo nix run github:astro/deadnix -- -e /etc/nixos";
 

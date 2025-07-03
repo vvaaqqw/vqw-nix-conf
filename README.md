@@ -16,5 +16,7 @@ I would like to thank the following projects for providing essential foundations
 - [mjschwenne/dotfiles](https://github.com/mjschwenne/dotfiles)
 - [boilmyplate/dotfiles](https://github.com/boilmyplate/dotfiles)
 - [Flameopathic/nixos-config](https://github.com/Flameopathic/nixos-config)
+- [Yohh/nix-confix](https://github.com/Yohh/nix-confix)
+- [bkp5190/Home-Manager-Configs](https://github.com/bkp5190/Home-Manager-Configs)
 
 Thanks for making it way too easy to look like I know what I'm doing

@@ -26,7 +26,7 @@
     ++ [(import ./qt.nix)] # qt theme
     ++ [(import ./kitty.nix)] # terminal
     ++ [(import ./micro.nix)] # nano replacement
-    ++ [(import ./nvim.nix)] # neovim editor
+    ++ [(import ./nvim)] # neovim editor
     ++ [(import ./helix.nix)] # helix editor
     ++ [(import ./packages.nix)] # other packages
     # ++ [(import ./retroarch.nix)]
