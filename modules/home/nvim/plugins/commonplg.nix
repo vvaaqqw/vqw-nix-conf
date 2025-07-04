@@ -4,4 +4,3 @@
     web-devicons.enable = true;
   };
 }
-

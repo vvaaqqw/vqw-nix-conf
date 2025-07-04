@@ -25,7 +25,7 @@
     #fcitx
     XMODIFIERS = "@im=fcitx";
     QT_IM_MODULE = "fcitx";
-    QT_IM_MODULES="wayland;fcitx;ibus";
+    QT_IM_MODULES = "wayland;fcitx;ibus";
     GTK_IM_MODULE = "fcitx";
     SDL_IM_MODULE = "fcitx";
     INPUT_METHOD = "fcitx";

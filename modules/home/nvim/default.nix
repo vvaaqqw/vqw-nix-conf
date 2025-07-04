@@ -9,7 +9,7 @@
     ++ [(import ./plugins/lazygit.nix)]
     ++ [(import ./plugins/treesitter.nix)];
 
-  programs.nixvim ={
+  programs.nixvim = {
     enable = true;
     defaultEditor = true;
     viAlias = true;
@@ -27,7 +27,7 @@
       tabstop = 4;
       expandtab = true;
       autoindent = true;
-      completeopt = [ "menu" "menuone" "noselect" ];
+      completeopt = ["menu" "menuone" "noselect"];
       termguicolors = true;
       incsearch = true;
       inccommand = "split"; # Search and replace: preview changes in quickfix list
@@ -52,11 +52,9 @@
     };
     match.TODO = "TODO";
 
-
     dependencies = {
       chafa.enable = true;
       imagemagick.enable = true;
     };
-    
   };
 }

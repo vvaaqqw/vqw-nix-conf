@@ -7,7 +7,8 @@
   generated,
   ...
 }: {
-  imports = [inputs.home-manager.nixosModules.home-manager
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
   ];
   home-manager = {
     useUserPackages = true;
@@ -18,10 +19,14 @@
     users.${username} = {
       imports =
         if (host == "leshy")
-        then [./../home/default.leshy.nix
-              inputs.nixvim.homeModules.nixvim]
-        else [./../home
-              inputs.nixvim.homeModules.nixvim];
+        then [
+          ./../home/default.leshy.nix
+          inputs.nixvim.homeModules.nixvim
+        ]
+        else [
+          ./../home
+          inputs.nixvim.homeModules.nixvim
+        ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
       home.stateVersion = "24.05";

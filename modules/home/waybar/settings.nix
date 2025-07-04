@@ -128,7 +128,7 @@
     battery = {
       format = "{icon} {capacity}%";
       # format-icons = [" " " " " " " " " " ];
-      format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+      format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
       format-charging = " {capacity}%";
       format-full = " {capacity}%";
       format-warning = " {capacity}%";

@@ -156,20 +156,20 @@
         when = "editorTextFocus";
       }
       {
-        key= "alt+h";
-        command= "workbench.action.focusLeftGroup";
+        key = "alt+h";
+        command = "workbench.action.focusLeftGroup";
       }
       {
-        key= "alt+j";
-        command= "workbench.action.focusBelowGroup";
+        key = "alt+j";
+        command = "workbench.action.focusBelowGroup";
       }
       {
-        "key"= "alt+k";
-        "command"= "workbench.action.focusAboveGroup";
+        "key" = "alt+k";
+        "command" = "workbench.action.focusAboveGroup";
       }
       {
-        "key"= "alt+l";
-        "command"= "workbench.action.focusRightGroup";
+        "key" = "alt+l";
+        "command" = "workbench.action.focusRightGroup";
       }
     ];
 
@@ -189,7 +189,7 @@
       "terminal.integrated.automationShell.linux" = "nix-shell";
       "terminal.integrated.defaultProfile.linux" = "zsh";
       "terminal.integrated.cursorBlinking" = true;
-      "editor.cursorSmoothCaretAnimation"= "on";
+      "editor.cursorSmoothCaretAnimation" = "on";
       "terminal.integrated.enableVisualBell" = false;
       "editor.formatOnPaste" = true;
       "editor.formatOnSave" = true;
@@ -218,17 +218,17 @@
       "dev.containers.dockerPath" = "/etc/profiles/per-user/${username}/bin/podman-host"; #https://github.com/89luca89/distrobox/blob/main/docs/posts/integrate_vscode_distrobox.md
 
       "vim.camelCaseMotion.enable" = true;
-       "vim.debug.silent" = true;
-       "vim.easymotion" = true;
+      "vim.debug.silent" = true;
+      "vim.easymotion" = true;
       # "vim.enableNeovim" = false;
       "vim.handleKeys" = {
-      "<C-a>" = false;
-       "<C-c>" = false;
-       "<C-d>" = false;
-       "<C-f>" = false;
-       "<C-j>" = false;
-       "<C-k>" = false;
-      "<C-p>" = false;
+        "<C-a>" = false;
+        "<C-c>" = false;
+        "<C-d>" = false;
+        "<C-f>" = false;
+        "<C-j>" = false;
+        "<C-k>" = false;
+        "<C-p>" = false;
       };
       # "vim.insertModeKeyBindings" = [
       #   {
@@ -240,15 +240,15 @@
       #     "after" = ["<Esc>"];
       #   }
       # ];
-      "vim.normalModeKeyBindings"= [
+      "vim.normalModeKeyBindings" = [
         {
-            "before"= [":"];
-            "commands"= [
-                "workbench.action.showCommands"
-            ];
-            "silent"= true;
+          "before" = [":"];
+          "commands" = [
+            "workbench.action.showCommands"
+          ];
+          "silent" = true;
         }
-    ];
+      ];
 
       "vim.normalModeKeyBindingsNonRecursive" = [
         {

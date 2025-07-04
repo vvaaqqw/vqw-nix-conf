@@ -1,6 +1,5 @@
 {
   programs.nixvim = {
-
     plugins = {
       luasnip.enable = true;
       cmp-omni.enable = true;

@@ -38,9 +38,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     Hyprspace = {
-        url = "github:KZDKM/Hyprspace";
-        # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
-        inputs.hyprland.follows = "hyprland";
+      url = "github:KZDKM/Hyprspace";
+      # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
+      inputs.hyprland.follows = "hyprland";
     };
 
     # hyprland-easymotion = {
@@ -143,7 +143,7 @@
     devShells.${system}.default = pkgs.mkShell {
       packages = with pkgs; [
         just
-	neovim
+        neovim
         helix
         nh
         age

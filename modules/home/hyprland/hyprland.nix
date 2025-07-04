@@ -24,7 +24,7 @@
   home.file.".config/nwg-dock-hyprland/style.css".source = ./nwg-dock-hyprland/style-dark.css;
   # home.file.".config/nwg-dock-pinned".text = ''
   #nwg-dock-hyprland
-  
+
   systemd.user.targets.hyprland-session.Unit.Wants = ["xdg-desktop-autostart.target"];
   wayland.windowManager.hyprland = {
     enable = true;

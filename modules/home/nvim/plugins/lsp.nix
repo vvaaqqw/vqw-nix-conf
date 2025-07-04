@@ -1,20 +1,19 @@
-{lib,...}:
-{
+{lib, ...}: {
   programs.nixvim.plugins = {
     lsp = {
       enable = true;
-      
+
       servers = {
         ts_ls = {
           enable = true; # TS
-          filetypes = [ "typescript" "typescriptreact" "typescript.tsx" ];
+          filetypes = ["typescript" "typescriptreact" "typescript.tsx"];
         };
         cssls.enable = true; # CSS
         tailwindcss.enable = true; # TailwindCSS
         html.enable = true; # HTML
         emmet_ls = {
           enable = true;
-          filetypes = [ "html" "css" "scss" "javascript" "javascriptreact" "typescript" "typescriptreact" "svelte" "vue" ];
+          filetypes = ["html" "css" "scss" "javascript" "javascriptreact" "typescript" "typescriptreact" "svelte" "vue"];
         };
         pyright.enable = true; # Python
         marksman.enable = true; # Markdown
@@ -70,4 +69,3 @@
     };
   };
 }
-
