@@ -6,7 +6,9 @@
   # security.sudo.execWheelOnly = true;
   services.fail2ban.enable = true;
   # security.pam.services.swaylock = { };
-  security.pam.services.hyprlock = {};
+  security.pam.services.hyprlock = {
+    enableGnomeKeyring = true;
+  };
   systemd.coredump.enable = false;
   #https://ryanseipp.com/post/hardening-nixos/
   systemd.services.systemd-rfkill = {
