@@ -40,7 +40,4 @@
     # enableNvidiaPatches = false;
     systemd.enable = true;
   };
-  # clipboard manager
-  services.clipse.enable = true;
-  services.clipse.imageDisplay.type = "kitty";
 }
