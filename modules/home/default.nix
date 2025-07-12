@@ -38,6 +38,7 @@
     #++ [(import ./vscodium.nix)]                  # vscode forck
     ++ [(import ./commonapps.nix)]
     ++ [(import ./yazi)]
+    ++ [(import ./clipse)]
     ++ [(import ./mime.nix)]
     ++ [(import ./fcitx5)] # fcitx5
     ++ [(import ./vscode)] # vscode

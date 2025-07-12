@@ -18,7 +18,6 @@
     ++ [(import ./network.nix)]
     ++ [(import ./proxychains.nix)]
     ++ [(import ./nh.nix)]
-    ++ [(import ./clipse)]
     ++ [(import ./pipewire.nix)]
     ++ [(import ./program.nix)]
     ++ [(import ./security.nix)]
