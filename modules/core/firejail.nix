@@ -20,7 +20,7 @@
 
       vesktop = {
         executable = "${lib.getBin pkgs.vesktop}/bin/vesktop";
-        profile = "${pkgs.firejail}/etc/firejail/discord.profile";
+        profile = "${pkgs.firejail}/etc/firejail/vesktop.profile";
       };
 
       vscode = {
@@ -30,6 +30,11 @@
       zen = {
         executable = "${lib.getBin inputs.zen-browser}/bin/zen";
         profile = "${pkgs.firejail}/etc/firejail/firefox.profile";
+      };
+      
+      bilibili = {
+        executable = "${lib.getBin pkgs.bilibili}/bin/bilibili";
+        profile = "${pkgs.firejail}/etc/firejail/electron-common.profile";
       };
       # slack = {
       #   executable = "${lib.getBin pkgs.slack}/bin/slack";

@@ -12,6 +12,7 @@
     qbittorrent
     # hexchat
     # netflix
+    bilibili
     keepassxc
     helvum
     (symlinkJoin {
