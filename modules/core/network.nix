@@ -31,6 +31,7 @@
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
     clash-nyanpasu # clash tauri gui
+    clash-verge-rev # clash tauri gui
     clash-meta
     dbip-country-lite # error: 'clash-geoip' has been removed. Consider using 'dbip-country-lite' instead.
   ];
