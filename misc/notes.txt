@@ -1,3 +1,21 @@
 要用flatseal调整nutstore和baidu云盘的权限，目前我是禁用了wayland
 如果需要使用蓝牙，要把蓝牙设置那里的poweronboot改成true
 rg stateVersion 看下要改成什么，home-manager和system的都要改
+
+
+# https://blog.nyaw.xyz/nixos-inwall-install
+网络问题：
+值得一提的是Nix Daemon 一般不吃环境变量, 并且实测使用sudo加nix也不会调用daemon，如果你不开透明代理，那需要额外的配置使nix走代理：
+sudo mkdir /run/systemd/system/nix-daemon.service.d/
+cat << EOF >/run/systemd/system/nix-daemon.service.d/override.conf  
+[Service]
+Environment="http_proxy=socks5h://localhost:7891" # 假设是你的socks代理端口 有可能要改成7890之类的，socks5h有可能要改成http
+Environment="https_proxy=socks5h://localhost:7891"
+Environment="all_proxy=socks5h://localhost:7891"
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl restart nix-daemon
+
+然后 nh os boot 之类的
+
