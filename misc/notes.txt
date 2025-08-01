@@ -17,5 +17,5 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl restart nix-daemon
 
-然后 nh os boot 之类的
+然后proxychains4 -f /etc/nixos/misc/prx.conf nh os boot 之类的
 

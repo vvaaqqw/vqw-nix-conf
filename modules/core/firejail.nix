@@ -31,7 +31,7 @@
         executable = "${lib.getBin inputs.zen-browser}/bin/zen";
         profile = "${pkgs.firejail}/etc/firejail/firefox.profile";
       };
-      
+
       bilibili = {
         executable = "${lib.getBin pkgs.bilibili}/bin/bilibili";
         profile = "${pkgs.firejail}/etc/firejail/electron-common.profile";

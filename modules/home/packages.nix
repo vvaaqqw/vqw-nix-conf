@@ -49,7 +49,7 @@
     tty-clock # cli clock
 
     ## GUI Apps
-    audacity
+    # audacity
     bleachbit # cache cleaner
     gimp
     libreoffice
