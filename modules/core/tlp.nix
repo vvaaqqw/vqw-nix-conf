@@ -16,8 +16,8 @@
       #CPU_MAX_PERF_ON_BAT = 20;
 
       #Optional helps save long term battery health
-      START_CHARGE_THRESH_BAT0 = 40; # 40 and bellow it starts to charge
-      STOP_CHARGE_THRESH_BAT0 = 50; # 50 and above it stops charging
+      START_CHARGE_THRESH_BAT0 = 75; # 40 and bellow it starts to charge
+      STOP_CHARGE_THRESH_BAT0 = 85; # 50 and above it stops charging
       # 开机默认关闭蓝牙
       DEVICES_TO_DISABLE_ON_STARTUP = "bluetooth";
     };
