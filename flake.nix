@@ -9,7 +9,7 @@
     #nixnix-flatpak 還在開發階段，所以ref=是用來固定版本的。
     hypr-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
-    xremap-flake.url = "github:xremap/nix-flake";
+    # xremap-flake.url = "github:xremap/nix-flake";
     nix-gaming.url = "github:fufexan/nix-gaming";
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -105,7 +105,7 @@
           (import ./hosts/leshy)
           {nixpkgs.overlays = [selfPkgs.overlay fenix.overlays.default];}
           nix-flatpak.nixosModules.nix-flatpak
-          inputs.xremap-flake.nixosModules.default
+          # inputs.xremap-flake.nixosModules.default
           # Adds the NUR overlay
           nur.modules.nixos.default
         ];
@@ -120,7 +120,7 @@
           (import ./hosts/ghostrace)
           {nixpkgs.overlays = [selfPkgs.overlay fenix.overlays.default];}
           nix-flatpak.nixosModules.nix-flatpak
-          inputs.xremap-flake.nixosModules.default
+          # inputs.xremap-flake.nixosModules.default
           # Adds the NUR overlay
           nur.modules.nixos.default
         ];

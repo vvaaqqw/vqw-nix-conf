@@ -45,19 +45,44 @@
     #####################################################
     ratbagd.enable = true; # ratbagd for logitech mouse
     blueman.enable = true;
-    xremap = {
-      withWlroots = true;
-      userName = "spectre";
-      yamlConfig = ''
-        modmap:
-          - name: CapsLock to RightCtrl/Esc
-            remap:
-              CapsLock:
-                held: Ctrl_R
-                alone: Esc
-                alone_timeout: 500
-      '';
+    # xremap = {
+    #   withWlroots = true;
+    #   userName = "spectre";
+    #   yamlConfig = ''
+    #     modmap:
+    #       - name: CapsLock to RightCtrl/Esc
+    #         remap:
+    #           CapsLock:
+    #             held: Ctrl_R
+    #             alone: Esc
+    #             alone_timeout: 500
+    #   '';
+    # };
+    services.kanata = {
+    enable = true;
+    keyboards = {
+      "l3shy".config = ''
+    (defsrc
+      grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+      tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+      caps a    s    d    f    g    h    j    k    l    ;    '    ret
+      lsft z    x    c    v    b    n    m    ,    .    /    rsft
+      lctl lmet lalt           spc            ralt 
+    )
+    (defalias
+      ;; tap for caps lock, hold for left control
+      cap (tap-hold 200 200 caps lctl)
+    )
+    (deflayer randomname
+      grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+      tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+      @cap a    s    d    f    g    h    j    k    l    ;    '    ret
+      lsft z    x    c    v    b    n    m    ,    .    /    rsft
+      lctl lmet lalt           spc            ralt 
+    )
+  '';
     };
+  };
     ############################
   };
   services.logind.settings.Login = {
