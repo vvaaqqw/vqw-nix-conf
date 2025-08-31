@@ -6,6 +6,4 @@
       python-preference = "only-system";
     };
   };
-
-  environment.localBinInPath = true; #https://nixos.wiki/wiki/Python
 }
