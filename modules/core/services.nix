@@ -58,7 +58,7 @@
     #             alone_timeout: 500
     #   '';
     # };
-    services.kanata = {
+    kanata = {
     enable = true;
     keyboards = {
       "l3shy".config = ''
@@ -71,7 +71,7 @@
     )
     (defalias
       ;; tap for caps lock, hold for left control
-      cap (tap-hold 200 200 caps lctl)
+      cap (tap-hold 200 200 esc lctl)
     )
     (deflayer randomname
       grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
