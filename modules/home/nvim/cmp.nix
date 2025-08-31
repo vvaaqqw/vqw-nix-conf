@@ -14,7 +14,9 @@
 
         cmp = {
           enable = true;
-          menu = {
+          };
+
+        settings.cmp.menu = {
             nvim_lsp = "[LSP]";
             nvim_lua = "[api]";
             path = "[path]";
@@ -23,7 +25,6 @@
             neorg = "[neorg]";
           };
         };
-      };
 
       cmp = {
         enable = true;

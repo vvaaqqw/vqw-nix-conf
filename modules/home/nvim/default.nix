@@ -41,7 +41,7 @@
     clipboard.providers.wl-copy.enable = true;
     clipboard.register = "unnamedplus"; # system clclipboard
 
-    colorschemes.gruvbox-material = {
+    colorschemes.gruvbox-material-nvim = {
       enable = true;
     };
 
