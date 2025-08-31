@@ -492,11 +492,9 @@
       ];
     };
 
-    #overview:toggle is a dispatcher from hyprspace plugin
     extraConfig = "
       monitor=,preferred,auto,1.25
-      bind = SUPER, TAB, overview:toggle 
-      bind = SUPER SHIFT, TAB, hyprexpo:expo, toggle 
+      bind = SUPER, TAB, hyprexpo:expo, toggle 
       $scratchpadsize = size 80% 85%
 
       xwayland {

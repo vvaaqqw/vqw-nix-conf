@@ -37,11 +37,11 @@
       submodules = true;
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    Hyprspace = {
-      url = "github:KZDKM/Hyprspace";
-      # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
-      inputs.hyprland.follows = "hyprland";
-    };
+    # Hyprspace = {
+    #   url = "github:KZDKM/Hyprspace";
+    #   # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
+    #   inputs.hyprland.follows = "hyprland";
+    # };
 
     # hyprland-easymotion = {
     # url = "github:zakk4223/hyprland-easymotion";
