@@ -25,10 +25,10 @@
         # workaround for brightness being reset on root rollback (impermanence)
         "brightness set 66%"
         "flatpak run com.jianguoyun.Nutstore" #nutstore
-        "clash-verge &" #proxy
 
         ## App auto start
         "[workspace 10 silent] easyeffects"
+        "[workspace 9 silent] clash-verge" #proxies
         #"[workspace 9 silent] sirikali" #mount gocryptfs
         "[workspace 4 silent] sleep 1 && thunderbird" #email
         # "[workspace 6 silent] sleep 1 && vesktop" #discord
