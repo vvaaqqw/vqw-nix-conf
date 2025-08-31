@@ -9,6 +9,7 @@
     #   [(import ./aseprite/aseprite.nix)]         # pixel art editor
     [(import ./audacious.nix)] # music player
     ++ [(import ./gh.nix)] # github cli command
+    ++ [(import ./uv.nix)] # python's new pip and more
     ++ [(import ./bat.nix)] # better cat command
     ++ [(import ./btop.nix)] # resouces monitor
     ++ [(import ./gammastep.nix)] # resouces monitor
