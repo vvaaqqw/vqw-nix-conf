@@ -43,6 +43,7 @@
     ++ [(import ./mime.nix)]
     ++ [(import ./fcitx5)] # fcitx5
     ++ [(import ./vscode)] # vscode
+    ++ [(import ./obsidian.nix)] 
     ++ [(import ./direnv.nix)] # direnv
     ++ [(import ./zsh.nix)] # shell
     ++ [(import ./zellij.nix)]

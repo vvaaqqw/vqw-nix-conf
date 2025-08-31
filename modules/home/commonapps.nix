@@ -15,11 +15,11 @@
     bilibili
     keepassxc
     helvum
-    (symlinkJoin {
-      # wrap obsidian with pandoc for the pandoc plugin dependency
-      name = "Obsidian";
-      paths = with pkgs; [obsidian pandoc];
-    })
+    # (symlinkJoin {
+    #   # wrap obsidian with pandoc for the pandoc plugin dependency
+    #   name = "Obsidian";
+    #   paths = with pkgs; [obsidian pandoc];
+    # })
     # gnome packages
     pkgs.gnome-tweaks
     pkgs.gnome-calendar
