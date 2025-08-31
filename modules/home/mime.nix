@@ -349,6 +349,7 @@
     "text/x-tex"
     "text/x-c"
     "text/x-c++"
+    "text/x-python"
     "text/*"
   ];
   torrents = [
