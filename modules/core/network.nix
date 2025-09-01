@@ -45,5 +45,8 @@
     mihomo
     dbip-country-lite # error: 'clash-geoip' has been removed. Consider using 'dbip-country-lite' instead.
     v2rayn # past lives couldn't ever hold me down
+    sing-box
+    sing-geoip
+    xray
   ];
 }
