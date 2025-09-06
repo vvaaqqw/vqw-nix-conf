@@ -11,7 +11,7 @@
     nftables.enable = true;
     firewall = {
       enable = true;
-      checkReversePath = "loose";#tunmode
+      # checkReversePath = "loose";#tunmode
       allowedTCPPorts = [22];
       allowedUDPPorts = [];
       #allowedTCPPorts = [22 80 443 59010 59011 7890];
@@ -52,8 +52,8 @@
   ];
   programs.clash-verge={
     enable = true;
-    tunMode = true;
-    serviceMode = true;
+    # tunMode = true;
+    # serviceMode = true;
   };
-  services.resolved.enable = true; #tunmode
+  # services.resolved.enable = true; #tunmode
 }

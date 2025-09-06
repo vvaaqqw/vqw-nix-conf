@@ -139,6 +139,8 @@
       tree = "eza --icons --tree --group-directories-first";
       # gocryptfs
       gcvi = "gocryptfs ~/Nutstore\\ Files/VI ~/VI";
+      # discord
+      discord = "vesktop --proxy-server=127.0.0.1:7890 --force-device-scale-factor=0.75 &";
 
       # Nixos
       cdnix = "z /etc/nixos";
