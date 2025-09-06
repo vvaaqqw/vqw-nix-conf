@@ -41,7 +41,7 @@
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
     clash-nyanpasu # clash tauri gui
-    clash-verge-rev # clash tauri gui
+    # clash-verge-rev # clash tauri gui #programs.clash-verge is recommanded
     mihomo
     dbip-country-lite # error: 'clash-geoip' has been removed. Consider using 'dbip-country-lite' instead.
     v2rayn # past lives couldn't ever hold me down
@@ -49,4 +49,9 @@
     sing-geoip
     xray
   ];
+  programs.clash-verge={
+    enable = true;
+    tunMode = true;
+    serviceMode = true;
+  };
 }
