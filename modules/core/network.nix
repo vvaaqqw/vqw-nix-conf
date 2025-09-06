@@ -7,10 +7,11 @@
   networking = {
     hostName = "${host}";
     networkmanager.enable = true;
-    nameservers = ["1.1.1.1"];
+    nameservers = ["1.1.1.1"];  #Cloudflare
     nftables.enable = true;
     firewall = {
       enable = true;
+      checkReversePath = "loose";#tunmode
       allowedTCPPorts = [22];
       allowedUDPPorts = [];
       #allowedTCPPorts = [22 80 443 59010 59011 7890];
@@ -45,13 +46,14 @@
     mihomo
     dbip-country-lite # error: 'clash-geoip' has been removed. Consider using 'dbip-country-lite' instead.
     v2rayn # past lives couldn't ever hold me down
+    xray
     sing-box
     sing-geoip
-    xray
   ];
   programs.clash-verge={
     enable = true;
     tunMode = true;
     serviceMode = true;
   };
+  services.resolved.enable = true; #tunmode
 }
