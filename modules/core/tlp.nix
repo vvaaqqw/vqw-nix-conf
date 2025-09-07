@@ -22,4 +22,8 @@
       DEVICES_TO_DISABLE_ON_STARTUP = "bluetooth";
     };
   };
+
+  services.thinkfan = {
+    enable = true;
+  }; # this software targets thinkpad series
 }
