@@ -11,6 +11,7 @@
     inputs.hypr-contrib.packages.${pkgs.system}.grimblast
     inputs.hypr-contrib.packages.${pkgs.system}.hdrop
     hyprpicker # color picker
+    hypridle
     grim
     slurp
     wl-clip-persist
