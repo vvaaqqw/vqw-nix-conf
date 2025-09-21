@@ -14,6 +14,7 @@
     ];
     modules-center = [
       "clock"
+      "idle_inhibitor"
       "tray"
       "privacy"
       "wireplumber"
@@ -34,6 +35,13 @@
       tooltip = "true";
       tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
       format-alt = "  {:%m/%d}";
+    };
+    idle_inhibitor = {
+      format = "{icon}";
+      format-icons = {
+        activated = "";
+        deactivated = "";
+      };
     };
     "hyprland/workspaces" = {
       active-only = false;

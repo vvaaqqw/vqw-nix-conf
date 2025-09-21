@@ -1,6 +1,7 @@
 {...}: {
   home.sessionVariables = {
     NIXOS_OZONE_WL = "1"; # You can turn on native Wayland support in all chrome and most electron apps by setting an environment variable:
+    ELECTRON_OZONE_PLATFORM_HINT = "wayland";
     __GL_GSYNC_ALLOWED = "0";
     __GL_VRR_ALLOWED = "0";
     _JAVA_AWT_WM_NONEREPARENTING = "1";
@@ -12,7 +13,8 @@
     WLR_DRM_NO_ATOMIC = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-    QT_QPA_PLATFORM = "xcb";
+    #QT_QPA_PLATFORM = "xcb";
+    QT_QPA_PLATFORM = "wayland";
     QT_STYLE_OVERRIDE = "kvantum";
     MOZ_ENABLE_WAYLAND = "1";
     WLR_BACKEND = "vulkan";

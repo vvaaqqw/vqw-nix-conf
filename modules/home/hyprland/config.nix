@@ -20,6 +20,7 @@
         "poweralertd &"
         "waybar &"
         "swaync &"
+        "hypridle"
         #"${pkgs.hyprpanel}/bin/hyprpanel"
         "hyprlock"
         # workaround for brightness being reset on root rollback (impermanence)
