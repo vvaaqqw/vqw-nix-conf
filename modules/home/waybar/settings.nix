@@ -13,8 +13,8 @@
       #"mpris"
     ];
     modules-center = [
-      "clock"
       "idle_inhibitor"
+      "clock"
       "tray"
       "privacy"
       "wireplumber"
