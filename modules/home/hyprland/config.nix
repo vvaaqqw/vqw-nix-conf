@@ -374,7 +374,8 @@
       windowrule = [
         "float, title:^(Picture-in-Picture)$"
         "opacity 1.0 override 1.0 override, title:^(Picture-in-Picture)$"
-        "pin, title:^(Picture-in-Picture)$"
+        # "pin, title:^(Picture-in-Picture)$"
+        "movetoworkspacesilent 10,title:^Picture-in-Picture$"
         "opacity 1.0 override 1.0 override, title:^(.*imv.*)$"
         "opacity 1.0 override 1.0 override, title:^(.*mpv.*)$"
         "opacity 1.0 override 1.0 override, class:(Aseprite)"
