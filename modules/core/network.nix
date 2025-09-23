@@ -28,6 +28,9 @@
       ];
     };
   };
+  services.dnsmasq ={
+    enable=true;
+  };
 
   # mihomo formerly known as clash-meta
   services.mihomo = {

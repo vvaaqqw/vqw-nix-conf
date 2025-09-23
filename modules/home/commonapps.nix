@@ -12,7 +12,7 @@
     qbittorrent
     # hexchat
     # netflix
-    bilibili
+    # bilibili
     keepassxc
     helvum
     # (symlinkJoin {
@@ -20,6 +20,7 @@
     #   name = "Obsidian";
     #   paths = with pkgs; [obsidian pandoc];
     # })
+    obsidian
     # gnome packages
     pkgs.gnome-tweaks
     pkgs.gnome-calendar
