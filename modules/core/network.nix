@@ -12,8 +12,8 @@
     firewall = {
       enable = true;
       # checkReversePath = "loose";#tunmode
-      allowedTCPPorts = [22];
-      allowedUDPPorts = [];
+      allowedTCPPorts = [22 53]; # libvirtd's dnsmasq 可能用到53端口
+      allowedUDPPorts = [53];
       #allowedTCPPorts = [22 80 443 59010 59011 7890];
       #allowedUDPPorts = [59010 59011 7890];
       allowedUDPPortRanges = [
@@ -29,7 +29,7 @@
     };
   };
   services.dnsmasq ={
-    enable=true;
+    enable=false;# 系统级别的Dnsmasq会和libvirtd的冲突
   };
 
   # mihomo formerly known as clash-meta
