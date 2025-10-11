@@ -11,12 +11,13 @@
     nftables.enable = true;
     firewall = {
       enable = true;
-      trustedInterfaces = ["virbr0"]; # workaround for libvirtd+nftables, the default interface is called virbr0
-      # checkReversePath = "loose";#tunmode
-      allowedTCPPorts = [22 53]; # libvirtd's dnsmasq 可能用到53端口
-      allowedUDPPorts = [53];
-      #allowedTCPPorts = [22 80 443 59010 59011 7890];
-      #allowedUDPPorts = [59010 59011 7890];
+      # checkReversePath = "loose";# clash tunmode
+      interfaces.virbr0.allowedTCPPorts = [ 53 ]; #libvirtd virbr0
+      interfaces.virbr0.allowedUDPPorts = [ 53 67 ];#libvirtd virbr0
+      allowedTCPPorts = [22]; # libvirtd's dnsmasq 可能用到53端口
+      allowedUDPPorts = [];
+      #allowedTCPPorts = [22 80 443 59010 59011];
+      #allowedUDPPorts = [59010 59011];
       allowedUDPPortRanges = [
         {
           from = 4000;
