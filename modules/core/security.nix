@@ -9,7 +9,12 @@
   security.pam.services.hyprlock = {
     enableGnomeKeyring = true;
   };
-  systemd.coredump.enable = false;
+  systemd.coredump.enable = false; #disable coredump that could be exploited later
+
+  # clamav anti-virus
+  services.clamav.daemon.enable = true;
+  services.clamav.updater.enable = true;
+  
   #https://ryanseipp.com/post/hardening-nixos/
   systemd.services.systemd-rfkill = {
     serviceConfig = {
