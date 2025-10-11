@@ -22,7 +22,6 @@
     #pkgs.pywal #hyprpanel uses
     # kde stuff
     pkgs.kdePackages.kate
-    pkgs.kdePackages.filelight
     pkgs.kdePackages.dolphin
     pkgs.kdePackages.dolphin-plugins
     pkgs.kdePackages.okular

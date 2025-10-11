@@ -25,6 +25,7 @@
     man-pages # extra man pages
     mpv # video player
     ncdu # disk space
+    dua # another disk usage analyzer
     nitch # systhem fetch util
     openssl
     onefetch # fetch utility for git repo
