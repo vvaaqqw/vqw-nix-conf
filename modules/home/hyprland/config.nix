@@ -250,7 +250,7 @@
         "$mainMod, U, togglesplit,"
         "$mainMod, S, swapsplit,"
         "$mainMod,I,togglegroup," # group focused window
-        "$mainMod,O,changegroupactive," # switch within the active group
+        "$mainMod,O,lockactivegroup, toggle," # switch within the active group
         "$mainMod SHIFT, O, exec, toggle_oppacity"
         "$mainMod SHIFT, P ,exec, hyprpicker -a"
         "$mainMod , Q, pseudo," # 切换伪 tiling 模式，伪 tiling 模式的窗口保持它们浮动时的大小
