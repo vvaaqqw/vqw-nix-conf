@@ -497,6 +497,7 @@
     extraConfig = "
       monitor=,preferred,auto,1.25
       bind = SUPER, TAB, hyprexpo:expo, toggle 
+      hyprexpo-gesture = 4, up, expo
       gesture = 3, horizontal, workspace
       $scratchpadsize = size 80% 85%
 
