@@ -17,9 +17,9 @@
   ];
 
   services = {
-    # thermald.enable = true;
-    # cpupower-gui.enable = true;
-    power-profiles-daemon.enable = false;
+    # thermald.enable = true; # might need it if thinkfan is disabled
+    cpupower-gui.enable = true;
+    power-profiles-daemon.enable = false;# conflicts with tlp
 
     upower = {
       enable = true;
@@ -44,7 +44,10 @@
     # };
   };
 
-  powerManagement.cpuFreqGovernor = "performance";
+  powerManagement.cpuFreqGovernor = "performance";#By default, the kernel configures the performance governor, although this may be overwritten in your hardware-configuration.nix file.
+
+  # hibernation needs this to work
+  boot.resumeDevice = "/dev/nvme0n1p3"; #swapon -s to list the option
 
   boot = {
     kernelModules = ["acpi_call"];
