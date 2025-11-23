@@ -31,7 +31,6 @@
         package = pkgs.qemu_kvm; 
         runAsRoot = true;          # 使用系统级 qemu:///system
         swtpm.enable = true;
-        ovmf.packages = [pkgs.OVMFFull.fd];
       };
     };
     spiceUSBRedirection.enable = true;
