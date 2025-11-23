@@ -140,7 +140,7 @@
     };
 
     # 用来nix develop，在一台新电脑上配置的时候用得到
-    devShells.${system}.default = pkgs.mkShell {
+    devShells.${pkgs.stdenv.hostPlatform.system}.default = pkgs.mkShell {
       packages = with pkgs; [
         just
         neovim

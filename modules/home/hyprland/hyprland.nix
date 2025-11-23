@@ -8,8 +8,8 @@
     swaybg
     nwg-dock-hyprland
     # pyprland
-    inputs.hypr-contrib.packages.${pkgs.system}.grimblast
-    inputs.hypr-contrib.packages.${pkgs.system}.hdrop
+    inputs.hypr-contrib.packages.${pkgs.stdenv.hostPlatform.system}.grimblast
+    inputs.hypr-contrib.packages.${pkgs.stdenv.hostPlatform.system}.hdrop
     hyprpicker # color picker
     hypridle
     grim
@@ -29,10 +29,10 @@
   systemd.user.targets.hyprland-session.Unit.Wants = ["xdg-desktop-autostart.target"];
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
-      # inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprexpo
+      # inputs.hyprland-easymotion.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-easymotion
     ];
     xwayland = {
       enable = true;

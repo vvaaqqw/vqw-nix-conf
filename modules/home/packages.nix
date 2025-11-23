@@ -68,6 +68,6 @@
     # Python
     python3
 
-    inputs.alejandra.defaultPackage.${system}
+    inputs.alejandra.defaultPackage.${stdenv.hostPlatform.system}
   ];
 }

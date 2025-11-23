@@ -7,7 +7,7 @@
   home.packages = with pkgs; [
     ## Utils
     winetricks
-    inputs.nix-gaming.packages.${pkgs.system}.wine-ge
+    inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.wine-ge
 
     ## Cli games
     #vitetris

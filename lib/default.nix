@@ -39,14 +39,14 @@
     
     (filterAttrs (name: _: name != "default") (dirAttrs ".nix" path)));
 
-  # pkgs -> inputs -> ["a" {b="c";}] -> { "a" = inputs.a.packages.${pkgs.system}.default; "c" = inputs.b.packages.${pkgs.system}.c; }
+  # pkgs -> inputs -> ["a" {b="c";}] -> { "a" = inputs.a.packages.${pkgs.stdenv.hostPlatform.system}.default; "c" = inputs.b.packages.${pkgs.stdenv.hostPlatform.system}.c; }
   dryFlakes = pkgs: inputs: deps:
     listToAttrs (flatten (lists.map (dep:
       if strings.typeOf dep == "string"
       then {
         name = dep;
         value = let
-          packages = inputs."${dep}".packages.${pkgs.system};
+          packages = inputs."${dep}".packages.${pkgs.stdenv.hostPlatform.system};
         in
           if packages ? dep
           then packages."${dep}"
@@ -55,7 +55,7 @@
       else
         mapAttrs (k: v: {
           name = v;
-          value = inputs."${k}".packages.${pkgs.system}."${v}";
+          value = inputs."${k}".packages.${pkgs.stdenv.hostPlatform.system}."${v}";
         }))
     deps));
 

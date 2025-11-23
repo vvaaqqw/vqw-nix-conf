@@ -12,7 +12,7 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code
     twemoji-color-font
-    noto-fonts-emoji
+    noto-fonts-color-emoji
     # monolisa
     # monolisa-nerd
   ];
