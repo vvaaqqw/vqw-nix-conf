@@ -31,7 +31,6 @@
       ])))
       rust-analyzer
       taplo
-      taplo-lsp
       terraform-ls
       typescript
       vscode-langservers-extracted
