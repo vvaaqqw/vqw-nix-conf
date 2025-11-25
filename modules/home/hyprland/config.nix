@@ -443,12 +443,12 @@
         "float,title:^(Confirm to replace files)$"
         "float,title:^(File Operation Progress)$"
 
-        "workspace 10, class:^(xwaylandvideobridge)$"
-        "opacity 0.0 override,class:^(xwaylandvideobridge)$"
-        "noanim,class:^(xwaylandvideobridge)$"
-        "noinitialfocus,class:^(xwaylandvideobridge)$"
-        "maxsize 1 1,class:^(xwaylandvideobridge)$"
-        "noblur,class:^(xwaylandvideobridge)$"
+        # "workspace 10, class:^(xwaylandvideobridge)$"
+        # "opacity 0.0 override,class:^(xwaylandvideobridge)$"
+        # "noanim,class:^(xwaylandvideobridge)$"
+        # "noinitialfocus,class:^(xwaylandvideobridge)$"
+        # "maxsize 1 1,class:^(xwaylandvideobridge)$"
+        # "noblur,class:^(xwaylandvideobridge)$"
 
         # 浮动窗口规则
         "float,class:^(qView)$"

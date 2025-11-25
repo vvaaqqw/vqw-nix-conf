@@ -10,16 +10,16 @@
         indent.enable = true;
         highlight.enable = true;
         auto_install = true;
+        treesitter-refactor = {
+          enable = true;
+          highlight_definition = {
+            enable = true;
+            clearOnCursorMove = false;
+          };
+        };
       };
     };
 
-    treesitter-refactor = {
-      enable = true;
-      highlightDefinitions = {
-        enable = true;
-        clearOnCursorMove = false;
-      };
-    };
 
     hmts.enable = true;
   };

@@ -16,7 +16,7 @@
       librime
       # needed enable rime using configtool after installed
       kdePackages.fcitx5-configtool
-      fcitx5-chinese-addons
+      kdePackages.fcitx5-chinese-addons
       fcitx5-gtk
       fcitx5-lua
       kdePackages.fcitx5-qt
