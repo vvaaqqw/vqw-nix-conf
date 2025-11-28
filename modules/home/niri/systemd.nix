@@ -17,7 +17,6 @@
    Description = "Waybar status bar (Niri session)";
    PartOf = "graphical-session.target";
    After = "graphical-session.target";
-   ConditionEnvironment = "XDG_CURRENT_DESKTOP=niri";
    };
    Service = {
    ExecStart = "${pkgs.waybar}/bin/waybar";

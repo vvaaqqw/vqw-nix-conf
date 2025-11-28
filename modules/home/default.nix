@@ -53,6 +53,7 @@
     ++ [(import ./hypridle.nix)]
     ++ [(import ./niri)]
     ++ [(import ./vicinae.nix)]
+    ++ [(import ./waypaper.nix)]
     ++ [(import ./waybar)]
     ++ lib.optionals (host == "ghostrace") [
       ./swaync/swaync.nix
