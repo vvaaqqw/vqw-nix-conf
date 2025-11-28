@@ -1,6 +1,5 @@
 {pkgs,...}:
 {
-  systemd.enable = true;
   # copied from someone else
   # Systemd services for Niri session
    systemd.user.targets.niri-session = {

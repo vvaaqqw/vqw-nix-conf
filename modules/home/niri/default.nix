@@ -1,6 +1,6 @@
 {pkgs,inputs,...}:
 let
- inherit (inputs.ns-flake.packages.${pkgs.stdenv.hostPlatform.system}) niri-scratchpad;
+ inherit (inputs.niri-scratchpad-flake.packages.${pkgs.stdenv.hostPlatform.system}) niri-scratchpad;
 in
 {
     imports =
