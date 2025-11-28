@@ -111,14 +111,13 @@
           (import ./hosts/leshy)
           {nixpkgs.overlays = [selfPkgs.overlay fenix.overlays.default];}
           nix-flatpak.nixosModules.nix-flatpak
-          vicinae.homeManagerModules.default
           # inputs.xremap-flake.nixosModules.default
           # Adds the NUR overlay
           nur.modules.nixos.default
         ];
         specialArgs = {
           host = "leshy";
-          inherit self inputs lib username generated;
+          inherit self inputs username lib generated;
         };
       };
       ghostrace = nixpkgs.lib.nixosSystem {
@@ -127,14 +126,13 @@
           (import ./hosts/ghostrace)
           {nixpkgs.overlays = [selfPkgs.overlay fenix.overlays.default];}
           nix-flatpak.nixosModules.nix-flatpak
-          vicinae.homeManagerModules.default
           # inputs.xremap-flake.nixosModules.default
           # Adds the NUR overlay
           nur.modules.nixos.default
         ];
         specialArgs = {
           host = "ghostrace";
-          inherit self inputs lib username generated;
+          inherit self inputs username lib generated;
         };
       };
       # vm = nixpkgs.lib.nixosSystem {
