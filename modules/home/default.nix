@@ -39,7 +39,6 @@
     #++ [(import ./vscodium.nix)]                  # vscode forck
     ++ [(import ./commonapps.nix)]
     ++ [(import ./yazi)]
-    ++ [(import ./clipse)]
     ++ [(import ./mime.nix)]
     ++ [(import ./fcitx5)] # fcitx5
     ++ [(import ./vscode)] # vscode
@@ -50,11 +49,11 @@
     ++ [(import ./zen-browser.nix)]
     ++ [(import ./librewolf.nix)]
     ++ [(import ./vesktop)]
+    ++ [(import ./hyprlock.nix)]
+    ++ [(import ./hypridle.nix)]
     ++ lib.optionals (host == "ghostrace") [
-      # Hyprland 相关配置
-      ./hyprland
+      ./niri
       ./waybar
       ./swaync/swaync.nix
-      #./hyprpanel.nix# NixOS instructions are pending updates for HyprPanel v2
     ];
 }

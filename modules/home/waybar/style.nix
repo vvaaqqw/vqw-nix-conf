@@ -61,6 +61,11 @@ in {
       border-bottom: ${indicator_height} solid ${yellow};
     }
 
+    /* make window module transparent when no windows present */
+    window#waybar.empty #window {
+        background-color: transparent;
+    }
+
     #clock {
       color: ${text_color};
       border-bottom: ${indicator_height} solid ${background_0};

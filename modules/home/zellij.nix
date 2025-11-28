@@ -1,8 +1,8 @@
 {pkgs, ...}: {
   programs.zellij = {
     enable = true;
-    enableZshIntegration = true;
-    enableBashIntegration = true;
+    enableZshIntegration = false;
+    enableBashIntegration = false;
     settings = {
       theme = "gruvbox-dark";
       pane_frames = false;

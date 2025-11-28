@@ -7,8 +7,8 @@
     nur.url = "github:nix-community/NUR";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     #nixnix-flatpak 還在開發階段，所以ref=是用來固定版本的。
-    hypr-contrib.url = "github:hyprwm/contrib";
     hyprpicker.url = "github:hyprwm/hyprpicker";
+    vicinae.url = "github:vicinaehq/vicinae"; 
     # xremap-flake.url = "github:xremap/nix-flake";
     nix-gaming.url = "github:fufexan/nix-gaming";
     zen-browser = {
@@ -31,12 +31,17 @@
     #   spicetify-nix.url = "github:gerg-l/spicetify-nix";
     #   spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
 
-    hyprland = {
-      type = "git";
-      url = "https://github.com/hyprwm/Hyprland";
-      submodules = true;
+   niri-scratchpad-flake = {
+      url = "github:gvolpe/niri-scratchpad";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
+   };
+    # hyprland = {
+    #   type = "git";
+    #   url = "https://github.com/hyprwm/Hyprland";
+    #   submodules = true;
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+    # hypr-contrib.url = "github:hyprwm/contrib";
     # Hyprspace = {
     #   url = "github:KZDKM/Hyprspace";
     #   # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
@@ -48,10 +53,10 @@
     # inputs.hyprland.follows = "hyprland";
     # };
 
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
+    # hyprland-plugins = {
+    #   url = "github:hyprwm/hyprland-plugins";
+    #   inputs.hyprland.follows = "hyprland";
+    # };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -67,6 +72,7 @@
     nixos-hardware,
     nix-flatpak,
     fenix,
+    vicinae,
     ...
   } @ inputs: let
     username = "spectre";
@@ -105,6 +111,7 @@
           (import ./hosts/leshy)
           {nixpkgs.overlays = [selfPkgs.overlay fenix.overlays.default];}
           nix-flatpak.nixosModules.nix-flatpak
+          vicinae.homeManagerModules.default
           # inputs.xremap-flake.nixosModules.default
           # Adds the NUR overlay
           nur.modules.nixos.default
@@ -120,6 +127,7 @@
           (import ./hosts/ghostrace)
           {nixpkgs.overlays = [selfPkgs.overlay fenix.overlays.default];}
           nix-flatpak.nixosModules.nix-flatpak
+          vicinae.homeManagerModules.default
           # inputs.xremap-flake.nixosModules.default
           # Adds the NUR overlay
           nur.modules.nixos.default

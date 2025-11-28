@@ -9,7 +9,8 @@
     margin-right = 0;
     modules-left = [
       "custom/launcher"
-      "hyprland/workspaces"
+      "niri/workspaces"
+      "niri/window"
       #"mpris"
     ];
     modules-center = [
@@ -43,28 +44,46 @@
         deactivated = "  ";
       };
     };
-    "hyprland/workspaces" = {
-      active-only = false;
-      disable-scroll = true;
+    "niri/workspaces" = {
+      # current-only = true; # If set to true, only the active or focused workspace will be shown.
       format = "{icon}";
-      on-click = "activate";
       format-icons = {
-        "1" = "一";
-        "2" = "二";
-        "3" = "三";
-        "4" = "亖";
-        "5" = "武";
-        "6" = "琉";
-        "7" = "柒";
-        "8" = "魃";
-        "9" = "玖";
-        "10" = "∅";
-        sort-by-number = true;
-      };
-      persistent-workspaces = {
-        "10" = [];
+        # "1" = "一";
+        # "2" = "二";
+        # "3" = "三";
+        # "4" = "亖";
+        # "5" = "武";
+        # "6" = "琉";
+        # "7" = "柒";
+        # "8" = "魃";
+        # "9" = "玖";
+        # Named workspaces(you need to configure them in niri)
+        "scratch" = "∅";
+        # Icons by state
+        "urgent"= "";
+    		"active"="";
+    		"default"="";
       };
     };
+
+  "niri/window" = {
+            format = "{}";
+            max-length = 20;
+            icon = false;
+            icon-size = 18;
+            separate-outputs = true;
+            rewrite = {
+              "(.*) - Mozilla Firefox" = "Web: $1";
+              "(.*) — Mozilla Firefox" = "Web: $1";
+              "(.*) - zsh"             = "> $1";
+              "(.*) - Alacritty"       = "Term: $1";
+              "(.*) - kitty"           = "Term: $1";
+              "(.*) — Spotify"         = "Music: $1";
+            };
+            on-click = "niri msg action focus-window-under-cursor";
+          };
+        };
+    
     bluetooth = {
       format = "{status}";
       format-connected = "{device_alias}";
