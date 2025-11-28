@@ -82,7 +82,6 @@
             };
             on-click = "niri msg action focus-window-under-cursor";
           };
-        };
     
     bluetooth = {
       format = "{status}";
