@@ -20,11 +20,8 @@ in
     wl-clip-persist
     wf-recorder
     glib
-    wayland
     direnv
+    wayland
+    xwayland-satellite # xwayland support
   ];
-
-  environment.systemPackages = with pkgs; [ 
-        xwayland-satellite # xwayland support
-    ];
 }
