@@ -352,6 +352,7 @@ animations {
     slowdown 0.75
 }
 //named workspaces
+workspace "init"
 workspace "scratch"
 
 window-rule {
@@ -409,6 +410,8 @@ window-rule {
 }
 window-rule {
     match app-id=r#"zen$"#
+    match app-id=r#"zen-beta$"#
+    match app-id=r#"zen-twilight$"#
     match app-id=r#"firefox$"#
     match app-id=r#"librewolf$"#
     match app-id=r#"chromium$"#
@@ -449,9 +452,7 @@ gestures {
 
 binds {
     //drop down
-    Mod+M { spawn-sh "nscratch -id Musicfox -s musicfox"; }
-    Mod+Y { spawn-sh "nscratch -id Yazi -s yazi"; }
-    Mod+T { spawn-sh "nscratch -id Zellij -s zellij"; }
+    Mod+M { spawn-sh "nscratch -t musicfox -s 'kitty -e musicfox'"; }
     ////////////////////////
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program

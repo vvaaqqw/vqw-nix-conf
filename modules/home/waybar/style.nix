@@ -44,13 +44,13 @@ in {
     }
 
     #workspaces {
-      padding-left: 15px;
+      padding-left: 7px;
     }
     #workspaces button {
       color: ${yellow};
-      padding-left:  5px;
-      padding-right: 5px;
-      margin-right: 10px;
+      padding-left:  2px;
+      padding-right: 2px;
+      margin-right: 5px;
       border-bottom: ${indicator_height} solid ${background_0};
     }
     #workspaces button.empty {
