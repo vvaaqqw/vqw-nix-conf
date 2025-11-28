@@ -7,27 +7,26 @@
 
   programs.git = {
     enable = true;
-
-    userName = "vvaaqqw";
-    userEmail = "3254549695@qq.com";
-
-    extraConfig = {
+    settings = {
+      user.name = "vvaaqqw";
+      user.email = "3254549695@qq.com";
       init.defaultBranch = "main";
       credential.helper = "store";
       merge.conflictstyle = "diff3";
       diff.colorMoved = "default";
       safe.directory = "/etc/nixos"; # prevent git from saying dubious permissions
     };
+  };
 
-    delta = {
+    programs.delta = {
       enable = true;
+      enableGitIntegration = true;
       options = {
         line-numbers = true;
         # side-by-side = true;
         navigate = true;
       };
     };
-  };
 
   home.packages = [pkgs.gh pkgs.git-lfs];
 
