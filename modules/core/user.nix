@@ -4,6 +4,7 @@
   inputs,
   username,
   host,
+  mylib,
   generated,
   ...
 }: {
@@ -15,7 +16,7 @@
     useGlobalPkgs = true;
     #backupFileExtension = "hmbackup";
     backupFileExtension = "hmbackup-${builtins.substring 0 8 (builtins.toString self.lastModifiedDate)}";
-    extraSpecialArgs = {inherit inputs username host generated;};
+    extraSpecialArgs = {inherit inputs username mylib host generated;};
     users.${username} = {
       imports =
         if (host == "leshy")

@@ -150,8 +150,8 @@
 
       nix-init = "nix run github:nix-community/nix-init";
       #nurl = "nix run github:nix-community/nurl"; # installed
-      nix-boot = "z /etc/nixos &&  nh os boot /etc/nixos && notify-send '❄ upd finished🫠'";
-      nix-upd = "z /etc/nixos/nvfpkgs && sudo nvfetcher && z /etc/nixos && sudo nix flake update && nh os boot /etc/nixos && notify-send '❄ upd finished🫠'";
+      nix-boot = "z /etc/nixos &&  nh os boot --accept-flake-config /etc/nixos ; notify-send '❄ finished or 🫠'";
+      nix-upd = "z /etc/nixos/nvfpkgs && sudo nvfetcher && z /etc/nixos && sudo nix flake update && nh os boot --accept-flake-config /etc/nixos ; notify-send '❄ finished or 🫠'";
       nix-clean = "nh clean all --keep 5";
       nix-search = "nh search";
       ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
@@ -159,13 +159,13 @@
       deadnix = "sudo nix run github:astro/deadnix /etc/nixos";
       deadfix = "sudo nix run github:astro/deadnix -- -e /etc/nixos";
 
-      # lockupd = "cd /etc/nixos && sudo nix flake update && cd /etc/nixos/nvfpkgs && sudo nvfetcher && notify-send '❄ lock upd finished🫠'";
-      # lockprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nix flake update && notify-send '❄ lock upd finished🫠'";
-      # nixupd = "cd /etc/nixos && sudo nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace && notify-send '❄ upd finished🫠'";
-      # nixnlockupd = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace && notify-send '❄ upd finished🫠'";
-      # nixnlockprxupd = "cd /etc/nixos && sudo nix flake update && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace && notify-send '❄ upd finished🫠'";
-      nixprxupd = "z /etc/nixos/nvfpkgs && sudo proxychains4 -f /etc/nixos/misc/prx.conf nvfetcher && z /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nix flake update && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace && notify-send '❄ upd finished🫠'";
-      nixprxboot = "z /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace && notify-send '❄ upd finished🫠'";
+      # lockupd = "cd /etc/nixos && sudo nix flake update && cd /etc/nixos/nvfpkgs && sudo nvfetcher ; notify-send '❄ lock finished or 🫠'";
+      # lockprxupd = "cd /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nix flake update ; notify-send '❄ lock finished or 🫠'";
+      # nixupd = "cd /etc/nixos && sudo nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace --accept-flake-config ; notify-send '❄ finished or 🫠'";
+      # nixnlockupd = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace --accept-flake-config ; notify-send '❄ finished or 🫠'";
+      # nixnlockprxupd = "cd /etc/nixos && sudo nix flake update && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace --accept-flake-config ; notify-send '❄ finished or 🫠'";
+      nixprxupd = "z /etc/nixos/nvfpkgs && sudo proxychains4 -f /etc/nixos/misc/prx.conf nvfetcher && z /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nix flake update && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace --accept-flake-config ; notify-send '❄ finished or 🫠'";
+      nixprxboot = "z /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nixos-rebuild boot --flake .#ghostrace --option eval-cache false --show-trace --accept-flake-config ; notify-send '❄ finished or 🫠'";
 
       # python
       piv = "python -m venv .venv";

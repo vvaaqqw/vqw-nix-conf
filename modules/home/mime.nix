@@ -2,6 +2,7 @@
   lib,
   config,
   pkgs,
+  mylib,
   ...
 }: let
   addDesktop = x: "${x}.desktop";
@@ -365,12 +366,12 @@
   # - /etc/profiles/per-user/kiara/share/applications/
   # - ~/.local/share/applications/
   browsers = ["chromium"];
-  editors = ["neovim" "helix" "code" "lapce" "kate"];
+  editors = ["neovim" "helix" "kate" "code" "lapce" ];
   # MIME associations: specific items go lower left
   # (first in the inner list but late in the outer list),
   # generic ones upper-right
   # MIME types: https://www.digipres.org/formats/mime-types/
-  associations = lib.mine.prioritizeList (lib.lists.map (lib.mine.mapVals (lib.lists.map addDesktop)) [
+  associations = mylib.prioritizeList (lib.lists.map (mylib.mapVals (lib.lists.map addDesktop)) [
     # use pistol as fallback for terminal-based read-only previews
     (
       lib.genAttrs

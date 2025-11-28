@@ -1,6 +1,10 @@
 {
   description = "copid from FrostPhoenix's nixos configuration";
 
+  nixConfig = {
+    abort-on-warn=true;
+  };
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixos-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
@@ -99,10 +103,12 @@
     # Extend nixpkgs.lib with custom lib and HM lib
     # Custom `./lib` will exposed as `lib.mine`
     # NOTE merge with `home-manager.lib` otherwise build will fail.
-    mkLib = nixpkgs:
-      nixpkgs.lib.extend
-      (self: super: {mine = import ./lib {lib = self;};} // home-manager.lib);
-    lib = mkLib inputs.nixpkgs;
+    # mkLib = nixpkgs:
+    #   nixpkgs.lib.extend
+    #   (self: super: {mine = import ./lib {lib = self;};} // home-manager.lib);
+    # lib = mkLib inputs.nixpkgs;
+    lib = nixpkgs.lib;
+    mylib  = import ./lib { lib = pkgs.lib; };
   in {
     nixosConfigurations = {
       leshy = nixpkgs.lib.nixosSystem {
@@ -117,7 +123,7 @@
         ];
         specialArgs = {
           host = "leshy";
-          inherit self inputs username lib generated;
+          inherit self inputs username lib mylib generated;
         };
       };
       ghostrace = nixpkgs.lib.nixosSystem {
@@ -132,7 +138,7 @@
         ];
         specialArgs = {
           host = "ghostrace";
-          inherit self inputs username lib generated;
+          inherit self inputs username lib mylib generated;
         };
       };
       # vm = nixpkgs.lib.nixosSystem {
