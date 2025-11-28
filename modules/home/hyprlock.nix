@@ -6,7 +6,7 @@ in {
     # BACKGROUND
     background {
       monitor =
-      path = ${../../../wallpapers/otherWallpaper/gruvbox/eqmixer.jpg}
+      path = ${../../wallpapers/otherWallpaper/gruvbox/eqmixer.jpg}
       blur_passes = 1
       contrast = 0.8916
       brightness = 0.8172
