@@ -1,0 +1,30 @@
+{pkgs,inputs,...}:
+let
+ inherit (inputs.ns-flake.packages.${pkgs.stdenv.hostPlatform.system}) niri-scratchpad;
+in
+{
+    imports =
+    [(import ./variables.nix)]
+    ++[(import ./systemd.nix)];
+
+  programs.niri.enable = true;
+  xdg.configFile."niri/config.kdl".source = ./config.kdl;
+
+  home.packages = with pkgs; [
+    niri-scratchpad
+    swaybg
+    hyprpicker # color picker
+    hypridle
+    grim
+    slurp
+    wl-clip-persist
+    wf-recorder
+    glib
+    wayland
+    direnv
+  ];
+
+  environment.systemPackages = with pkgs; [ 
+        xwayland-satellite # xwayland support
+    ];
+}
