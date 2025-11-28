@@ -7,7 +7,6 @@ in
     [(import ./variables.nix)]
     ++[(import ./systemd.nix)];
 
-  programs.niri.enable = true;
   xdg.configFile."niri/config.kdl".source = ./config.kdl;
 
   home.packages = with pkgs; [

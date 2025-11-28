@@ -51,9 +51,9 @@
     ++ [(import ./vesktop)]
     ++ [(import ./hyprlock.nix)]
     ++ [(import ./hypridle.nix)]
+    ++ [(import ./niri)]
+    ++ [(import ./waybar)]
     ++ lib.optionals (host == "ghostrace") [
-      ./niri
-      ./waybar
       ./swaync/swaync.nix
     ];
 }
