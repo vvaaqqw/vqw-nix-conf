@@ -141,10 +141,9 @@ layout {
     // Make the tab indicator wider and match the window height,
     // also put it at the top and within the column.
     tab-indicator {
-            width 8
-            gap 8
+            width 4
+            gap 4
             length total-proportion=1.0
-            position "top"
             place-within-column
         }
     // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
