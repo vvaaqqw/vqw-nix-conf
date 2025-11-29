@@ -76,7 +76,8 @@ input {
 
     // niri默认接管电源按钮的功能是sleep,这里禁用以使用关机功能
     disable-power-key-handling
-
+    // switching to the same workspace by index twice will switch back to the previous workspace.
+    workspace-auto-back-and-forth
     // Uncomment this to make the mouse warp to the center of newly focused windows.
     warp-mouse-to-focus
 
@@ -409,6 +410,10 @@ window-rule {
 }
 window-rule {
     match app-id=r#"zen$"# title="^Picture-in-Picture$"
+    match app-id=r#"zen-beta$"# title="^Picture-in-Picture$"
+    match app-id=r#"zen-twilight$"# title="^Picture-in-Picture$"
+    match app-id=r#"librewolf$"# title="^Picture-in-Picture$"
+    match app-id=r#"chromium-browser$"# title="^Picture-in-Picture$"
     open-floating true
 }
 
@@ -435,7 +440,7 @@ window-rule {
     match app-id=r#"zen-twilight$"#
     match app-id=r#"firefox$"#
     match app-id=r#"librewolf$"#
-    match app-id=r#"chromium$"#
+    match app-id=r#"chromium-browser$"#
     default-column-width {proportion 0.75;}
 }
 
@@ -473,9 +478,9 @@ gestures {
 
 binds {
     //drop down
-    Mod+M { spawn-sh "nscratch -t kitty_music -s 'kitty --title kitty_music -e musicfox'"; }
-    Mod+T { spawn-sh "nscratch -t kitty_zj -s 'kitty --title kitty_zj -e zellij'"; }
-    Mod+Y { spawn-sh "nscratch -t kitty_yz -s 'kitty --title kitty_yz -e yazi'"; }
+    Mod+M { spawn-sh "nscratch -a -t kitty_music -s 'kitty --title kitty_music -e musicfox'"; }
+    Mod+T { spawn-sh "nscratch -a -t kitty_zj -s 'kitty --title kitty_zj -e zellij'"; }
+    Mod+Y { spawn-sh "nscratch -a -t kitty_yz -s 'kitty --title kitty_yz -e yazi'"; }
     // mru
     Alt+Tab         { next-window; }
     Alt+Shift+Tab   { previous-window; }
