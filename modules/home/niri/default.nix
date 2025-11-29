@@ -11,6 +11,8 @@ in
 
   home.packages = with pkgs; [
     niri-scratchpad
+    alacritty # the default terminal as a fallback
+    fuzzel # the default app launcher as a fallback
     swaybg
     hyprpicker # color picker
     grim

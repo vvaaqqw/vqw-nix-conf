@@ -163,8 +163,8 @@ layout {
     // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
     preset-window-heights {
         proportion 0.5
+        proportion 0.2
         proportion 0.8
-        proportion 1.0
     }
 
 
@@ -303,18 +303,20 @@ layout {
       zoom 0.5
   }
 
-  recent-windows {
-  open-delay-ms 150
-  highlight {
-    active-color "#83a598"
-    urgent-color "#cc241d"
-    padding 30
-    corner-radius 5
-  }
-  previews {
-    max-height 480
-    max-scale 0.5
-  }
+  // next-release
+  // recent-windows {
+  //     open-delay-ms 150
+  //     highlight {
+  //       active-color "#83a598"
+  //       urgent-color "#cc241d"
+  //       padding 30
+  //       corner-radius 5
+  //     }
+  //     previews {
+  //       max-height 480
+  //       max-scale 0.5
+  //     }
+  // }
 
 
 // Add lines like this to spawn processes at startup.
@@ -490,9 +492,9 @@ binds {
     Mod+T { spawn-sh "nscratch -a -t kitty_zj -s 'kitty --title kitty_zj -e zellij'"; }
     Mod+Y { spawn-sh "nscratch -a -t kitty_yz -s 'kitty --title kitty_yz -e yazi'"; }
     Mod+P { spawn-sh "nscratch -a -id org.keepassxc.KeePassXC -s keepassxc"; }
-    // mru
-    Alt+Tab         { next-window; }
-    Alt+Shift+Tab   { previous-window; }
+    // mru next-release
+    // Alt+Tab         { next-window; }
+    // Alt+Shift+Tab   { previous-window; }
     ////////////////////////
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
