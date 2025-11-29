@@ -1,7 +1,7 @@
 {...}: let
   custom = {
     font = "JetBrainsMono Nerd Font";
-    font_size = "11px";
+    font_size = "18px";
     font_weight = "bold";
     text_color = "#FBF1C7";
     background_0 = "#1D2021";
@@ -14,6 +14,7 @@
     magenta = "#B16286";
     cyant = "#689D6A";
     orange = "#D65D0E";
+    orange_bright = "#FE8019";
     opacity = "1";
     indicator_height = "2px";
   };
@@ -47,7 +48,7 @@ in {
       padding-left: 3px;
     }
     #workspaces button {
-      color: ${yellow};
+      color: ${orange_bright};
       padding-left:  1px;
       padding-right: 1px;
       margin-right: 3px;
@@ -57,8 +58,8 @@ in {
       color: ${text_color};
     }
     #workspaces button.active {
-      color: ${yellow};
-      border-bottom: ${indicator_height} solid ${yellow};
+      color: ${orange_bright};
+      border-bottom: ${indicator_height} solid ${orange_bright};
     }
 
     /* make window module transparent when no windows present */

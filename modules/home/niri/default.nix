@@ -13,7 +13,6 @@ in
     niri-scratchpad
     swaybg
     hyprpicker # color picker
-    hypridle
     grim
     slurp
     wl-clip-persist

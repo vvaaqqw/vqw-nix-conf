@@ -50,7 +50,7 @@
     ++ [(import ./librewolf.nix)]
     ++ [(import ./vesktop)]
     ++ [(import ./hyprlock.nix)]
-    ++ [(import ./hypridle.nix)]
+    ++ [(import ./swayidle.nix)]
     ++ [(import ./niri)]
     ++ [(import ./vicinae.nix)]
     ++ [(import ./waypaper.nix)]

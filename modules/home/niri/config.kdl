@@ -74,6 +74,9 @@ input {
         // middle-emulation
     }
 
+    // niri默认接管电源按钮的功能是sleep,这里禁用以使用关机功能
+    disable-power-key-handling
+
     // Uncomment this to make the mouse warp to the center of newly focused windows.
     warp-mouse-to-focus
 
@@ -141,15 +144,20 @@ layout {
         // For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
         // The default preset widths are 1/3, 1/2 and 2/3 of the output.
         proportion 0.5
-        proportion 0.66667
-        proportion 1.0
+        proportion 0.2444
+        proportion 0.7556
 
         // Fixed sets the width in logical pixels exactly.
         // fixed 1920
     }
 
     // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
-    // preset-window-heights { }
+    preset-window-heights {
+        proportion 0.5
+        proportion 0.8
+        proportion 1.0
+    }
+
 
     // You can change the default width of the new windows.
     default-column-width {proportion 0.5; }
@@ -286,6 +294,19 @@ layout {
       zoom 0.5
   }
 
+  recent-windows {
+  open-delay-ms 150
+  highlight {
+    active-color "#83a598"
+    urgent-color "#cc241d"
+    padding 30
+    corner-radius 5
+  }
+  previews {
+    max-height 480
+    max-scale 0.5
+  }
+
 
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
@@ -300,7 +321,7 @@ spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLA
 spawn-at-startup "hyprlock"
 //spawn-at-startup "brightnessctl set 66%"
 spawn-at-startup "poweralertd"
-spawn-at-startup "hypridle"
+spawn-at-startup "swayidle"
 spawn-at-startup "swaync"
 
 spawn-at-startup "nm-applet"
@@ -452,7 +473,12 @@ gestures {
 
 binds {
     //drop down
-    Mod+M { spawn-sh "nscratch -t musicfox -s 'kitty -e musicfox'"; }
+    Mod+M { spawn-sh "nscratch -t kitty_music -s 'kitty --title kitty_music -e musicfox'"; }
+    Mod+T { spawn-sh "nscratch -t kitty_zj -s 'kitty --title kitty_zj -e zellij'"; }
+    Mod+Y { spawn-sh "nscratch -t kitty_yz -s 'kitty --title kitty_yz -e yazi'"; }
+    // mru
+    Alt+Tab         { next-window; }
+    Alt+Shift+Tab   { previous-window; }
     ////////////////////////
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
@@ -482,7 +508,8 @@ binds {
     Mod+W repeat=false { spawn-sh "killall rofi || run-as-service $(rofi -combi-modi window,ssh -show combi -show-icons)"; }
     Mod+Shift+W repeat=false { spawn "waypaper"; }
     Mod+V repeat=false { spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history"; }
-    Mod+Shift+Z {spawn-sh "toggle_waybar"; }
+    // can't do this when waybar is a systemd service I guess
+    // Mod+Shift+Z {spawn-sh "toggle_waybar"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
@@ -577,12 +604,12 @@ binds {
 
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
-    Mod+B              { focus-workspace-down; }
-    Mod+N              { focus-workspace-up; }
+    Mod+U              { focus-workspace-down; }
+    Mod+I              { focus-workspace-up; }
     Mod+Shift+Page_Down { move-column-to-workspace-down; }
     Mod+Shift+Page_Up   { move-column-to-workspace-up; }
-    Mod+Shift+B         { move-column-to-workspace-down; }
-    Mod+Shift+N         { move-column-to-workspace-up; }
+    Mod+Shift+U         { move-column-to-workspace-down; }
+    Mod+Shift+I         { move-column-to-workspace-up; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
@@ -590,8 +617,8 @@ binds {
 
     Mod+Ctrl+Page_Down { move-workspace-down; }
     Mod+Ctrl+Page_Up   { move-workspace-up; }
-    Mod+Ctrl+B         { move-workspace-down; }
-    Mod+Ctrl+N         { move-workspace-up; }
+    Mod+Ctrl+U         { move-workspace-down; }
+    Mod+Ctrl+I         { move-workspace-up; }
 
     // You can bind mouse wheel scroll ticks using the following syntax.
     // These binds will change direction based on the natural-scroll setting.
@@ -652,13 +679,13 @@ binds {
     Mod+Shift+7 { move-column-to-workspace 7; }
     Mod+Shift+8 { move-column-to-workspace 8; }
     Mod+Shift+9 { move-column-to-workspace 9; }
-    Mod+Shift+0 { move-column-to-workspace "scratch"; }
+    Mod+Z { move-column-to-workspace "scratch"; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
 
     // Switches focus between the current and the previous workspace.
-    ALT+Shift+Tab { focus-workspace-previous; }
+    ALT+Ctrl+Tab { focus-workspace-previous; }
 
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.
@@ -674,8 +701,8 @@ binds {
     Mod+R { switch-preset-column-width; }
     // Cycling through the presets in reverse order is also possible.
     // Mod+R { switch-preset-column-width-back; }
-    Mod+Shift+R { switch-preset-window-height; }
-    Mod+Ctrl+R { reset-window-height; }
+    Mod+Ctrl+R { switch-preset-window-height; }
+    Mod+Shift+R { reset-window-height; }
     Mod+C { maximize-column; }
     Mod+Shift+C { fullscreen-window; }
     Mod+A { center-column; }
@@ -697,8 +724,8 @@ binds {
     Mod+Equal { set-column-width "+10%"; }
 
     // Finer height adjustments when in column with other windows.
-    Mod+Shift+Minus { set-window-height "-10%"; }
-    Mod+Shift+Equal { set-window-height "+10%"; }
+    Mod+Ctrl+Minus { set-window-height "-10%"; }
+    Mod+Ctrl+Equal { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
     Mod+Space       { toggle-window-floating; }
@@ -707,7 +734,7 @@ binds {
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    Mod+I { toggle-column-tabbed-display; }
+    Mod+O { toggle-column-tabbed-display; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have
