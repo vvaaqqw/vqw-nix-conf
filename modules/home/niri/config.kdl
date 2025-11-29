@@ -709,7 +709,7 @@ binds {
     Mod+Ctrl+7 { spawn-sh "niri msg action move-window-to-workspace --focus false 7"; }
     Mod+Ctrl+8 { spawn-sh "niri msg action move-window-to-workspace --focus false 8"; }
     Mod+Ctrl+9 { spawn-sh "niri msg action move-window-to-workspace --focus false 9"; }
-    Mod+Z { spawn-sh "niri msg action move-window-to-workspace --focus false 0"; }
+    Mod+Z { spawn-sh "niri msg action move-window-to-workspace --focus false 'scratch'"; }
 
 
     // Alternatively, there are commands to move just a single window:
