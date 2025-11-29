@@ -383,7 +383,11 @@ animations {
     slowdown 0.75
 }
 //named workspaces
-workspace "init"
+workspace "init0"
+workspace "init1"
+workspace "init2"
+workspace "init3"
+workspace "init4"
 workspace "scratch"
 
 window-rule {

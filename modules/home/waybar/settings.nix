@@ -48,11 +48,11 @@
       # current-only = true; # If set to true, only the active or focused workspace will be shown.
       format = "{icon}";
       format-icons = {
-        # "1" = "一";
-        # "2" = "二";
-        # "3" = "三";
-        # "4" = "亖";
-        # "5" = "武";
+        "init0" = "一";
+        "init1" = "二";
+        "init2" = "三";
+        "init3" = "亖";
+        "init4" = "武";
         # "6" = "琉";
         # "7" = "柒";
         # "8" = "魃";
