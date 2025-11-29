@@ -67,10 +67,9 @@
     };
 
   "niri/window" = {
-            format = "{}";
+            format = "{title}";
             max-length = 20;
             icon = false;
-            icon-size = 18;
             separate-outputs = true;
             rewrite = {
               "(.*) - Mozilla Firefox" = "Web: $1";
@@ -80,7 +79,6 @@
               "(.*) - kitty"           = "Term: $1";
               "(.*) — Spotify"         = "Music: $1";
             };
-            on-click = "niri msg action focus-window-under-cursor";
           };
     
     bluetooth = {
