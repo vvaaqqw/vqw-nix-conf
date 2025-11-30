@@ -73,6 +73,8 @@
       # ctrl a e 跳转
       bindkey "^A" beginning-of-line
       bindkey "^E" end-of-line
+      # If I press tab key twice in succession, it completes the command. If I tap tab once and leave I can use the shell's suggestions and cycle through them.
+      # bindkey '^I^I' autosuggest-accept
 
       # Use fd (https://github.com/sharkdp/fd) for listing path candidates.
       # - The first argument to the function ($1) is the base path to start traversal
