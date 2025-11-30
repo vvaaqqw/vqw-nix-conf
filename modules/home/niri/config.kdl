@@ -331,7 +331,6 @@ spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLA
 spawn-at-startup "hyprlock"
 //spawn-at-startup "brightnessctl set 66%"
 spawn-at-startup "poweralertd"
-spawn-at-startup "swayidle"
 spawn-at-startup "swaync"
 
 spawn-at-startup "nm-applet"
