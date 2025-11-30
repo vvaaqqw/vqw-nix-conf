@@ -523,8 +523,9 @@ binds {
     Mod+Shift+E { spawn "dolphin"; }
     Mod+D repeat=false { spawn "vicinae" "toggle"; }
     Mod+Shift+D repeat=false { spawn-sh "killall rofi || run-as-service $(rofi -combi-modi window,ssh -show combi -show-icons)"; }
-    Mod+W repeat=false { spawn-sh "killall rofi || run-as-service $(rofi -combi-modi window,ssh -show combi -show-icons)"; }
+    Mod+W repeat=false { spawn "vicinae" "vicinae://extensions/vicinae/wm/switch-windows"; }
     Mod+Shift+W repeat=false { spawn "waypaper"; }
+    // Mod+W repeat=false { spawn-sh "killall rofi || run-as-service $(rofi -combi-modi window,ssh -show combi -show-icons)"; }
     Mod+V repeat=false { spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history"; }
     // can't do this when waybar is a systemd service I guess
     // Mod+B {spawn-sh "toggle_waybar"; }
