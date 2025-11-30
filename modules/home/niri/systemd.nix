@@ -11,20 +11,20 @@
    After = "graphical-session-pre.target";
    };
    };
-   # # Waybar service for Niri 
-   # systemd.user.services.waybar-niri = {
-   # Unit = {
-   # Description = "Waybar status bar (Niri session)";
-   # PartOf = "graphical-session.target";
-   # After = "graphical-session.target";
-   # };
-   # Service = {
-   # ExecStart = "${pkgs.waybar}/bin/waybar";
-   # Restart = "on-failure";
-   # RestartSec = "1s";
-   # };
-   # Install.WantedBy = [ "graphical-session.target" ];
-   # };
+   # Waybar service for Niri 
+   systemd.user.services.waybar-niri = {
+   Unit = {
+   Description = "Waybar status bar (Niri session)";
+   PartOf = "graphical-session.target";
+   After = "graphical-session.target";
+   };
+   Service = {
+   ExecStart = "${pkgs.waybar}/bin/waybar";
+   Restart = "on-failure";
+   RestartSec = "1s";
+   };
+   Install.WantedBy = [ "graphical-session.target" ];
+   };
 
    # XWayland satellite service for X11 app support
    systemd.user.services.xwayland-satellite = {
