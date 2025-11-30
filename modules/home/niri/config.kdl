@@ -394,7 +394,7 @@ window-rule {
     open-on-workspace "scratch"
 }
 window-rule {
-    match at-startup=true app-id=r#"clash-verge"#
+    match at-startup=true app-id=r#"Clash-verge"#
     open-on-workspace "scratch"
 }
 
