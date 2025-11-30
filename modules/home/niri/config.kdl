@@ -527,7 +527,7 @@ binds {
     Mod+Shift+W repeat=false { spawn "waypaper"; }
     Mod+V repeat=false { spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history"; }
     // can't do this when waybar is a systemd service I guess
-    // Mod+Shift+Z {spawn-sh "toggle_waybar"; }
+    Mod+B {spawn-sh "toggle_waybar"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
