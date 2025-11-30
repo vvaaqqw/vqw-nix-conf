@@ -26,24 +26,25 @@
    Install.WantedBy = [ "graphical-session.target" ];
    };
 
-  systemd.user.services.swayidle = {
-   Unit = {
-   Description = "swayidle";
-   PartOf = "graphical-session.target";
-   After = "graphical-session.target";
-   };
-   Service = {
-   ExecStart = "swayidle -w  \
-             timeout 600 'brightnessctl set 10%' \
-             timeout 900 'hyprlock'
-             timeout 960 'niri msg action power-off-monitors' \
-             resume      'brightnessctl -r && niri msg action power-on-monitors' \
-             before-sleep 'hyprlock' &";
-   Restart = "on-failure";
-   RestartSec = "1s";
-   };
-   Install.WantedBy = [ "graphical-session.target" ];
-   };
+  # nixos will do it for you
+  # systemd.user.services.swayidle = {
+  #  Unit = {
+  #  Description = "swayidle";
+  #  PartOf = "graphical-session.target";
+  #  After = "graphical-session.target";
+  #  };
+  #  Service = {
+  #  ExecStart = "swayidle -w  \
+  #            timeout 600 'brightnessctl set 10%' \
+  #            timeout 900 'hyprlock'
+  #            timeout 960 'niri msg action power-off-monitors' \
+  #            resume      'brightnessctl -r && niri msg action power-on-monitors' \
+  #            before-sleep 'hyprlock' &";
+  #  Restart = "on-failure";
+  #  RestartSec = "1s";
+  #  };
+  #  Install.WantedBy = [ "graphical-session.target" ];
+  #  };
 
 
    # XWayland satellite service for X11 app support
