@@ -401,7 +401,7 @@ workspace "init4"
 workspace "scratch"
 
 window-rule {
-    match at-startup=true app-id=r#"easyeffects"#
+    match at-startup=true app-id=r#"com.github.wwmm.easyeffects"#
     open-on-workspace "scratch"
 }
 window-rule {
