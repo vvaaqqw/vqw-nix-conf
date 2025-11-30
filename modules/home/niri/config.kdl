@@ -324,11 +324,12 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-sh-at-startup "systemctl --user import-environment &"
-spawn-sh-at-startup "hash dbus-update-activation-environment 2>/dev/null &"
-spawn-sh-at-startup "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
+spawn-sh-at-startup "systemctl --user import-environment"
+spawn-sh-at-startup "hash dbus-update-activation-environment 2>/dev/null"
+spawn-sh-at-startup "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=niri"
 
 spawn-at-startup "hyprlock"
+spawn-sh-at-startup "systemctl --user restart xdg-desktop-portal && systemctl --user daemon-reload && waybar &"
 //spawn-at-startup "brightnessctl set 66%"
 spawn-at-startup "poweralertd"
 spawn-at-startup "swaync"
