@@ -760,7 +760,7 @@ binds {
 
     // Move the focused window between the floating and the tiling layout.
     Mod+Space       { toggle-window-floating; }
-    Mod+Shift+Space { switch-focus-between-floating-and-tiling; }
+    Mod+S { switch-focus-between-floating-and-tiling; }
 
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
