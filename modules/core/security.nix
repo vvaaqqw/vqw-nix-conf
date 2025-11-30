@@ -1,6 +1,6 @@
 {...}: {
   security.rtkit.enable = true; #pipewire
-  security.polkit-gnome.enable = true; # polkit
+  security.polkit.enable = true; # polkit
   security.sudo-rs.enable = true;
   security.sudo-rs.execWheelOnly = true;
   security.sudo.enable = false;
