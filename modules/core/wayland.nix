@@ -18,8 +18,20 @@
       pkgs.xdg-desktop-portal-gtk
       # niri needs it
       pkgs.xdg-desktop-portal-gnome
-      # pkgs.kdePackages.xdg-desktop-portal-kde # 部分 KDE 应用需要
+      pkgs.kdePackages.xdg-desktop-portal-kde # 部分 KDE 应用需要
     ];
+      # 关键：指定 Niri 的 portal 加载顺序（避免 1.17+ 版本的警告）
+    config = {
+      common = {
+        default = [ "gnome" "gtk" ];  # 先 gnome（Niri 专用），后 gtk
+      };
+      # Niri 特定配置（如果有多个环境）
+      niri = {
+        default = [ "gnome" "gtk" ];
+      };
+    };
+    # 可选：如果有 Flatpak/Snap，额外加 configPackages
+    configPackages = [ pkgs.xdg-desktop-portal-gnome pkgs.xdg-desktop-portal-gtk ];
   };
 
   # environment.systemPackages = with pkgs; [

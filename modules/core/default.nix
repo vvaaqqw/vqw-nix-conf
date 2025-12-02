@@ -30,5 +30,6 @@
     ++ [(import ./virtualization.nix)]
     ++ lib.optionals (host == "ghostrace") [
       ./rust.nix
+      ./4_ghostrace.nix
     ];
 }
