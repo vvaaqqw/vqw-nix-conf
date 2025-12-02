@@ -79,6 +79,7 @@
    BusName = "org.freedesktop.portal.Desktop";
    ExecStart = "${pkgs.xdg-desktop-portal}/libexec/xdg-desktop-portal";
    Restart = "on-failure";
+   # very important variables
    Environment = [
    "XDG_CURRENT_DESKTOP=niri"
    "WAYLAND_DISPLAY=wayland-1"
@@ -104,6 +105,7 @@
    Restart = "on-failure";
    Environment = [
    "XDG_CURRENT_DESKTOP=niri"
+   "WAYLAND_DISPLAY=wayland-1"
    ];
    };
    Install.WantedBy = [ "graphical-session.target" ];
@@ -122,6 +124,10 @@
    BusName = "org.freedesktop.impl.portal.desktop.gtk";
    ExecStart = "${pkgs.xdg-desktop-portal-gtk}/libexec/xdg-desktop-portal-gtk";
    Restart = "on-failure";
+   Environment = [
+   "XDG_CURRENT_DESKTOP=niri"
+   "WAYLAND_DISPLAY=wayland-1"
+   ];
    };
    Install.WantedBy = [ "graphical-session.target" ];
    };
