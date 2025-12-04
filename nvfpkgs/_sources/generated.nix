@@ -3,15 +3,15 @@
 {
   rime-ice = {
     pname = "rime-ice";
-    version = "c5e8cca497dc44a4e4540cf2a95043aa0151a40e";
+    version = "c7fdbb25d6b2e50f65dfae7923a74b5272e934c2";
     src = fetchFromGitHub {
       owner = "iDvel";
       repo = "rime-ice";
-      rev = "c5e8cca497dc44a4e4540cf2a95043aa0151a40e";
+      rev = "c7fdbb25d6b2e50f65dfae7923a74b5272e934c2";
       fetchSubmodules = false;
-      sha256 = "sha256-6HvbKAqk5ihNnk0abN45fZ5DQG80AwNodXvC030r6Mo=";
+      sha256 = "sha256-ayXzpWrRq6a0g69Ohx+tHbo3YfjERhdEsCK1IMoTypw=";
     };
-    date = "2025-11-28";
+    date = "2025-12-03";
   };
   vesktop-theme-system24 = {
     pname = "vesktop-theme-system24";
