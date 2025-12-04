@@ -1,11 +1,13 @@
-{pkgs,inputs,...}:
-let
- inherit (inputs.niri-scratchpad-flake.packages.${pkgs.stdenv.hostPlatform.system}) niri-scratchpad;
-in
 {
-    imports =
+  pkgs,
+  inputs,
+  ...
+}: let
+  inherit (inputs.niri-scratchpad-flake.packages.${pkgs.stdenv.hostPlatform.system}) niri-scratchpad;
+in {
+  imports =
     [(import ./variables.nix)]
-    ++[(import ./systemd.nix)];
+    ++ [(import ./systemd.nix)];
 
   xdg.configFile."niri/config.kdl".source = ./config.kdl;
 

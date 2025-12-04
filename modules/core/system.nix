@@ -15,7 +15,7 @@
       trusted-public-keys = ["nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="];
       extra-substituters = [
         # "https://hyprland.cachix.org"
-        "https://vicinae.cachix.org" 
+        "https://vicinae.cachix.org"
         "https://yazi.cachix.org"
         "https://nix-community.cachix.org"
       ];

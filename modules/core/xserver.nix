@@ -7,7 +7,6 @@
     xserver = {
       enable = true;
       xkb.layout = "us";
-      videoDrivers = [ "modesetting" ];# https://wiki.nixos.org/wiki/Intel_Graphics
     };
 
     displayManager.autoLogin = {

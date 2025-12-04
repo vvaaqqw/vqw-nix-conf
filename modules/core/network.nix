@@ -7,14 +7,14 @@
   networking = {
     hostName = "${host}";
     networkmanager.enable = true;
-    nameservers = ["1.1.1.1"];  #Cloudflare
+    nameservers = ["1.1.1.1"]; #Cloudflare
     nftables.enable = true;
     firewall = {
       enable = true;
       # checkReversePath = "loose";# clash tunmode
-      interfaces.virbr0.allowedTCPPorts = [ 53 ]; #libvirtd virbr0
-      interfaces.virbr0.allowedUDPPorts = [ 53 67 ];#libvirtd virbr0
-      allowedTCPPorts = []; 
+      interfaces.virbr0.allowedTCPPorts = [53]; #libvirtd virbr0
+      interfaces.virbr0.allowedUDPPorts = [53 67]; #libvirtd virbr0
+      allowedTCPPorts = [];
       allowedUDPPorts = [];
       #allowedTCPPorts = [22 80 443 59010 59011];
       #allowedUDPPorts = [59010 59011];
@@ -30,8 +30,8 @@
       ];
     };
   };
-  services.dnsmasq ={
-    enable=false;# 系统级别的Dnsmasq会和libvirtd的冲突
+  services.dnsmasq = {
+    enable = false; # 系统级别的Dnsmasq会和libvirtd的冲突
   };
 
   # mihomo formerly known as clash-meta
@@ -55,7 +55,7 @@
     sing-box
     sing-geoip
   ];
-  programs.clash-verge={
+  programs.clash-verge = {
     enable = true;
     # tunMode = true;
     # serviceMode = true;

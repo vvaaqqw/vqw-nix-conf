@@ -2,7 +2,7 @@
   description = "copid from FrostPhoenix's nixos configuration";
 
   nixConfig = {
-    abort-on-warn=true;
+    abort-on-warn = true;
   };
 
   inputs = {
@@ -12,7 +12,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     #nixnix-flatpak 還在開發階段，所以ref=是用來固定版本的。
     hyprpicker.url = "github:hyprwm/hyprpicker";
-    vicinae.url = "github:vicinaehq/vicinae"; 
+    vicinae.url = "github:vicinaehq/vicinae";
     # xremap-flake.url = "github:xremap/nix-flake";
     nix-gaming.url = "github:fufexan/nix-gaming";
     zen-browser = {
@@ -35,10 +35,10 @@
     #   spicetify-nix.url = "github:gerg-l/spicetify-nix";
     #   spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
 
-   niri-scratchpad-flake = {
+    niri-scratchpad-flake = {
       url = "github:gvolpe/niri-scratchpad";
       inputs.nixpkgs.follows = "nixpkgs";
-   };
+    };
     # hyprland = {
     #   type = "git";
     #   url = "https://github.com/hyprwm/Hyprland";
@@ -108,7 +108,7 @@
     #   (self: super: {mine = import ./lib {lib = self;};} // home-manager.lib);
     # lib = mkLib inputs.nixpkgs;
     lib = nixpkgs.lib;
-    mylib  = import ./lib { lib = pkgs.lib; };
+    mylib = import ./lib {lib = pkgs.lib;};
   in {
     nixosConfigurations = {
       leshy = nixpkgs.lib.nixosSystem {

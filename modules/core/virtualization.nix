@@ -28,8 +28,8 @@
     libvirtd = {
       enable = true;
       qemu = {
-        package = pkgs.qemu_kvm; 
-        runAsRoot = true;          # 使用系统级 qemu:///system
+        package = pkgs.qemu_kvm;
+        runAsRoot = true; # 使用系统级 qemu:///system
         swtpm.enable = true;
       };
     };

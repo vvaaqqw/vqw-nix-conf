@@ -15,7 +15,7 @@
   # clamav anti-virus
   services.clamav.daemon.enable = true;
   services.clamav.updater.enable = true;
-  
+
   #https://ryanseipp.com/post/hardening-nixos/
   systemd.services.systemd-rfkill = {
     serviceConfig = {

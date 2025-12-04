@@ -366,7 +366,7 @@
   # - /etc/profiles/per-user/kiara/share/applications/
   # - ~/.local/share/applications/
   browsers = ["chromium"];
-  editors = ["neovim" "helix" "kate" "code" "lapce" ];
+  editors = ["neovim" "helix" "kate" "code" "lapce"];
   # MIME associations: specific items go lower left
   # (first in the inner list but late in the outer list),
   # generic ones upper-right

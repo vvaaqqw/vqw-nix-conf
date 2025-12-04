@@ -1,12 +1,21 @@
-{ config, pkgs, ... }:
-
 {
-  # 关键：一次性干掉 E14 Gen 2 的 DMAR + UCSI 卡死
-  boot.kernelParams = [
-    "quiet"
-    "splash"
-    "intel_iommu=off"                # 彻底关闭有 bug 的 DMAR 表
-    "pci=pcie_bus_safe"              # 安全模式扫描 PCIe，防止 UCSI 控制器挂起
-    "ucsi_acpi.skip_resume_workaround"  # 跳过 ucsi_acpi 那个会死等的 workaround
+  config,
+  pkgs,
+  ...
+}: {
+  # 只有thinkpad能用的命令
+  services.thinkfan = {
+    enable = true;
+  }; # this software targets thinkpad series
+
+  hardware.graphics.extraPackages = with pkgs; [
+    # https://wiki.nixos.org/wiki/Intel_Graphics
+    # Required for modern Intel GPUs (Xe iGPU and ARC)
+    intel-media-driver # VA-API (iHD) userspace
+    vpl-gpu-rt # oneVPL (QSV) runtime
+    # Optional (compute / tooling):
+    intel-compute-runtime # OpenCL (NEO) + Level Zero for Arc/Xe
   ];
+
+  services.xserver.videoDrivers = ["modesetting"]; # https://wiki.nixos.org/wiki/Intel_Graphics
 }

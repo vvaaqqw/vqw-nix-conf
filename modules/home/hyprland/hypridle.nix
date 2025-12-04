@@ -11,9 +11,9 @@
 
       listener = [
         {
-          timeout = 300; # 5 分钟后触发                               
-          on-timeout = "brightnessctl -s set 15"; # 调整亮度到15      
-          on-resume = "brightnessctl -r"; # 恢复亮度             
+          timeout = 300; # 5 分钟后触发
+          on-timeout = "brightnessctl -s set 15"; # 调整亮度到15
+          on-resume = "brightnessctl -r"; # 恢复亮度
         }
         {
           timeout = 900; # 15 分钟后触发

@@ -1,6 +1,5 @@
-{ pkgs, ... }:
-{
-  home.packages = with pkgs; [ waypaper ];
+{pkgs, ...}: {
+  home.packages = with pkgs; [waypaper];
   # depends on swaybg/awww
   # xdg.configFile."waypaper/config.ini".text = ''
   #   [Settings]
@@ -15,7 +14,7 @@
   #   subfolders = False
   #   show_hidden = False
   #   show_gifs_only = False
-  #   post_command = 
+  #   post_command =
   #   number_of_columns = 3
   #   use_xdg_state = False
   # '';

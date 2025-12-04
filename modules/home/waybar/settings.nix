@@ -60,27 +60,27 @@
         # Named workspaces(you need to configure them in niri)
         "scratch" = "∅";
         # Icons by state
-        "urgent"= "";
-    		"active"="";
-    		"default"="";
+        "urgent" = "";
+        "active" = "";
+        "default" = "";
       };
     };
 
-  "niri/window" = {
-            format = "{title}";
-            max-length = 20;
-            icon = false;
-            separate-outputs = true;
-            rewrite = {
-              "(.*) - Mozilla Firefox" = "Web: $1";
-              "(.*) — Mozilla Firefox" = "Web: $1";
-              "(.*) - zsh"             = "> $1";
-              "(.*) - Alacritty"       = "Term: $1";
-              "(.*) - kitty"           = "Term: $1";
-              "(.*) — Spotify"         = "Music: $1";
-            };
-          };
-    
+    "niri/window" = {
+      format = "{title}";
+      max-length = 20;
+      icon = false;
+      separate-outputs = true;
+      rewrite = {
+        "(.*) - Mozilla Firefox" = "Web: $1";
+        "(.*) — Mozilla Firefox" = "Web: $1";
+        "(.*) - zsh" = "> $1";
+        "(.*) - Alacritty" = "Term: $1";
+        "(.*) - kitty" = "Term: $1";
+        "(.*) — Spotify" = "Music: $1";
+      };
+    };
+
     bluetooth = {
       format = "{status}";
       format-connected = "{device_alias}";

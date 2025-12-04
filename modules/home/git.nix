@@ -18,15 +18,15 @@
     };
   };
 
-    programs.delta = {
-      enable = true;
-      enableGitIntegration = true;
-      options = {
-        line-numbers = true;
-        # side-by-side = true;
-        navigate = true;
-      };
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+    options = {
+      line-numbers = true;
+      # side-by-side = true;
+      navigate = true;
     };
+  };
 
   home.packages = [pkgs.gh pkgs.git-lfs];
 

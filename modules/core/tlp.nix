@@ -17,8 +17,8 @@
       #CPU_MAX_PERF_ON_BAT = 20;
 
       RUNTIME_PM_ON_AC = "auto"; #archwiki said it's useful somehow
-      CPU_BOOST_ON_AC=0; # turbo boost might be harmful according to the internet
-      CPU_BOOST_ON_BAT=0;
+      CPU_BOOST_ON_AC = 0; # turbo boost might be harmful according to the internet
+      CPU_BOOST_ON_BAT = 0;
 
       #Optional helps save long term battery health
       START_CHARGE_THRESH_BAT0 = 75; # 40 and bellow it starts to charge
@@ -26,13 +26,9 @@
       # 开机默认关闭蓝牙
       DEVICES_TO_DISABLE_ON_STARTUP = "bluetooth";
       # Do not suspend USB devices
-      USB_AUTOSUSPEND=0;
+      USB_AUTOSUSPEND = 0;
     };
   };
-
-  services.thinkfan = {
-    enable = true;
-  }; # this software targets thinkpad series
 
   # services.power-profiles-daemon = {
   #   enable = true;

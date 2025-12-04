@@ -28,8 +28,8 @@
       DisplayMenuBar = "never"; # alternatives: "always", "never" or "default-on"
       SearchBar = "unified"; # alternative: "separate"
       PictureInPicture = {
-      Enabled = false;
-      Locked = true;  # 可选：锁定，防止用户通过 about:config 或设置手动启用
+        Enabled = false;
+        Locked = true; # 可选：锁定，防止用户通过 about:config 或设置手动启用
       };
 
       SecurityDevices = {

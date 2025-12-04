@@ -29,8 +29,8 @@
   rofi-power-menu = pkgs.writeScriptBin "rofi-power-menu" (builtins.readFile ./scripts/rofi-power-menu.sh);
   power-menu = pkgs.writeScriptBin "power-menu" (builtins.readFile ./scripts/power-menu.sh);
 
-  nix-prx = pkgs.writeScriptBin "nix-prx" (builtins.readFile ./scripts/nix-prx.sh);in {
-
+  nix-prx = pkgs.writeScriptBin "nix-prx" (builtins.readFile ./scripts/nix-prx.sh);
+in {
   home.packages = with pkgs; [
     wall-change
     wallpaper-picker
