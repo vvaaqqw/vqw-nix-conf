@@ -348,8 +348,8 @@ spawn-at-startup "nm-applet"
 spawn-sh-at-startup "fcitx5 -dr"
 spawn-sh-at-startup "udiskie -s"
 spawn-sh-at-startup "dbus-run-session pipewire"
-// Launch GNOME Polkit
-spawn-at-startup "/usr/libexec/polkit-gnome-authentication-agent-1"
+// I think security.polkit.enable starts it automatically
+// spawn-at-startup "/usr/libexec/polkit-gnome-authentication-agent-1"
 spawn-sh-at-startup "waypaper --restore"
 spawn-sh-at-startup "vicinae server"
 //nutstore
