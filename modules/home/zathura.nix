@@ -8,7 +8,6 @@ _: {
       scroll-page-aware = "true";
       scroll-full-overlap = "0.01";
       scroll-step = "100";
-      smooth-scroll = true;
       zoom-min = "10";
       # theme below:https://github.com/eastack/zathura-gruvbox/blob/master/zathura-gruvbox-dark
       notification-error-bg = "rgba(40,40,40,1)"; # bg
