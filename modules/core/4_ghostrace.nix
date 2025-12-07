@@ -10,12 +10,13 @@
   
   # 休眠后小红点和trackpad的左右键会挂，唤醒后自动重置
   # suspend to RAM
-  powerManagement.resumeCommands = ''
-    sleep 1
-    modprobe -r psmouse || true
-    modprobe psmouse || true
-  '';
-  # hibernate 这是目前合盖默认
+  # powerManagement.resumeCommands = ''
+  #   sleep 1
+  #   modprobe -r psmouse || true
+  #   modprobe psmouse || true
+  # '';
+
+  # powerup/suspend/hibernate 
   powerManagement.powerUpCommands = ''
     sleep 1
     modprobe -r psmouse || true
