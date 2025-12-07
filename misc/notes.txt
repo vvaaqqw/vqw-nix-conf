@@ -9,6 +9,7 @@ Hibernation
 Hibernation requires a configured swap device. See installation instructions on how to create a swap partition.
 Please note that resumeDevice must match the output of swapon -s especially if you're dealing with mapped volumes (LUKS, logical volumes, logical volumes under LUKS, etc.). If you're using a swapfile, you must also specify the offset to it. 
 https://wiki.nixos.org/wiki/Power_Management
+rg boot.resumeDevice 并且改hardware-config的内容
 ###############################
 # https://blog.nyaw.xyz/nixos-inwall-install
 网络问题：
