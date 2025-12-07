@@ -9,6 +9,7 @@
   ];
   
   # 休眠后小红点和trackpad的左右键会挂，唤醒后自动重置
+  # 以下方法不管用
   # suspend to RAM
   # powerManagement.resumeCommands = ''
   #   sleep 1
@@ -17,11 +18,11 @@
   # '';
 
   # powerup/suspend/hibernate 
-  powerManagement.powerUpCommands = ''
-    sleep 1
-    modprobe -r psmouse || true
-    modprobe psmouse || true
-  '';
+  # powerManagement.powerUpCommands = ''
+  #   sleep 1
+  #   modprobe -r psmouse || true
+  #   modprobe psmouse || true
+  # '';
 
   # 只有thinkpad能用的命令
   services.thinkfan = {
