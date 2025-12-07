@@ -3,6 +3,8 @@
   pkgs,
   ...
 }: {
+  # firmware bug
+  boot.kernelParams = ["module_blacklist=ucsi_acpi"];
   # 只有thinkpad能用的命令
   services.thinkfan = {
     enable = true;
