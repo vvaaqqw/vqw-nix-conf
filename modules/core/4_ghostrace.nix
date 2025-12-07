@@ -6,10 +6,15 @@
   boot.kernelParams = [
   # firmware bug: ucsi_acpi USBC000:00: possible UCSI driver bug 2
   "module_blacklist=ucsi_acpi"
-  # Avoid touchpad click to tap (clickpad) bug. For more detail see:
-  # https://wiki.archlinux.org/title/Touchpad_Synaptics#Touchpad_does_not_work_after_resuming_from_hibernate/suspend
-  "psmouse.synaptics_intertouch=0"
   ];
+  
+  # 休眠后小红点和trackpad的左右键会挂，唤醒后自动重置
+  powerManagement.resumeCommands = ''
+    sleep 1
+    modprobe -r psmouse || true
+    modprobe psmouse || true
+  '';
+
   # 只有thinkpad能用的命令
   services.thinkfan = {
     enable = true;

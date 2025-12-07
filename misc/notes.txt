@@ -1,13 +1,15 @@
 thinkfan 是一个专门给联想的thinkpad系列用的风扇控制软件，不是一个通用软件。
 如果不用thinkfan，推荐使用thermald，rg thermald 就能看到注释,不要什么都不用
-
+###############################
 要用flatseal调整nutstore和baidu云盘的权限，目前我是禁用了wayland
-如果需要使用蓝牙，要把蓝牙设置那里的poweronboot改成true
+如果需要默认启用蓝牙，要把蓝牙设置那里的poweronboot改成true
 rg stateVersion 看下要改成什么，home-manager和system的都要改
-
-rg intel, 看下哪些是intel硬件专属的配置和包
-
-
+###############################
+Hibernation
+Hibernation requires a configured swap device. See installation instructions on how to create a swap partition.
+Please note that resumeDevice must match the output of swapon -s especially if you're dealing with mapped volumes (LUKS, logical volumes, logical volumes under LUKS, etc.). If you're using a swapfile, you must also specify the offset to it. 
+https://wiki.nixos.org/wiki/Power_Management
+###############################
 # https://blog.nyaw.xyz/nixos-inwall-install
 网络问题：
 值得一提的是Nix Daemon 一般不吃环境变量, 并且实测使用sudo加nix也不会调用daemon，如果你不开透明代理，那需要额外的配置使nix走代理：
@@ -23,4 +25,5 @@ sudo systemctl daemon-reload
 sudo systemctl restart nix-daemon
 
 然后proxychains4 -f /etc/nixos/misc/prx.conf nh os boot 之类的
+###############################
 
