@@ -7,7 +7,6 @@
 in {
   imports =
     [(import ./variables.nix)]
-    ++ [(import ./greetd.nix)]
     ++ [(import ./systemd.nix)];
 
   xdg.configFile."niri/config.kdl".source = ./config.kdl;

@@ -22,6 +22,7 @@
     ++ [(import ./program.nix)]
     ++ [(import ./security.nix)]
     ++ [(import ./services.nix)]
+    ++ [(import ./greetd-niri.nix)]
     ++ [(import ./font.nix)]
     ++ [(import ./system.nix)]
     ++ [(import ./user.nix)]
