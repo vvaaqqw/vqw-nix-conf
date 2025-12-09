@@ -805,5 +805,5 @@ binds {
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
-    Mod+Ctrl+Q { power-off-monitors; }
+    Mod+Ctrl+Q allow-when-locked=true { power-off-monitors; }
 }
