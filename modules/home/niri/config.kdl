@@ -332,7 +332,7 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-spawn-sh-at-startup "systemctl --user import-environment"
+// spawn-sh-at-startup "systemctl --user import-environment"
 spawn-sh-at-startup "hash dbus-update-activation-environment 2>/dev/null"
 spawn-sh-at-startup "dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=niri"
 spawn-sh-at-startup "systemctl --user restart xdg-desktop-portal && systemctl --user daemon-reload"
@@ -346,7 +346,7 @@ spawn-at-startup "swaync"
 spawn-at-startup "nm-applet"
 spawn-sh-at-startup "fcitx5 -dr"
 spawn-sh-at-startup "udiskie -s"
-spawn-sh-at-startup "dbus-run-session pipewire"
+// spawn-sh-at-startup "dbus-run-session pipewire"
 // I think security.polkit.enable starts it automatically
 // spawn-at-startup "/usr/libexec/polkit-gnome-authentication-agent-1"
 spawn-sh-at-startup "waypaper --restore"
@@ -805,5 +805,5 @@ binds {
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
-    Mod+Ctrl+Q allow-when-locked=true { power-off-monitors; }
+    Mod+Ctrl+Q allow-when-locked=true { spawn-sh "niri msg action power-off-monitors"; }
 }
