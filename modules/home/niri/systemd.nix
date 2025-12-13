@@ -45,22 +45,22 @@
   #  Install.WantedBy = [ "graphical-session.target" ];
   #  };
 
-  # XWayland satellite service for X11 app support
-  systemd.user.services.xwayland-satellite = {
-    Unit = {
-      Description = "Xwayland outside Wayland";
-      BindsTo = "graphical-session.target";
-      After = "graphical-session.target";
-    };
-    Service = {
-      Type = "notify";
-      NotifyAccess = "all";
-      ExecStart = "${pkgs.xwayland-satellite}/bin/xwayland-satellite";
-      StandardOutput = "journal";
-      Restart = "on-failure";
-    };
-    Install.WantedBy = ["graphical-session.target"];
-  };
+  # XWayland satellite service for X11 app support)(Niri integrates with xwayland-satellite out of the box)
+  # systemd.user.services.xwayland-satellite = {
+  #   Unit = {
+  #     Description = "Xwayland outside Wayland";
+  #     BindsTo = "graphical-session.target";
+  #     After = "graphical-session.target";
+  #   };
+  #   Service = {
+  #     Type = "notify";
+  #     NotifyAccess = "all";
+  #     ExecStart = "${pkgs.xwayland-satellite}/bin/xwayland-satellite";
+  #     StandardOutput = "journal";
+  #     Restart = "on-failure";
+  #   };
+  #   Install.WantedBy = ["graphical-session.target"];
+  # };
 
   # greetd + niri-session's job
   # XDG Desktop Portal services - properly configured for screen sharing
