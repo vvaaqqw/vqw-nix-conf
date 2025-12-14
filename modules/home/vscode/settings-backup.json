@@ -1,0 +1,329 @@
+{
+  "breadcrumbs.enabled": false,
+  "dev.containers.dockerPath": "/etc/profiles/per-user/spectre/bin/podman-host",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.fontFamily": "JetBrainsMono Nerd Font, Material Design Icons, 'monospace', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.indentation": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": true,
+  "editor.overviewRulerBorder": false,
+  "editor.renderLineHighlight": "all",
+  "editor.smoothScrolling": true,
+  "editor.suggestSelection": "first",
+  "explorer.confirmDelete": false,
+  "files.trimTrailingWhitespace": true,
+  "security.workspace.trust.enabled": false,
+  "terminal.integrated.automationShell.linux": "nix-shell",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.enableVisualBell": false,
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "vim.autoSwitchInputMethod.defaultIM": "1",
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/etc/profiles/per-user/spectre/bin/fcitx5-remote",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/etc/profiles/per-user/spectre/bin/fcitx5-remote -t {im}",
+  "vim.camelCaseMotion.enable": true,
+  "vim.debug.silent": true,
+  "vim.easymotion": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-c>": false,
+    "<C-d>": false,
+    "<C-f>": false,
+    "<C-j>": false,
+    "<C-k>": false,
+    "<C-p>": false
+  },
+  "vim.highlightedyank.enable": true,
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        ":"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ],
+      "silent": true
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        {
+          "args": {
+            "key": "editor.action.showHover",
+            "kind": "editor"
+          },
+          "command": "editor.action.showHover"
+        }
+      ]
+    },
+    {
+      "before": [
+        "K",
+        "K"
+      ],
+      "commands": [
+        {
+          "args": {
+            "key": "editor.action.showHover",
+            "kind": "editor"
+          },
+          "command": "editor.action.showHover"
+        },
+        "cursorDown"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        {
+          "args": {},
+          "command": "editor.action.goToDeclaration"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "D"
+      ],
+      "commands": [
+        {
+          "args": {},
+          "command": "editor.action.goToDefinition"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        {
+          "args": {},
+          "command": "editor.action.findReferences"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "I"
+      ],
+      "commands": [
+        {
+          "args": {},
+          "command": "editor.action.goToImplementation"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "s"
+      ],
+      "commands": [
+        {
+          "args": {},
+          "command": "editor.action.triggerSuggest"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "l"
+      ],
+      "commands": [
+        {
+          "args": {},
+          "command": "editor.action.showDiagnostics"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "l",
+        "g",
+        "l"
+      ],
+      "commands": [
+        {
+          "args": {},
+          "command": "editor.action.showDiagnostics"
+        },
+        "cursorDown"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m"
+      ],
+      "commands": [
+        "bookmarks.toggle"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "b"
+      ],
+      "commands": [
+        "bookmarks.list"
+      ]
+    },
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "commands": [
+        "=nohl"
+      ]
+    },
+    {
+      "before": [
+        "<C-x>"
+      ],
+      "commands": [
+        "=wq"
+      ]
+    },
+    {
+      "after": [
+        "o",
+        "<Esc>",
+        "k"
+      ],
+      "before": [
+        "<leader>",
+        "o"
+      ],
+      "silent": true
+    },
+    {
+      "after": [
+        "O",
+        "<Esc>",
+        "j"
+      ],
+      "before": [
+        "<leader>",
+        "O"
+      ],
+      "silent": true
+    },
+    {
+      "after": [
+        "5",
+        "j"
+      ],
+      "before": [
+        "J"
+      ],
+      "silent": true
+    },
+    {
+      "after": [
+        "5",
+        "h"
+      ],
+      "before": [
+        "H"
+      ],
+      "silent": true
+    },
+    {
+      "after": [
+        "5",
+        "l"
+      ],
+      "before": [
+        "L"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    }
+  ],
+  "vim.statusBarColorControl": false,
+  "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "after": [
+        "p",
+        "g",
+        "v",
+        "y"
+      ],
+      "before": [
+        "p"
+      ]
+    }
+  ],
+  "window.menuBarVisibility": "toggle",
+  "window.nativeTabs": true,
+  "window.restoreWindows": "all",
+  "window.titleBarStyle": "custom",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.editor.tabActionLocation": "left",
+  "workbench.editor.tabCloseButton": "left",
+  "workbench.fontAliasing": "antialiased",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.list.smoothScrolling": true,
+  "workbench.panel.defaultLocation": "right",
+  "workbench.startupEditor": "none"
+}
