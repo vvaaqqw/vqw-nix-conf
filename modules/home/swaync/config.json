@@ -64,11 +64,11 @@
         "actions": [
           {
             "label": "󰹑  Whole screen",
-            "command": "grimblast --notify --cursor --freeze copy output"
+            "command": "niri msg action screenshot-screen"
           },
           {
             "label": "󰩭  Window / Region",
-            "command": "grimblast --notify --cursor --freeze copy area"
+            "command": "niri msg action screenshot"
           }
         ]
       },
@@ -100,15 +100,15 @@
         "actions": [
           {
             "label": "  Lock",
-            "command": "swaylock"
+            "command": "pidof hyprlock || hyprlock"
           },
           {
             "label": "  Reboot",
-            "command": "systemctl reboot"
+            "command": "reboot"
           },
           {
             "label": "  Shut down",
-            "command": "systemctl poweroff"
+            "command": "poweroff"
           }
         ]
       }
