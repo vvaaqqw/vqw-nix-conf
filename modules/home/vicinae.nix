@@ -11,10 +11,11 @@ in {
     enable = true;
     package = inputs.vicinae.packages.${system}.default;
 
-    autoStart = true;
-    useLayerShell = true;
+    systemd.autoStart = true;
+    systemd.enable = true;
 
     settings = {
+      launcher_window.layer_shell.enabled = false;
       font = {
         normal = "FiraCode Nerd Font";
         size = 12;
@@ -26,12 +27,12 @@ in {
       };
 
       window = {
-        csd = true;
-        opacity = 1;
+        # csd = true;
+        # opacity = 1;
         rounding = 0;
       };
 
-      faviconService = "twenty";
+      # faviconService = "twenty";
       popToRootOnClose = true;
       closeOnFocusLoss = true;
 
@@ -39,6 +40,11 @@ in {
         searchFiles = true;
       };
     };
+    # extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
+    #   bluetooth
+    #   nix
+    #   wifi-commander
+    # ];
 
     #     themes = {
     #       gruvbox-dark-hard = {

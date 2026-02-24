@@ -27,8 +27,8 @@
         executable = "${lib.getBin pkgs.vscode-fhs}/bin/code";
         profile = "${pkgs.firejail}/etc/firejail/code.profile";
       };
-      zen = {
-        executable = "${lib.getBin inputs.zen-browser}/bin/zen";
+      zen-beta = {
+        executable = "${lib.getBin inputs.zen-browser}/bin/zen-beta";
         profile = "${pkgs.firejail}/etc/firejail/firefox.profile";
       };
 

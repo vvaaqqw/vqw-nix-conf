@@ -16,7 +16,6 @@
       golangci-lint-langserver
       gopls
       gotools
-      helix-gpt
       marksman
       nil
       nixpkgs-fmt

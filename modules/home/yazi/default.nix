@@ -34,6 +34,7 @@ in {
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
+    shellWrapperName = "y";
     #enableNushellIntegration = true;
     # https://yazi-rs.github.io/docs/configuration/keymap
     # https://yazi-rs.github.io/docs/quick-start/#keybindings

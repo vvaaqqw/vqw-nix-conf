@@ -15,6 +15,7 @@
 
   programs.zen-browser = {
     enable = true;
+    suppressXdgMigrationWarning = true; # TODO: comment out this later
     nativeMessagingHosts = [pkgs.firefoxpwa]; #https://github.com/0xc000022070/zen-browser-flake
     policies = {
       DisplayBookmarksToolbar = "newtab"; # alternatives: "always" or "newtab" or "never"

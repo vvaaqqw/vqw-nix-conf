@@ -529,7 +529,7 @@ binds {
     Mod+Return { spawn "kitty"; }
     Mod+E { spawn-sh "kitty -e yazi"; }
     Mod+Shift+P { spawn-sh "hyprpicker -a"; }
-    Mod+F { spawn "zen"; }
+    Mod+F { spawn "zen-beta"; }
     Mod+G { spawn "code"; }
     Mod+Shift+E { spawn "dolphin"; }
     Mod+D repeat=false { spawn "vicinae" "toggle"; }
