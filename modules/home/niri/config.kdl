@@ -350,7 +350,8 @@ spawn-sh-at-startup "udiskie -s"
 // I think security.polkit.enable starts it automatically
 // spawn-at-startup "/usr/libexec/polkit-gnome-authentication-agent-1"
 spawn-sh-at-startup "waypaper --restore"
-spawn-sh-at-startup "vicinae server"
+spawn-sh-at-startup "copyq --start-server"
+// spawn-sh-at-startup "vicinae server"
 //nutstore
 spawn-sh-at-startup "flatpak run com.jianguoyun.Nutstore" 
 //scratch workspace
@@ -529,15 +530,17 @@ binds {
     Mod+Return { spawn "kitty"; }
     Mod+E { spawn-sh "kitty -e yazi"; }
     Mod+Shift+P { spawn-sh "hyprpicker -a"; }
-    Mod+F { spawn "zen-beta"; }
+    // Mod+F { spawn "zen-beta"; }
+    Mod+F { spawn "zen-twilight"; }
     Mod+G { spawn "code"; }
     Mod+Shift+E { spawn "dolphin"; }
-    Mod+D repeat=false { spawn "vicinae" "toggle"; }
-    Mod+Shift+D repeat=false { spawn-sh "killall rofi || run-as-service $(rofi -combi-modi window,ssh -show combi -show-icons)"; }
-    Mod+W repeat=false { spawn "vicinae" "vicinae://extensions/vicinae/wm/switch-windows"; }
+    // Mod+D repeat=false { spawn "vicinae" "toggle"; }
+    Mod+D repeat=false { spawn-sh "killall rofi || run-as-service $(rofi -combi-modi drun,ssh -show combi -show-icons)"; }
+    Mod+W repeat=false { spawn-sh "killall rofi || run-as-service $(rofi -combi-modi window,ssh -show combi -show-icons)"; }
+    // Mod+W repeat=false { spawn "vicinae" "vicinae://extensions/vicinae/wm/switch-windows"; }
     Mod+Shift+W repeat=false { spawn "waypaper"; }
-    // Mod+W repeat=false { spawn-sh "killall rofi || run-as-service $(rofi -combi-modi window,ssh -show combi -show-icons)"; }
-    Mod+V repeat=false { spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history"; }
+    Mod+V repeat=false { spawn "copyq"; }
+    // Mod+V repeat=false { spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history"; }
     // can't do this when waybar is a systemd service I guess
     // Mod+B {spawn-sh "toggle_waybar"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }

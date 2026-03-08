@@ -12,7 +12,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     #nixnix-flatpak 還在開發階段，所以ref=是用來固定版本的。
     hyprpicker.url = "github:hyprwm/hyprpicker";
-    vicinae.url = "github:vicinaehq/vicinae";
+    # vicinae.url = "github:vicinaehq/vicinae";
     # xremap-flake.url = "github:xremap/nix-flake";
     nix-gaming.url = "github:fufexan/nix-gaming";
     zen-browser = {
@@ -76,7 +76,7 @@
     nixos-hardware,
     nix-flatpak,
     fenix,
-    vicinae,
+    # vicinae,
     ...
   } @ inputs: let
     username = "spectre";

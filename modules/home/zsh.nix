@@ -152,8 +152,8 @@
 
       nix-init = "nix run github:nix-community/nix-init";
       #nurl = "nix run github:nix-community/nurl"; # installed
-      nix-boot = "z /etc/nixos &&  nh os boot --accept-flake-config /etc/nixos ; notify-send '❄ finished or 🫠'";
-      nix-upd = "z /etc/nixos/nvfpkgs && sudo proxychains4 -f /etc/nixos/misc/prx.conf nvfetcher && z /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nix flake update && nh os boot --accept-flake-config /etc/nixos ; notify-send '❄ finished or 🫠'";
+      nix-boot = "z /etc/nixos && proxychains4 -f /etc/nixos/misc/prx.conf nh os boot --accept-flake-config /etc/nixos ; notify-send '❄ finished or 🫠'";
+      nix-upd = "z /etc/nixos/nvfpkgs && sudo proxychains4 -f /etc/nixos/misc/prx.conf nvfetcher && z /etc/nixos && sudo proxychains4 -f /etc/nixos/misc/prx.conf nix flake update && proxychains4 -f /etc/nixos/misc/prx.conf nh os boot --accept-flake-config /etc/nixos ; notify-send '❄ finished or 🫠'";
       nix-clean = "nh clean all --keep 5";
       nix-search = "nh search";
       ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";

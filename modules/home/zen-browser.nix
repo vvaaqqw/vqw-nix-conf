@@ -5,9 +5,9 @@
 }: {
   # home.nix
   imports = [
-    inputs.zen-browser.homeModules.beta
+    # inputs.zen-browser.homeModules.beta
     # or inputs.zen-browser.homeModules.twilight
-    # inputs.zen-browser.homeModules.twilight
+    inputs.zen-browser.homeModules.twilight
     # IMPORTANT: this package relies on the twilight release artifacts from the
     # official zen repo and no new release is created, the artifacts are replaced
     # inputs.zen-browser.homeModules.twilight-official
@@ -15,7 +15,6 @@
 
   programs.zen-browser = {
     enable = true;
-    suppressXdgMigrationWarning = true; # TODO: comment out this later
     nativeMessagingHosts = [pkgs.firefoxpwa]; #https://github.com/0xc000022070/zen-browser-flake
     policies = {
       DisplayBookmarksToolbar = "newtab"; # alternatives: "always" or "newtab" or "never"
@@ -33,6 +32,12 @@
       PictureInPicture = {
         Enabled = false;
         Locked = true; # 可选：锁定，防止用户通过 about:config 或设置手动启用
+      };
+      EnableTrackingProtection = {
+        Value = true;
+        Locked = true;
+        Cryptomining = true;
+        Fingerprinting = true;
       };
       # find more options here: https://mozilla.github.io/policy-templates/
     };

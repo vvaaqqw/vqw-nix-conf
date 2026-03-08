@@ -1,7 +1,7 @@
 {
     "rime-ice": {
-        "cargoLocks": null,
-        "date": "2026-02-06",
+        "cargoLock": null,
+        "date": "2026-03-08",
         "extract": null,
         "name": "rime-ice",
         "passthru": null,
@@ -13,15 +13,15 @@
             "name": null,
             "owner": "iDvel",
             "repo": "rime-ice",
-            "rev": "23f0c39a0b443524e37dbff4f085236b32691291",
-            "sha256": "sha256-Y6/tU63+JQ9HX1m/kI9VQz6tIhFVRAPSsp6Vf47gzUk=",
+            "rev": "042906d04ead85400b4ef3fe2e4aaa8062c056df",
+            "sha256": "sha256-cIAcK58HOSGlUbnN35zxzOwG/wwYiuwYSeNG3Qr/DCg=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "23f0c39a0b443524e37dbff4f085236b32691291"
+        "version": "042906d04ead85400b4ef3fe2e4aaa8062c056df"
     },
     "vesktop-theme-system24": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2026-01-23",
         "extract": null,
         "name": "vesktop-theme-system24",
@@ -42,7 +42,7 @@
         "version": "642601d7d3582f7997ad1c491ad0de292abee782"
     },
     "yazi-bookmarks": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2025-07-09",
         "extract": null,
         "name": "yazi-bookmarks",
@@ -63,7 +63,7 @@
         "version": "9ef1254d8afe88aba21cd56a186f4485dd532ab8"
     },
     "yazi-compress": {
-        "cargoLocks": null,
+        "cargoLock": null,
         "date": "2026-01-24",
         "extract": null,
         "name": "yazi-compress",
@@ -84,8 +84,8 @@
         "version": "cb6e8ec0141915dc319ccd6b904dcd2f03502576"
     },
     "yazi-plugins": {
-        "cargoLocks": null,
-        "date": "2026-02-21",
+        "cargoLock": null,
+        "date": "2026-02-27",
         "extract": null,
         "name": "yazi-plugins",
         "passthru": null,
@@ -97,11 +97,11 @@
             "name": null,
             "owner": "yazi-rs",
             "repo": "plugins",
-            "rev": "b224ddfb4bb6a9b438ac00ccb607b0eb517207d2",
-            "sha256": "sha256-hn6oEFCLhACPh8T/qoPVHbX8Npsjd1EDXsZlm9SzIII=",
+            "rev": "196281844b8cbcac658a59013e4805300c2d6126",
+            "sha256": "sha256-pAkBlodci4Yf+CTjhGuNtgLOTMNquty7xP0/HSeoLzE=",
             "sparseCheckout": [],
             "type": "github"
         },
-        "version": "b224ddfb4bb6a9b438ac00ccb607b0eb517207d2"
+        "version": "196281844b8cbcac658a59013e4805300c2d6126"
     }
 }

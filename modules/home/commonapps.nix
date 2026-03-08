@@ -14,7 +14,6 @@
     # netflix
     # bilibili
     keepassxc
-    helvum
     # (symlinkJoin {
     #   # wrap obsidian with pandoc for the pandoc plugin dependency
     #   name = "Obsidian";

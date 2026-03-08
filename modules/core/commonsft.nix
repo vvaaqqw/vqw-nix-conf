@@ -19,6 +19,7 @@
     pkgs.netease-cloud-music-gtk # netease cloud music gui
     pkgs.piper # front end for ratbagd
     pkgs.htop
+    pkgs.copyq
     #pkgs.pywal #hyprpanel uses
     # kde stuff
     pkgs.kdePackages.kate

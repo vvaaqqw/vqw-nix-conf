@@ -27,11 +27,15 @@
         executable = "${lib.getBin pkgs.vscode-fhs}/bin/code";
         profile = "${pkgs.firejail}/etc/firejail/code.profile";
       };
-      zen-beta = {
-        executable = "${lib.getBin inputs.zen-browser}/bin/zen-beta";
+      # zen-beta = {
+      #   executable = "${lib.getBin inputs.zen-browser}/bin/zen-beta";
+      #   profile = "${pkgs.firejail}/etc/firejail/firefox.profile";
+      # };
+
+      zen-twilight = {
+        executable = "${lib.getBin inputs.zen-browser}/bin/zen-twilight";
         profile = "${pkgs.firejail}/etc/firejail/firefox.profile";
       };
-
       # bilibili = {
       #   executable = "${lib.getBin pkgs.bilibili}/bin/bilibili";
       #   profile = "${pkgs.firejail}/etc/firejail/electron-common.profile";
