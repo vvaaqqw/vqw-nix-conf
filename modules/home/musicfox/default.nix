@@ -2,5 +2,5 @@
   home.packages = with pkgs; [
     go-musicfox
   ];
-  xdg.configFile."go-musicfox/go-musicfox.ini".source = ./go-musicfox.ini;
+  xdg.configFile."go-musicfox/config.toml".source = ./config.toml;
 }
