@@ -1,0 +1,574 @@
+{
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "breadcrumbs.enabled": false,
+  // "dev.containers.dockerPath": "/etc/profiles/per-user/spectre/bin/podman-host",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.guides.bracketPairs": "active",
+  "editor.lineNumbers": "relative",
+  "editor.scrollBeyondLastLine": false, // recommended by neovim
+  "editor.fontFamily": "'Source Code Pro','Droid Sans Mono', 'monospace', monospace",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.guides.indentation": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": true,
+  "editor.overviewRulerBorder": false,
+  "editor.renderLineHighlight": "all",
+  "editor.smoothScrolling": true,
+  "editor.suggestSelection": "first",
+  "files.trimTrailingWhitespace": true,
+  "jupyter.askForKernelRestart": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "jupyter.jupyterServerType": "local",
+  "extensions.autoUpdate": false,
+  "extensions.autoCheckUpdates": false,
+  "python.languageServer": "Pylance",
+  "python.linting.flake8Args": [
+    "--max-line-length=248"
+  ],
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false,
+  "vscode-neovim.textDecorationsAtTop": true,
+  "vscode-neovim.mouseSelectionStartVisualMode": true,
+  "vscode-neovim.revealCursorScrollLine": true,
+  "telemetry.telemetryLevel": "off",
+  "AREPL.telemetry": false,
+  "cloudmusic.network.foreignUser": true,
+  "code-runner.enableAppInsights": false,
+  "workbench.productIconTheme": "material-product-icons",
+  "r.bracketedPaste": true,
+  "r.plot.useHttpgd": true,
+  "cloudmusic.music.quality": 999000,
+  "cloudmusic.queue.initialization": "recommend",
+  "editor.largeFileOptimizations": false,
+  "vim.easymotion": true,
+  "vim.camelCaseMotion.enable": true,
+  "vim.debug.silent": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        ":"
+      ],
+      "commands": [
+        "workbench.action.showCommands"
+      ],
+      "silent": true
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        {
+          "args": {
+            "key": "editor.action.showHover",
+            "kind": "editor"
+          },
+          "command": "editor.action.showHover"
+        }
+      ]
+    },
+    {
+      "before": [
+        "K",
+        "K"
+      ],
+      "commands": [
+        {
+          "args": {
+            "key": "editor.action.showHover",
+            "kind": "editor"
+          },
+          "command": "editor.action.showHover"
+        },
+        "cursorDown"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        {
+          "args": {},
+          "command": "editor.action.goToDeclaration"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "D"
+      ],
+      "commands": [
+        {
+          "args": {},
+          "command": "editor.action.goToDefinition"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        {
+          "args": {},
+          "command": "editor.action.findReferences"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "I"
+      ],
+      "commands": [
+        {
+          "args": {},
+          "command": "editor.action.goToImplementation"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "s"
+      ],
+      "commands": [
+        {
+          "args": {},
+          "command": "editor.action.triggerSuggest"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "l"
+      ],
+      "commands": [
+        {
+          "args": {},
+          "command": "editor.action.showDiagnostics"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "l",
+        "g",
+        "l"
+      ],
+      "commands": [
+        {
+          "args": {},
+          "command": "editor.action.showDiagnostics"
+        },
+        "cursorDown"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m"
+      ],
+      "commands": [
+        "bookmarks.toggle"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "b"
+      ],
+      "commands": [
+        "bookmarks.list"
+      ]
+    },
+    {
+      "before": [
+        "<C-n>"
+      ],
+      "commands": [
+        "=nohl"
+      ]
+    },
+    {
+      "before": [
+        "<C-x>"
+      ],
+      "commands": [
+        "=wq"
+      ]
+    },
+    {
+      "after": [
+        "o",
+        "<Esc>",
+        "k"
+      ],
+      "before": [
+        "<leader>",
+        "o"
+      ],
+      "silent": true
+    },
+    {
+      "after": [
+        "O",
+        "<Esc>",
+        "j"
+      ],
+      "before": [
+        "<leader>",
+        "O"
+      ],
+      "silent": true
+    },
+    {
+      "after": [
+        "5",
+        "j"
+      ],
+      "before": [
+        "J"
+      ],
+      "silent": true
+    },
+    {
+      "after": [
+        "5",
+        "h"
+      ],
+      "before": [
+        "H"
+      ],
+      "silent": true
+    },
+    {
+      "after": [
+        "5",
+        "l"
+      ],
+      "before": [
+        "L"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "after": [
+        "p",
+        "g",
+        "v",
+        "y"
+      ],
+      "before": [
+        "p"
+      ]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-c>": false,
+    "<C-d>": false,
+    "<C-f>": false,
+    "<C-j>": false,
+    "<C-k>": false,
+    "<C-p>": false
+  },
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": [
+    "#8FBCBB",
+    "#434C5E"
+  ],
+  "vim.statusBarColors.insert": "#00FFFF",
+  "vim.statusBarColors.visual": "#B48EAD",
+  "vim.statusBarColors.visualline": "#B48EAD",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#D08770",
+  "vim.statusBarColors.commandlineinprogress": "#007ACC",
+  "vim.statusBarColors.searchinprogressmode": "#007ACC",
+  "vim.statusBarColors.easymotionmode": "#007ACC",
+  "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  "vim.statusBarColors.surroundinputmode": "#007ACC",
+  "vim.autoSwitchInputMethod.enable": true,
+  //linux fcitx5 settings
+  "vim.autoSwitchInputMethod.defaultIM": "1",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/bin/fcitx5-remote",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/usr/bin/fcitx5-remote -t {im}",
+  "notebook.lineNumbers": "on",
+  // "python.analysis.extraPaths": [
+  //   "/home/spectre/anaconda3/bin/python3"
+  // ],
+  "markdown-preview-enhanced.previewTheme": "newsprint.css",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#8FBCBB",
+    "statusBar.noFolderBackground": "#8FBCBB",
+    "statusBar.debuggingBackground": "#8FBCBB",
+    "statusBar.foreground": "#434C5E",
+    "statusBar.debuggingForeground": "#434C5E"
+  },
+  "markdown-preview-enhanced.latexEngine": "xetex",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "lualatexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-lualatex",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "xelatexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-xelatex",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "latexmk_rconly",
+      "command": "latexmk",
+      "args": [
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "rnw2tex",
+      "command": "Rscript",
+      "args": [
+        "-e",
+        "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+      ],
+      "env": {}
+    },
+    {
+      "name": "jnw2tex",
+      "command": "julia",
+      "args": [
+        "-e",
+        "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+      ],
+      "env": {}
+    },
+    {
+      "name": "jnw2texmintex",
+      "command": "julia",
+      "args": [
+        "-e",
+        "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+      ],
+      "env": {}
+    },
+    {
+      "name": "tectonic",
+      "command": "tectonic",
+      "args": [
+        "--synctex",
+        "--keep-logs",
+        "%DOC%.tex"
+      ],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (xelatex)",
+      "tools": [
+        "xelatexmk"
+      ]
+    },
+    {
+      "name": "latexmk 🔃",
+      "tools": [
+        "latexmk"
+      ]
+    },
+    {
+      "name": "latexmk (latexmkrc)",
+      "tools": [
+        "latexmk_rconly"
+      ]
+    },
+    {
+      "name": "latexmk (lualatex)",
+      "tools": [
+        "lualatexmk"
+      ]
+    },
+    {
+      "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+      "tools": [
+        "pdflatex",
+        "bibtex",
+        "pdflatex",
+        "pdflatex"
+      ]
+    },
+    {
+      "name": "Compile Rnw files",
+      "tools": [
+        "rnw2tex",
+        "latexmk"
+      ]
+    },
+    {
+      "name": "Compile Jnw files",
+      "tools": [
+        "jnw2tex",
+        "latexmk"
+      ]
+    },
+    {
+      "name": "tectonic",
+      "tools": [
+        "tectonic"
+      ]
+    }
+  ],
+  "explorer.confirmDelete": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "terminal.integrated.localEchoExcludePrograms": [
+    "vim",
+    "vi",
+    "nano",
+    "tmux",
+    "nvim"
+  ],
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.automationShell.linux": "nix-shell",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.enableVisualBell": false,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.generateWithTypeAnnotation": true,
+  "python.analysis.typeCheckingMode": "standard",
+  "chat.mcp.gallery.enabled": true,
+  "notebook.cellExecutionTimeVerbosity": "verbose",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "markdown_latex_combined": false
+  },
+}
