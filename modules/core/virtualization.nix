@@ -5,7 +5,7 @@
   ...
 }: {
   # Add user to podman libvirtd group
-  users.users.${username}.extraGroups = ["podman" "libvirtd" "kvm" "qemu-libvirtd"];
+  users.users.${username}.extraGroups = ["podman" "docker" "libvirtd" "kvm" "qemu-libvirtd"];
 
   # Install necessary packages
   environment.systemPackages = with pkgs; [
@@ -39,9 +39,12 @@
     podman = {
       enable = true;
       # Create a `docker` alias for podman, to use it as a drop-in replacement
-      dockerCompat = true;
+      # dockerCompat = true;
       # Required for containers under podman-compose to be able to talk to each other.
       defaultNetwork.settings.dns_enabled = true;
+    };
+    docker ={
+      enable = true;
     };
   };
 }
