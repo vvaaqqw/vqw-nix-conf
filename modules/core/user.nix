@@ -12,8 +12,8 @@
     inputs.home-manager.nixosModules.home-manager
   ];
   home-manager = {
-    useUserPackages = true;
     useGlobalPkgs = true;
+    useUserPackages = true;
     #backupFileExtension = "hmbackup";
     backupFileExtension = "hmbackup-${builtins.substring 0 8 (builtins.toString self.lastModifiedDate)}";
     extraSpecialArgs = {inherit inputs username mylib host generated;};

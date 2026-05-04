@@ -8,27 +8,27 @@
 {
   rime-ice = {
     pname = "rime-ice";
-    version = "042906d04ead85400b4ef3fe2e4aaa8062c056df";
+    version = "4de928b0e4df019fb4e90097ab2999d36a0c1275";
     src = fetchFromGitHub {
       owner = "iDvel";
       repo = "rime-ice";
-      rev = "042906d04ead85400b4ef3fe2e4aaa8062c056df";
+      rev = "4de928b0e4df019fb4e90097ab2999d36a0c1275";
       fetchSubmodules = false;
-      sha256 = "sha256-cIAcK58HOSGlUbnN35zxzOwG/wwYiuwYSeNG3Qr/DCg=";
+      sha256 = "sha256-P/HzsqNOpifQMfD4sN/knvL4mbTVDGhvpUfXJhgvF9M=";
     };
-    date = "2026-03-08";
+    date = "2026-05-02";
   };
   vesktop-theme-system24 = {
     pname = "vesktop-theme-system24";
-    version = "642601d7d3582f7997ad1c491ad0de292abee782";
+    version = "19156ab05de9c9b9b398f506c866035e0e79288c";
     src = fetchFromGitHub {
       owner = "refact0r";
       repo = "system24";
-      rev = "642601d7d3582f7997ad1c491ad0de292abee782";
+      rev = "19156ab05de9c9b9b398f506c866035e0e79288c";
       fetchSubmodules = false;
-      sha256 = "sha256-/RA3V1BYc2mBS6glva7yHSCspCE/GAKX+UikAyt2T2A=";
+      sha256 = "sha256-Mzf6yHbbem8Wl1Bua3XFQHKGRq3uqfltrryvFNS9e1U=";
     };
-    date = "2026-01-23";
+    date = "2026-04-25";
   };
   yazi-bookmarks = {
     pname = "yazi-bookmarks";
@@ -44,26 +44,26 @@
   };
   yazi-compress = {
     pname = "yazi-compress";
-    version = "cb6e8ec0141915dc319ccd6b904dcd2f03502576";
+    version = "46a6b9f02ff2f8aced466a1f01a3fe241f1cd45f";
     src = fetchFromGitHub {
       owner = "KKV9";
       repo = "compress.yazi";
-      rev = "cb6e8ec0141915dc319ccd6b904dcd2f03502576";
+      rev = "46a6b9f02ff2f8aced466a1f01a3fe241f1cd45f";
       fetchSubmodules = false;
-      sha256 = "sha256-D/EpcRDIc3toeyjHqi+vGw0v9B22HVvKJua5EVEAc0U=";
+      sha256 = "sha256-Mby185FCJY6nqHcHDQu+D5SLk+wGcyeUHK8yAvrd4TM=";
     };
-    date = "2026-01-24";
+    date = "2026-03-15";
   };
   yazi-plugins = {
     pname = "yazi-plugins";
-    version = "196281844b8cbcac658a59013e4805300c2d6126";
+    version = "ac82af3e10f9a32cecd9f87ac64b3f9de7c7aea7";
     src = fetchFromGitHub {
       owner = "yazi-rs";
       repo = "plugins";
-      rev = "196281844b8cbcac658a59013e4805300c2d6126";
+      rev = "ac82af3e10f9a32cecd9f87ac64b3f9de7c7aea7";
       fetchSubmodules = false;
-      sha256 = "sha256-pAkBlodci4Yf+CTjhGuNtgLOTMNquty7xP0/HSeoLzE=";
+      sha256 = "sha256-svc7I2E+tVMEUWUvIS6i3oTGfLq13eaI61T0c1MQ8qQ=";
     };
-    date = "2026-02-27";
+    date = "2026-04-23";
   };
 }

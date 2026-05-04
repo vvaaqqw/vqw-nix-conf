@@ -4,7 +4,6 @@
   # sudo mkdir .git
   # sudo chown YOURUSERNAME:users .git
   # git init
-
   programs.git = {
     enable = true;
     settings = {
@@ -16,6 +15,7 @@
       diff.colorMoved = "default";
       safe.directory = "/etc/nixos"; # prevent git from saying dubious permissions
     };
+    signing.format = "openpgp";
   };
 
   programs.delta = {

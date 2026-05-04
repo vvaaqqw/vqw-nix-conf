@@ -19,8 +19,6 @@
       marksman
       nil
       nixpkgs-fmt
-      nodePackages.prettier
-      nodePackages.typescript-language-server
       pgformatter
       (python3.withPackages (p: (with p; [
         black
